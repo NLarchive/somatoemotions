@@ -1,0 +1,18 @@
+{
+  "id": "ui.safe_rendering",
+  "type": "unit",
+  "version": "1.0.0",
+  "layer": "ui",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "copyText",
+    "element",
+    "run",
+    "safeSourceURL",
+    "sourceLink"
+  ],
+  "lifecycle": "stable"
+}

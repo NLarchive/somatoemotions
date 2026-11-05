@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Served bytes must match artifact identity",
+    "input": {
+      "responses": [
+        {
+          "path": "app.js",
+          "status": 200,
+          "expected_hash": "a",
+          "actual_hash": "b"
+        }
+      ]
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "app.js"
+      ]
+    }
+  },
+  {
+    "name": "Correct served byte identity passes",
+    "input": {
+      "responses": [
+        {
+          "path": "app.js",
+          "status": 200,
+          "expected_hash": "a",
+          "actual_hash": "a"
+        }
+      ]
+    },
+    "expected_output": {
+      "ok": true,
+      "errors": []
+    }
+  }
+]

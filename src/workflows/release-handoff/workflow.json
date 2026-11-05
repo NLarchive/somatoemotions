@@ -1,0 +1,9 @@
+{
+  "entry": "readinessReport",
+  "steps": [
+    "tools.source_archive",
+    "workflows.content_review",
+    "workflows.release_runbook",
+    "workflows.staging_validation"
+  ]
+}

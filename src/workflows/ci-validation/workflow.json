@@ -1,0 +1,10 @@
+{
+  "entry": "buildCandidate",
+  "steps": [
+    "workflows.content_review",
+    "tools.source_archive",
+    "tools.release_package",
+    "tools.security_audit",
+    "tools.performance_audit"
+  ]
+}

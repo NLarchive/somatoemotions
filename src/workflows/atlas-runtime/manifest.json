@@ -1,0 +1,49 @@
+{
+  "id": "workflows.atlas_runtime",
+  "type": "organ",
+  "version": "1.0.0",
+  "layer": "workflows",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "adapters.fetch_resources",
+      "role": "depends_on"
+    },
+    {
+      "unit": "app.atlas_service",
+      "role": "depends_on"
+    },
+    {
+      "unit": "app.visual_resolver",
+      "role": "depends_on"
+    },
+    {
+      "unit": "app.navigation_service",
+      "role": "depends_on"
+    },
+    {
+      "unit": "ui.safe_rendering",
+      "role": "depends_on"
+    },
+    {
+      "unit": "ui.atlas_shell",
+      "role": "depends_on"
+    },
+    {
+      "unit": "ui.reference_gallery",
+      "role": "depends_on"
+    },
+    {
+      "unit": "ui.evidence_panel",
+      "role": "depends_on"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "run",
+    "startApp",
+    "transition"
+  ],
+  "lifecycle": "stable"
+}

@@ -1,0 +1,6 @@
+[
+  {
+    "scenario": "Every runtime image and publication decision is audited",
+    "command": "npm run validate:content"
+  }
+]

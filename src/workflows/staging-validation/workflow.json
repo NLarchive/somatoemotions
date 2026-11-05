@@ -1,0 +1,9 @@
+{
+  "entry": "verifyStaging",
+  "steps": [
+    "workflows.ci_validation",
+    "tools.hosting_profile",
+    "workflows.browser_validation",
+    "workflows.release_runbook"
+  ]
+}

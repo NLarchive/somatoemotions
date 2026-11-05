@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Small selective bundle passes",
+    "input": {
+      "initial_bytes": 300000,
+      "max_image_bytes": 80000,
+      "total_image_bytes": 1000000
+    },
+    "expected_output": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "name": "Oversized initial bundle fails",
+    "input": {
+      "initial_bytes": 950000,
+      "max_image_bytes": 80000,
+      "total_image_bytes": 1000000
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "Initial transfer budget exceeded"
+      ]
+    }
+  }
+]

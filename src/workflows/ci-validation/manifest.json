@@ -1,0 +1,56 @@
+{
+  "id": "workflows.ci_validation",
+  "type": "organ",
+  "version": "1.0.0",
+  "layer": "workflows",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "tools.task_graph_audit",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.content_audit",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.image_pipeline",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.atlas_runtime",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.content_review",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.browser_validation",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.security_audit",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.performance_audit",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.release_package",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.source_archive",
+      "role": "depends_on"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "buildCandidate",
+    "run"
+  ],
+  "lifecycle": "stable"
+}

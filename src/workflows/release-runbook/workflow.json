@@ -1,0 +1,10 @@
+{
+  "entry": "auditDocumentation",
+  "steps": [
+    "tools.source_archive",
+    "workflows.atlas_runtime",
+    "workflows.content_review",
+    "tools.release_package",
+    "tools.hosting_profile"
+  ]
+}

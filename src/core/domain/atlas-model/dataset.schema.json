@@ -1,0 +1,1061 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "4.0.0"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "external_shared_labels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "evidence_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "migration": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "external_shared_labels",
+        "evidence_policy",
+        "confidence_policy",
+        "migration"
+      ],
+      "additionalProperties": false
+    },
+    "emotions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "display_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "enum": [
+              "Basic",
+              "Complex",
+              "Complex / Social",
+              "Baseline"
+            ]
+          },
+          "valence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "arousal": {
+            "type": "string",
+            "minLength": 1
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1
+          },
+          "somatic_profile": {
+            "type": "object",
+            "properties": {
+              "cardiovascular": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "image_key": {
+                      "type": "string",
+                      "pattern": "^(somatic|face|action)/[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "content_type": {
+                      "enum": [
+                        "illustration",
+                        "scientific_claim"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "object",
+                      "properties": {
+                        "decision": {
+                          "enum": [
+                            "qualified",
+                            "replaced_with_visual_label"
+                          ]
+                        },
+                        "support": {
+                          "enum": [
+                            "direct",
+                            "illustration_only"
+                          ]
+                        },
+                        "source_ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "review_method": {
+                          "const": "source-based editorial audit"
+                        },
+                        "reviewed_at": {
+                          "type": "string",
+                          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                        },
+                        "limitations": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "decision",
+                        "support",
+                        "source_ids",
+                        "review_method",
+                        "reviewed_at",
+                        "limitations"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "shared_with": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "image_prompt": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "muscles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "action_description": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "prototype_role": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "method_source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "claim",
+                    "image_key",
+                    "content_type",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "respiratory": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "image_key": {
+                      "type": "string",
+                      "pattern": "^(somatic|face|action)/[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "content_type": {
+                      "enum": [
+                        "illustration",
+                        "scientific_claim"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "object",
+                      "properties": {
+                        "decision": {
+                          "enum": [
+                            "qualified",
+                            "replaced_with_visual_label"
+                          ]
+                        },
+                        "support": {
+                          "enum": [
+                            "direct",
+                            "illustration_only"
+                          ]
+                        },
+                        "source_ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "review_method": {
+                          "const": "source-based editorial audit"
+                        },
+                        "reviewed_at": {
+                          "type": "string",
+                          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                        },
+                        "limitations": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "decision",
+                        "support",
+                        "source_ids",
+                        "review_method",
+                        "reviewed_at",
+                        "limitations"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "shared_with": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "image_prompt": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "muscles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "action_description": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "prototype_role": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "method_source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "claim",
+                    "image_key",
+                    "content_type",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "gastrointestinal": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "image_key": {
+                      "type": "string",
+                      "pattern": "^(somatic|face|action)/[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "content_type": {
+                      "enum": [
+                        "illustration",
+                        "scientific_claim"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "object",
+                      "properties": {
+                        "decision": {
+                          "enum": [
+                            "qualified",
+                            "replaced_with_visual_label"
+                          ]
+                        },
+                        "support": {
+                          "enum": [
+                            "direct",
+                            "illustration_only"
+                          ]
+                        },
+                        "source_ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "review_method": {
+                          "const": "source-based editorial audit"
+                        },
+                        "reviewed_at": {
+                          "type": "string",
+                          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                        },
+                        "limitations": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "decision",
+                        "support",
+                        "source_ids",
+                        "review_method",
+                        "reviewed_at",
+                        "limitations"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "shared_with": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "image_prompt": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "muscles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "action_description": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "prototype_role": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "method_source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "claim",
+                    "image_key",
+                    "content_type",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "musculoskeletal": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "image_key": {
+                      "type": "string",
+                      "pattern": "^(somatic|face|action)/[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "content_type": {
+                      "enum": [
+                        "illustration",
+                        "scientific_claim"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "object",
+                      "properties": {
+                        "decision": {
+                          "enum": [
+                            "qualified",
+                            "replaced_with_visual_label"
+                          ]
+                        },
+                        "support": {
+                          "enum": [
+                            "direct",
+                            "illustration_only"
+                          ]
+                        },
+                        "source_ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "review_method": {
+                          "const": "source-based editorial audit"
+                        },
+                        "reviewed_at": {
+                          "type": "string",
+                          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                        },
+                        "limitations": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "decision",
+                        "support",
+                        "source_ids",
+                        "review_method",
+                        "reviewed_at",
+                        "limitations"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "shared_with": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "image_prompt": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "muscles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "action_description": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "prototype_role": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "method_source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "claim",
+                    "image_key",
+                    "content_type",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "integumentary_thermal": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "image_key": {
+                      "type": "string",
+                      "pattern": "^(somatic|face|action)/[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "content_type": {
+                      "enum": [
+                        "illustration",
+                        "scientific_claim"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "object",
+                      "properties": {
+                        "decision": {
+                          "enum": [
+                            "qualified",
+                            "replaced_with_visual_label"
+                          ]
+                        },
+                        "support": {
+                          "enum": [
+                            "direct",
+                            "illustration_only"
+                          ]
+                        },
+                        "source_ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "review_method": {
+                          "const": "source-based editorial audit"
+                        },
+                        "reviewed_at": {
+                          "type": "string",
+                          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                        },
+                        "limitations": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "decision",
+                        "support",
+                        "source_ids",
+                        "review_method",
+                        "reviewed_at",
+                        "limitations"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "shared_with": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "image_prompt": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "muscles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "action_description": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "prototype_role": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "method_source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "claim",
+                    "image_key",
+                    "content_type",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "neurosensory": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "image_key": {
+                      "type": "string",
+                      "pattern": "^(somatic|face|action)/[a-z0-9][a-z0-9_-]*$"
+                    },
+                    "content_type": {
+                      "enum": [
+                        "illustration",
+                        "scientific_claim"
+                      ]
+                    },
+                    "evidence": {
+                      "type": "object",
+                      "properties": {
+                        "decision": {
+                          "enum": [
+                            "qualified",
+                            "replaced_with_visual_label"
+                          ]
+                        },
+                        "support": {
+                          "enum": [
+                            "direct",
+                            "illustration_only"
+                          ]
+                        },
+                        "source_ids": {
+                          "type": "array",
+                          "items": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "review_method": {
+                          "const": "source-based editorial audit"
+                        },
+                        "reviewed_at": {
+                          "type": "string",
+                          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                        },
+                        "limitations": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "decision",
+                        "support",
+                        "source_ids",
+                        "review_method",
+                        "reviewed_at",
+                        "limitations"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "shared_with": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "image_prompt": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "code": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "name": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "muscles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "action_description": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "prototype_role": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "method_source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "claim",
+                    "image_key",
+                    "content_type",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "cardiovascular",
+              "respiratory",
+              "gastrointestinal",
+              "musculoskeletal",
+              "integumentary_thermal",
+              "neurosensory"
+            ],
+            "additionalProperties": false
+          },
+          "behavioral_action_tendencies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9][a-z0-9_-]*$"
+                },
+                "claim": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "image_key": {
+                  "type": "string",
+                  "pattern": "^(somatic|face|action)/[a-z0-9][a-z0-9_-]*$"
+                },
+                "content_type": {
+                  "enum": [
+                    "illustration",
+                    "scientific_claim"
+                  ]
+                },
+                "evidence": {
+                  "type": "object",
+                  "properties": {
+                    "decision": {
+                      "enum": [
+                        "qualified",
+                        "replaced_with_visual_label"
+                      ]
+                    },
+                    "support": {
+                      "enum": [
+                        "direct",
+                        "illustration_only"
+                      ]
+                    },
+                    "source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "review_method": {
+                      "const": "source-based editorial audit"
+                    },
+                    "reviewed_at": {
+                      "type": "string",
+                      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                    },
+                    "limitations": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "decision",
+                    "support",
+                    "source_ids",
+                    "review_method",
+                    "reviewed_at",
+                    "limitations"
+                  ],
+                  "additionalProperties": false
+                },
+                "shared_with": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "image_prompt": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "code": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "muscles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "action_description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "prototype_role": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "method_source_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "claim",
+                "image_key",
+                "content_type",
+                "evidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "facial_motor_units_fused": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9][a-z0-9_-]*$"
+                },
+                "claim": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "image_key": {
+                  "type": "string",
+                  "pattern": "^(somatic|face|action)/[a-z0-9][a-z0-9_-]*$"
+                },
+                "content_type": {
+                  "enum": [
+                    "illustration",
+                    "scientific_claim"
+                  ]
+                },
+                "evidence": {
+                  "type": "object",
+                  "properties": {
+                    "decision": {
+                      "enum": [
+                        "qualified",
+                        "replaced_with_visual_label"
+                      ]
+                    },
+                    "support": {
+                      "enum": [
+                        "direct",
+                        "illustration_only"
+                      ]
+                    },
+                    "source_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "review_method": {
+                      "const": "source-based editorial audit"
+                    },
+                    "reviewed_at": {
+                      "type": "string",
+                      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                    },
+                    "limitations": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "decision",
+                    "support",
+                    "source_ids",
+                    "review_method",
+                    "reviewed_at",
+                    "limitations"
+                  ],
+                  "additionalProperties": false
+                },
+                "shared_with": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "image_prompt": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "code": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "muscles": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "action_description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "prototype_role": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "method_source_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "claim",
+                "image_key",
+                "content_type",
+                "evidence"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "display_name",
+          "category",
+          "valence",
+          "arousal",
+          "notes",
+          "somatic_profile",
+          "behavioral_action_tendencies",
+          "facial_motor_units_fused"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "metadata",
+    "emotions"
+  ],
+  "additionalProperties": false
+}

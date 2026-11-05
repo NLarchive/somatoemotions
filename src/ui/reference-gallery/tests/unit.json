@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Illustrative label is explicit",
+    "input": {
+      "record": {
+        "claim": "Open shoulders",
+        "content_type": "illustration"
+      }
+    },
+    "expected_output": {
+      "label": "Open shoulders",
+      "badge": "Illustration"
+    }
+  },
+  {
+    "name": "Bounded statement badge",
+    "input": {
+      "record": {
+        "claim": "Qualified statement",
+        "content_type": "scientific_claim"
+      }
+    },
+    "expected_output": {
+      "label": "Qualified statement",
+      "badge": "Source-qualified"
+    }
+  }
+]

@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Somatic Manifestations Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .legend {
+            background: #f8f9fa;
+            padding: 30px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .legend h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .legend-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .legend-item strong {
+            color: #667eea;
+        }
+
+        .universality-scale {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .scale-bar {
+            flex: 1;
+            height: 30px;
+            background: linear-gradient(to right, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .scale-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .emotion-section {
+            padding: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .emotion-section:last-child {
+            border-bottom: none;
+        }
+
+        .emotion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .emotion-title {
+            font-size: 1.8em;
+            color: #667eea;
+            text-transform: capitalize;
+        }
+
+        .emotion-category {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .category-basic { background: #ff6b6b; }
+        .category-complex { background: #feca57; color: #333; }
+        .category-positive { background: #1dd1a1; }
+        .category-negative { background: #5f27cd; }
+        .category-neutral { background: #48dbfb; color: #333; }
+
+        .universality-badge {
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .uni-high { background: #1dd1a1; }
+        .uni-moderate { background: #feca57; color: #333; }
+        .uni-variable { background: #ff6b6b; }
+        .uni-low { background: #8395a7; }
+
+        .somatic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .body-region {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .body-region h4 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .manifestation-list {
+            list-style: none;
+        }
+
+        .manifestation-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            color: #333;
+        }
+
+        .manifestation-list li:last-child {
+            border-bottom: none;
+        }
+
+        .shared-note {
+            background: #fff3cd;
+            border-left: 4px solid #feca57;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            color: #856404;
+        }
+
+        .shared-note strong {
+            color: #667eea;
+        }
+
+        .physiological-note {
+            background: #d1ecf1;
+            border-left: 4px solid #48dbfb;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+            color: #0c5460;
+        }
+
+        .intensity-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .intensity-high { background: #ff6b6b; }
+        .intensity-moderate { background: #feca57; }
+        .intensity-low { background: #1dd1a1; }
+
+        .notes-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-top: 3px solid #667eea;
+        }
+
+        .notes-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .note-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .note-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .emotion-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .somatic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Emotional Somatic Manifestations Map</h1>
+            <p>A comprehensive guide to how emotions manifest in the body, with universality rankings</p>
+        </header>
+
+        <div class="legend">
+            <h2>📊 How to Use This Map</h2>
+            <div class="legend-grid">
+                <div class="legend-item">
+                    <strong>Universality Ranking:</strong>
+                    <div class="universality-scale">
+                        <div class="scale-bar"></div>
+                    </div>
+                    <div class="scale-labels">
+                        <span>High (Universal)</span>
+                        <span>Moderate</span>
+                        <span>Variable</span>
+                        <span>Low (Cultural)</span>
+                    </div>
+                </div>
+                <div class="legend-item">
+                    <strong>Emotion Categories:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li><span class="emotion-category category-basic">Basic</span> - Primary emotions</li>
+                        <li><span class="emotion-category category-complex">Complex</span> - Secondary emotions</li>
+                        <li><span class="emotion-category category-positive">Positive</span> - Pleasant valence</li>
+                        <li><span class="emotion-category category-negative">Negative</span> - Unpleasant valence</li>
+                    </ul>
+                </div>
+                <div class="legend-item">
+                    <strong>Intensity Indicators:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li><span class="intensity-indicator intensity-high"></span>High intensity</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Moderate intensity</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Low intensity</li>
+                    </ul>
+                </div>
+                <div class="legend-item">
+                    <strong>Important Notes:</strong>
+                    <p style="margin-top: 10px; font-size: 0.9em;">
+                        • Not all manifestations appear in every person<br>
+                        • Cultural and individual differences exist<br>
+                        • Some sensations overlap between emotions<br>
+                        • Context matters for interpretation
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BASIC EMOTIONS -->
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😠 Anger</h2>
+                <span class="emotion-category category-basic">Basic Emotion</span>
+                <span class="universality-badge uni-high">Universality: Very High (95%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heat sensation in face and head</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Tension in jaw and temples</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Flushing or redness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Pressure behind eyes</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Clenched teeth</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body & Arms</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Tightness in chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Tension in shoulders and neck</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Increased sensation in hands and fists</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Raised arms or forward posture</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Muscle tension in upper limbs</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Rapid heartbeat</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Increased blood pressure</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Shallow, rapid breathing</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Adrenaline surge</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Digestive tension</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Fear (chest tension, rapid heartbeat), Excitement (increased arousal), Anxiety (muscle tension). Key differentiator: Anger shows approach-oriented activation (forward movement, fists) vs. fear's withdrawal pattern.
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Sympathetic nervous system activation prepares body for confrontation. Increased cortisol and adrenaline. Blood flow redirected to muscles. [web:1][web:3][web:5]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😨 Fear</h2>
+                <span class="emotion-category category-basic">Basic Emotion</span>
+                <span class="universality-badge uni-high">Universality: Very High (95%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Tension in forehead</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Wide eyes, dilated pupils</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Pale complexion</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Heightened alertness</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Dry mouth</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body & Arms</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Tightness in chest and throat</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Raised, tense shoulders</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Protective arm positioning</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Trembling in hands</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Backward leaning posture</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Tension in legs (unique to fear)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Sensation in feet (preparation to flee)</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Weakness or "jelly legs"</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Ready-to-run muscle activation</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Rapid, pounding heartbeat</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Short, quick breaths</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Stomach dropping sensation</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Cold sweat</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Urge to urinate</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Anger (chest activation, rapid heartbeat), Anxiety (similar pattern but less intense), Surprise (startle response). Key differentiator: Fear uniquely activates lower legs and feet, shows backward/protective posture. [web:2][web:5]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Fight-or-flight response. Amygdala activation. Adrenaline and cortisol release. Blood flow to large muscles. Pupils dilate for better vision. [web:1][web:14]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😢 Sadness</h2>
+                <span class="emotion-category category-basic">Basic Emotion</span>
+                <span class="universality-badge uni-high">Universality: Very High (90%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heaviness in head</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Downward gaze</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Tears or urge to cry</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Drooping eyelids</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Slow facial movements</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body & Arms</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Slumped, collapsed shoulders</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Decreased arm activity (defining feature)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Heaviness in chest</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Arms hanging limply</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Reduced upper body tension</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Decreased leg activity</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Slow, heavy movements</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Feeling of weakness</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Reduced sensation in limbs</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Empty or hollow feeling in chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Slow, shallow breathing</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Reduced heart rate</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Loss of energy/fatigue</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Lump in throat</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Depression (very similar pattern, more chronic), Grief (intense sadness with additional yearning), Fatigue (low energy). Key differentiator: Sadness uniquely shows decreased limb activity and collapsed upper body posture. [web:1][web:2][web:3]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Parasympathetic activation. Reduced metabolic activity. Lower cortisol over time. Associated with conservation-withdrawal response. [web:4][web:14]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😊 Happiness</h2>
+                <span class="emotion-category category-basic">Basic Emotion</span>
+                <span class="universality-badge uni-high">Universality: Very High (95%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Smiling (universal marker)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Warmth in face</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Bright, engaged eyes</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Relaxed forehead</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Increased facial sensation</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body & Arms</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Enhanced sensation throughout (UNIQUE)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Open, expansive posture</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Raised arms (celebration)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Increased limb activity</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Light, energetic movements</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Increased leg sensation</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Bouncy, springy steps</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Desire to move/dance</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Overall bodily activation</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Warmth spreading through body</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Light, easy breathing</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Comfortable heart rate</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Feeling of energy/vitality</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Relaxed digestive system</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Excitement (similar activation but more intense), Contentment (similar but calmer), Love (similar warmth). Key differentiator: Happiness is the ONLY emotion associated with enhanced sensations ALL over the body. [web:1][web:3][web:4][web:15]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Balanced autonomic activation. Release of endorphins, dopamine, serotonin. Reduced cortisol. Associated with approach motivation and social bonding. [web:4][web:14]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">🤢 Disgust</h2>
+                <span class="emotion-category category-basic">Basic Emotion</span>
+                <span class="universality-badge uni-high">Universality: Very High (90%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Wrinkled nose (universal marker)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Upper lip raised</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Gag reflex activation</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Turned away gaze</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Facial tension around mouth</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🍽️ Digestive System (PRIMARY)</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Nausea in stomach</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Sensation along entire GI tract</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Throat constriction</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Esophageal tension</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Urge to vomit or expel</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Loss of appetite</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Backward lean (rejection)</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Arms pushing away</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Mild chest discomfort</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Shoulder shrug</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Stomach churning</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Salivation changes</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Mild increase in heart rate</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Strong rejection impulse</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Contempt (similar facial expression but less intense), Nausea (physical sensation without emotional component). Key differentiator: Disgust uniquely activates the digestive tract and throat region. Most localized emotion. [web:1][web:3][web:5]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Originally evolved to prevent ingestion of toxins. Parasympathetic activation in digestive system. Distinct neural pathways from other negative emotions. [web:5][web:14]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😲 Surprise</h2>
+                <span class="emotion-category category-basic">Basic Emotion</span>
+                <span class="universality-badge uni-high">Universality: High (85%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Raised eyebrows (universal marker)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Wide-open eyes</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Dropped jaw/open mouth</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Intake of breath (gasp)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Frozen facial expression</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Startle response (whole body jerk)</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Raised shoulders</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Arms may fling outward</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Momentary muscle tension</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Hand to chest gesture</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Jump or startle jump</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Quick step backward</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Temporary freezing</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Leg muscle tension</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Sudden heart rate spike</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Sharp intake of breath</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Adrenaline rush</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Stomach flip sensation</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Heightened alertness</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Fear (startle response, but fear sustains), Shock (more intense surprise), Excitement (positive surprise). Key differentiator: Surprise is the briefest emotion, typically lasting only seconds before transitioning to another emotion. [web:6][web:10]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Orienting response. Rapid sympathetic activation. Prepares organism to process unexpected stimulus. Shortest duration of all basic emotions. [web:11]
+            </div>
+        </div>
+
+        <!-- COMPLEX EMOTIONS -->
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😰 Anxiety</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate-High (80%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Constant mental tension</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Racing thoughts</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Tension headaches</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Jaw clenching</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Hypervigilance</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Chronic chest tightness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Shoulder and neck tension</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Restless arms/hands</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Shallow breathing pattern</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Fidgeting</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Restless legs</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Inability to sit still</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Leg bouncing</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Weakness or heaviness</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Butterflies or knots in stomach</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Rapid or irregular heartbeat</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Difficulty breathing</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Sweaty palms</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Frequent urination</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Chronic muscle tension</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Fear (similar but fear has clear object), Stress (overlapping), Panic (more intense). Key differentiator: Anxiety is future-oriented, sustained, and often lacks specific trigger. More chronic than fear. [web:9]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Chronic sympathetic activation. Elevated cortisol. HPA axis dysregulation. Associated with anticipatory threat processing. [web:9]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">❤️ Love</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-positive">Positive Valence</span>
+                <span class="universality-badge uni-high">Universality: High (85%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Warmth in face</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Soft, relaxed expression</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Gentle smiling</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Eye contact intensity</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Flushing when thinking of beloved</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Warmth in chest (primary)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Open, receptive posture</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Desire for physical closeness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Relaxed shoulders</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Gentle, flowing movements</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Light, pleasant sensation</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Approach-oriented movement</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Bodily lightness (positive valence marker)</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Increased overall sensation</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heart "fluttering" or "racing"</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Warmth spreading through body</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Comfortable breathing</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Relaxed digestive system</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Feeling of expansion/openness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Oxytocin-related warmth</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Happiness (similar positive activation), Contentment (similar calm), Lust (similar arousal but more sexual). Key differentiator: Love uniquely combines warmth, openness, and desire for connection. Shows bodily lightness pattern. [web:4][web:9]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Oxytocin and vasopressin release. Dopamine reward system activation. Reduced cortisol. Associated with attachment and bonding systems. [web:4][web:9]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😔 Shame</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-negative">Negative Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate (70%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Intense facial heat/flushing</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Averted gaze (looking down)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Head bowed</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Blushing (visible marker)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Desire to hide face</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Collapsed, shrinking posture</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Shoulders hunched forward</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Making self smaller</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Arms crossing body (protective)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Heaviness in chest</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Desire to flee or disappear</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Weakness in legs</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Reduced movement</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Grounding sensation (wanting to sink)</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Sinking feeling in stomach</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Hollow or empty feeling</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Nausea</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Intense self-consciousness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Overwhelming desire to hide</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Shallow breathing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Guilt (similar but guilt is action-focused), Embarrassment (less intense), Sadness (similar collapse). Key differentiator: Shame uniquely involves intense facial heat, desire to disappear, and self-focused attention. [web:9][web:12]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Complex social emotion. Involves self-evaluation systems. Parasympathetic withdrawal. Associated with social status and belonging concerns. [web:9][web:12]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😔 Guilt</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-negative">Negative Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate (65%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Heavy, burdened feeling</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Avoidant eye contact</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Furrowed brow</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Rumination (mental loops)</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Self-critical inner voice</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heaviness on shoulders ("weight")</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Slumped posture</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Chest tightness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Desire to make amends (action urge)</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Restlessness</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Heavy, slow movements</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Desire to approach (repair)</li>
+                        <li><span class="intensity-indicator intensity-low"></span>General heaviness</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Reduced energy</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Stomach discomfort</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Feeling of burden/weight</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Loss of appetite</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Mental preoccupation</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Urge to confess or repair</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Sleep disturbances</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Shame (similar but shame is self-focused), Regret (similar but past-focused), Sadness (similar heaviness). Key differentiator: Guilt is action-focused ("I did something bad") vs. shame's self-focus ("I am bad"). Shows approach motivation to repair. [web:9][web:12]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Moral emotion involving prefrontal cortex. Associated with empathy and theory of mind. Motivates reparative action. Less physiological arousal than shame. [web:9][web:12]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">🤩 Pride</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-positive">Positive Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate-High (75%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Head held high</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Chin up (universal marker)</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Confident smile</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Direct eye contact</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Alert, engaged expression</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Expanded chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Shoulders back</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Upright, tall posture</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Arms raised (victory)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Expansive body language</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Firm, grounded stance</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Confident walk</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Bodily lightness</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Increased overall activation</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Warmth in chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Feeling of elevation/expansion</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Comfortable heart rate</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Energy and vitality</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Desire to share achievement</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Relaxed breathing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Happiness (similar positive activation), Confidence (similar posture), Joy (similar energy). Key differentiator: Pride uniquely involves expanded chest, raised chin, and achievement-related warmth. Shows bodily lightness. [web:4][web:9][web:10][web:12]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Self-conscious emotion. Dopamine reward system. Associated with status and achievement. Shows approach-oriented physiology similar to happiness. [web:4][web:9]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😒 Contempt</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-negative">Negative Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate (60-70%)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>One-sided lip curl (asymmetric)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Sneering expression</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Looking down nose</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Cold, dismissive gaze</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Facial asymmetry (unique marker)</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Dismissive hand gestures</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Turned away posture</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Mild shoulder shrug</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Arms crossed (defensive)</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Reduced engagement</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-low"></span>Turning away</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Desire to distance</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Minimal movement</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Withdrawal posture</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Coolness or coldness</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Mild stomach discomfort</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Feeling of superiority</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Emotional distance</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Judgment/evaluation mode</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Low physiological arousal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Disgust (similar rejection but contempt is person-focused), Disdain (synonymous), Arrogance (related state). Key differentiator: Contempt uniquely shows facial asymmetry and involves moral superiority judgment. Lower arousal than disgust. [web:6][web:7][web:10][web:12]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Complex social/moral emotion. Lower physiological arousal than basic emotions. Associated with social hierarchy processing. Unique among emotions for facial asymmetry. [web:6][web:7]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😔 Depression</h2>
+                <span class="emotion-category category-complex">Complex State</span>
+                <span class="emotion-category category-negative">Negative Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate-High (80%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heavy, leaden feeling</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Flat, expressionless face</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Downward gaze</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Slow facial movements</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Mental fog/heaviness</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Profound heaviness in chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Collapsed, slumped posture</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Decreased arm activity</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Psychomotor retardation</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Overwhelming fatigue</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heavy, leaden limbs</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Decreased leg activity</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Slow, effortful movement</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Desire to lie down</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Reduced sensation in limbs</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Empty, hollow feeling</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Numbness or deadness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Slow, shallow breathing</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Profound exhaustion</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Appetite changes</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Sleep disturbances</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Sadness (very similar pattern, but depression is chronic), Grief (similar but grief has waves), Fatigue (similar exhaustion). Key differentiator: Depression shows the most extreme decrease in bodily sensation and activity. Chronic, pervasive pattern. [web:9][web:14]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Chronic parasympathetic dominance. HPA axis dysregulation. Neurotransmitter imbalances (serotonin, dopamine, norepinephrine). Inflammatory markers elevated. [web:9][web:14]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">🤗 Embarrassment</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-negative">Negative Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate (65%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Intense facial flushing</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Blushing (primary marker)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Averted gaze</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Nervous smile or grimace</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Heat sensation in face/ears</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Self-touching (face, neck)</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Shrinking posture</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Shoulders hunched</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Nervous laughter</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Fidgeting</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Desire to flee</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Restless legs</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Shifting weight</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Wanting to disappear</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Stomach dropping</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Rapid heartbeat</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Short, shallow breaths</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Intense self-consciousness</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Mental blankness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Urge to hide</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Shame (similar but less intense), Guilt (similar self-focus), Social Anxiety (similar pattern). Key differentiator: Embarrassment is situation-specific, transient, and involves visible blushing. Less severe than shame. [web:10][web:12]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Social emotion involving self-presentation concerns. Sympathetic activation (blushing). Associated with social bonding and norm adherence. Shorter duration than shame. [web:10][web:12]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😌 Contentment</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-positive">Positive Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate-High (75%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Relaxed facial muscles</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Gentle, soft smile</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Soft, relaxed eyes</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Peaceful expression</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Slow blinking</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Deep relaxation in chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Loose, relaxed shoulders</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Comfortable posture</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Slow, easy movements</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Absence of tension</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heavy, relaxed limbs</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Grounded, stable feeling</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Desire to rest/stay</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Bodily lightness</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Comfortable stillness</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Warm, peaceful feeling</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Slow, deep breathing</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Comfortable heart rate</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Relaxed digestive system</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Feeling of sufficiency</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Absence of desire/wanting</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Happiness (similar positive valence), Peace (similar calm), Satisfaction (similar state). Key differentiator: Contentment uniquely involves absence of wanting, deep relaxation, and present-moment satisfaction. Lower arousal than happiness. [web:4][web:10]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Parasympathetic dominance. Balanced neurotransmitters. Low cortisol. Associated with satiety and safety systems. Rest-and-digest state. [web:4][web:10]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😤 Frustration</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-negative">Negative Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate (70%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Tension in forehead</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Furrowed brow</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Clenched jaw</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Intense, focused gaze</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Heat in face</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Tightness in chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Tense shoulders</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Clenched fists</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Restless, agitated arms</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Muscle tension throughout</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Restless legs</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Pacing or fidgeting</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Tense leg muscles</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Stomping or heavy steps</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Pressure in chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Rapid heartbeat</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Shallow breathing</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Urge to act/fix</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Blocked energy feeling</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Stomach tension</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Anger (similar tension but less intense), Annoyance (milder form), Impatience (similar restlessness). Key differentiator: Frustration involves blocked goal pursuit. Less intense than anger, more action-oriented than annoyance. [web:9]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Goal-blocking response. Moderate sympathetic activation. Associated with persistence systems. Can escalate to anger if blockage continues. [web:9]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">🎉 Excitement</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-positive">Positive Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate-High (75%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Bright, wide eyes</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Big smile or grin</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Flushed face</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Alert, animated expression</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Rapid speech</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>High energy throughout</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Expansive, open posture</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Animated gestures</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Jumping or bouncing</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Clapping or hand movements</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Restless, energetic legs</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Jumping up and down</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Quick, light steps</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Difficulty staying still</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Bodily lightness</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Racing heart (positive)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Butterflies in stomach</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Quick, excited breathing</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Surge of energy</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Anticipatory arousal</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Warmth throughout body</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Happiness (similar positive valence), Joy (similar high energy), Anxiety (similar arousal but negative). Key differentiator: Excitement is future-oriented, high-arousal positive emotion. Shows bodily lightness and high activation. [web:4][web:9][web:10]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> High sympathetic activation (positive). Dopamine release. Associated with anticipation and reward prediction. Similar arousal to anxiety but positive valence. [web:4][web:9]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😔 Loneliness</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-negative">Negative Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate (70%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heavy, empty feeling</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Sad, distant expression</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Averted or distant gaze</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Mental preoccupation</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Tearfulness</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Emptiness in chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Hollow, vacant feeling</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Slumped posture</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Self-hugging gesture</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Cold sensation</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Heavy, slow legs</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Reduced movement</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Desire to curl up</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Weakness</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Empty, hollow feeling</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Coldness inside</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Aching sensation</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Shallow breathing</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Yearning for connection</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Loss of appetite</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Sadness (similar pattern), Depression (similar emptiness), Grief (similar yearning). Key differentiator: Loneliness uniquely involves coldness, emptiness, and social yearning. Related to attachment system activation. [web:9]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Social pain system activation. Overlaps with physical pain pathways. Elevated cortisol. Associated with attachment and belonging systems. [web:9]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😨 Awe</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-neutral">Mixed Valence</span>
+                <span class="universality-badge uni-moderate">Universality: Moderate (65%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Wide eyes (taking in)</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Dropped jaw/open mouth</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Raised eyebrows</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Frozen, captivated expression</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Upward gaze</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Stillness, frozen posture</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Arms may spread wide</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Open, receptive posture</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Decreased muscle tension</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Goosebumps (chills)</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-moderate"></span>Rooted, grounded stance</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Stillness</li>
+                        <li><span class="intensity-indicator intensity-low"></span>Weakness (overwhelmed)</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Desire to approach</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heart "stopping" or racing</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Chills down spine</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Shallow or held breath</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Feeling of smallness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Expanded awareness</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Time distortion</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Surprise (similar facial expression), Fear (similar freezing), Wonder (similar state). Key differentiator: Awe involves vastness and need for accommodation. Unique combination of freezing and expansion. Can be positive or threatening. [web:10][web:12]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Complex emotion involving self-transcendence. Mixed autonomic activation. Associated with vastness perception. Can trigger goosebumps and chills. [web:10][web:12]
+            </div>
+        </div>
+
+        <div class="emotion-section">
+            <div class="emotion-header">
+                <h2 class="emotion-title">😔 Grief</h2>
+                <span class="emotion-category category-complex">Complex Emotion</span>
+                <span class="emotion-category category-negative">Negative Valence</span>
+                <span class="universality-badge uni-high">Universality: High (85%+)</span>
+            </div>
+            <div class="somatic-grid">
+                <div class="body-region">
+                    <h4>🔥 Head & Face</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Intense sadness expression</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Tears, crying</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Downcast eyes</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Heavy, bowed head</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Puffy, swollen eyes</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>💪 Upper Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Collapsed, slumped shoulders</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Heaviness in chest</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Decreased arm activity</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Self-soothing gestures</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Psychomotor retardation</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>🦵 Lower Body</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Heavy, leaden limbs</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Decreased leg activity</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Slow, effortful movement</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Desire to lie down</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Weakness</li>
+                    </ul>
+                </div>
+                <div class="body-region">
+                    <h4>❤️ Internal Sensations</h4>
+                    <ul class="manifestation-list">
+                        <li><span class="intensity-indicator intensity-high"></span>Intense chest pain/ache</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Empty, hollow feeling</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Physical pain sensation</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Difficulty breathing</li>
+                        <li><span class="intensity-indicator intensity-moderate"></span>Loss of appetite</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Yearning, longing</li>
+                        <li><span class="intensity-indicator intensity-high"></span>Waves of intensity</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shared-note">
+                <strong>⚠️ Shared With:</strong> Sadness (core component), Depression (similar pattern), Loneliness (similar emptiness). Key differentiator: Grief involves loss and yearning specifically. Comes in waves. Can include physical pain. More intense than sadness. [web:9]
+            </div>
+            <div class="physiological-note">
+                <strong>🔬 Physiological Basis:</strong> Attachment system activation. Stress response. Elevated cortisol. Can trigger actual physical pain pathways. Associated with separation distress. [web:9]
+            </div>
+        </div>
+
+        <!-- NOTES SECTION -->
+        <div class="notes-section">
+            <h2>📚 Important Considerations & Research Notes</h2>
+            <div class="notes-grid">
+                <div class="note-card">
+                    <h3>🌍 Universality Research</h3>
+                    <p>Bodily sensation maps show remarkable cross-cultural consistency. Research with 3,954 individuals from 101 countries found correlations of r > 0.82 across cultures and r > 0.80 across sexes, supporting cultural universality of emotion-associated bodily sensations. [web:8]</p>
+                </div>
+                <div class="note-card">
+                    <h3>⚠️ Individual Variation</h3>
+                    <p>While patterns are universal, intensity and specific manifestations vary by individual. Interoceptive accuracy (ability to sense internal states) affects how precisely people can identify bodily sensations. Some people experience emotions more somatically than others. [web:5]</p>
+                </div>
+                <div class="note-card">
+                    <h3>🔄 Overlapping Patterns</h3>
+                    <p>Many emotions share somatic features, particularly in the chest area (common to most emotions). Differentiation often comes from: limb activity patterns, facial expressions, valence (lightness vs. heaviness), and action tendencies. [web:4][web:5]</p>
+                </div>
+                <div class="note-card">
+                    <h3>🧠 Neural Basis</h3>
+                    <p>Emotions are represented in the somatosensory system as culturally universal categorical somatotopic maps. Different emotions activate distinct brain regions that correspond to bodily sensation patterns. [web:1][web:3][web:13]</p>
+                </div>
+                <div class="note-card">
+                    <h3>📊 Valence Dimension</h3>
+                    <p>Positive emotions (happiness, love, pride) systematically show bodily LIGHTNESS sensations. Negative emotions (anger, fear, sadness) show bodily HEAVINESS. This valence-related pattern is consistent across emotions. [web:4]</p>
+                </div>
+                <div class="note-card">
+                    <h3>🔬 Physiological Correlates</h3>
+                    <p>Bodily sensation maps correspond with major physiological changes: increased chest activity for most emotions (breathing/heart rate), upper limb activation for approach emotions (anger, happiness), digestive activation for disgust. [web:4][web:5]</p>
+                </div>
+                <div class="note-card">
+                    <h3>👥 Cultural Variations</h3>
+                    <p>While core patterns are universal, research has identified over 100 cultural variations and hundreds of individual variations in emotional expression. Display rules and cultural norms affect how emotions are expressed somatically. [web:12]</p>
+                </div>
+                <div class="note-card">
+                    <h3>📈 Aging Effects</h3>
+                    <p>Bodily sensations associated with emotions weaken during aging (mean r = 0.11 across emotions). Older adults may experience less intense somatic manifestations of emotions. [web:8]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes-section" style="border-top: none; background: white;">
+            <h2>📖 References & Sources</h2>
+            <p style="margin-top: 15px; color: #666; font-size: 0.9em;">
+                This map is based on peer-reviewed research including: Nummenmaa et al. (2014) "Bodily maps of emotions" (PNAS), Volynets et al. (2019) cross-cultural validation with 3,954 participants, Witkower et al. (2020) on universality of bodily expressions, and multiple studies on emotion-sensation mapping. All universality rankings are based on empirical research findings.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

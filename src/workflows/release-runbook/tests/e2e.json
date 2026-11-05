@@ -1,0 +1,6 @@
+[
+  {
+    "scenario": "Documented commands and required runbooks exist",
+    "command": "npm run check:documentation"
+  }
+]

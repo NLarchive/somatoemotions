@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Owner-selected local profile",
+    "input": {
+      "profile": {
+        "mode": "local-staging",
+        "base_path": "/atlas/",
+        "indexing": false,
+        "public_domain": null
+      }
+    },
+    "expected_output": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "name": "Unsafe base path rejected",
+    "input": {
+      "profile": {
+        "mode": "local-staging",
+        "base_path": "/../",
+        "indexing": false,
+        "public_domain": null
+      }
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "Unsafe base path"
+      ]
+    }
+  }
+]

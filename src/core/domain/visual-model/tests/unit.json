@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Canonical category key",
+    "input": {
+      "key": "face/anger-full-face"
+    },
+    "expected_output": {
+      "valid": true
+    }
+  },
+  {
+    "name": "Reject traversal",
+    "input": {
+      "key": "face/../data"
+    },
+    "expected_output": {
+      "valid": false
+    }
+  },
+  {
+    "name": "Reject display AU string",
+    "input": {
+      "key": "face/anger-au4, 5"
+    },
+    "expected_output": {
+      "valid": false
+    }
+  }
+]

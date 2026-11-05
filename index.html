@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InteroMap · Emotion reference atlas</title>
+    <meta
+      name="description"
+      content="An educational atlas of posed body and facial illustrations with source-qualified context and clear limits on emotion inference."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content-viewport">Skip to atlas content</a>
+    <noscript
+      ><p class="context-notice">
+        JavaScript is required to explore this catalogue. Illustrations are educational and do not
+        establish an emotion or diagnosis.
+      </p></noscript
+    >
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <h2>InteroMap</h2>
+          <div class="version-tag">4.0 · atlas</div>
+        </div>
+        <div class="search-box">
+          <label class="filter-label" for="global-search">Search the catalogue</label>
+          <input
+            id="global-search"
+            type="search"
+            placeholder="Emotion, reference, or AU code…"
+            disabled
+          />
+          <p id="result-count" role="status"></p>
+        </div>
+        <div>
+          <span class="filter-label">Category</span>
+          <div class="filter-chips" id="category-filters">
+            <button class="chip active" data-filter="All" aria-pressed="true" disabled>All</button>
+            <button class="chip" data-filter="Basic" aria-pressed="false" disabled>Basic</button>
+            <button class="chip" data-filter="Complex" aria-pressed="false" disabled>
+              Complex
+            </button>
+            <button class="chip" data-filter="Social" aria-pressed="false" disabled>Social</button>
+            <button class="chip" data-filter="Baseline" aria-pressed="false" disabled>
+              Baseline
+            </button>
+          </div>
+        </div>
+        <nav class="emotion-nav" id="emotion-list" aria-label="Emotions"></nav>
+      </aside>
+      <main class="content-viewport atlas-loading" id="content-viewport" tabindex="-1">
+        <p id="app-status" role="status">Loading the atlas…</p>
+        <button id="retry-load" type="button" hidden>Retry loading the atlas</button>
+        <header class="emotion-header">
+          <div>
+            <div class="title-row">
+              <h1 id="active-name">Loading the atlas</h1>
+              <span class="badge" id="active-category"></span>
+            </div>
+            <p id="active-summary"></p>
+          </div>
+        </header>
+        <aside class="context-notice" aria-label="Evidence context">
+          <p>
+            This educational catalogue combines posed illustrations and source-qualified statements.
+            Body appearance and facial movement cannot determine a person's emotion or diagnosis.
+            The earlier editorial percentages are not empirical probabilities and are no longer
+            shown.
+          </p>
+          <details>
+            <summary>Sources, review method, and limitations</summary>
+            <div id="evidence-content">Sources are loading.</div>
+          </details>
+        </aside>
+        <div class="view-tabs" role="tablist" aria-label="Reference views">
+          <button
+            class="tab active"
+            id="tab-somatic"
+            data-tab="somatic"
+            role="tab"
+            aria-controls="panel-somatic"
+            aria-selected="true"
+            disabled
+          >
+            Somatic
+          </button>
+          <button
+            class="tab"
+            id="tab-facs"
+            data-tab="facs"
+            role="tab"
+            aria-controls="panel-facs"
+            aria-selected="false"
+            tabindex="-1"
+            disabled
+          >
+            Facial units
+          </button>
+          <button
+            class="tab"
+            id="tab-actions"
+            data-tab="actions"
+            role="tab"
+            aria-controls="panel-actions"
+            aria-selected="false"
+            tabindex="-1"
+            disabled
+          >
+            Action references
+          </button>
+        </div>
+        <section
+          class="tab-panel active"
+          id="panel-somatic"
+          role="tabpanel"
+          aria-labelledby="tab-somatic"
+        >
+          <h2 class="sr-only">Bodily references</h2>
+          <p class="panel-lead">
+            Choose a reference to see its illustration. Source-qualified statements link to bounded
+            research findings; other labels describe illustrations without asserting
+            emotion-specific physiology.
+          </p>
+          <div class="system-split-grid">
+            <div class="system-list" id="somatic-list">
+              <article class="system-card">
+                <div class="card-head"><h3>Cardiovascular</h3></div>
+                <ul class="manifest-list" id="list-cardiovascular"></ul>
+              </article>
+              <article class="system-card">
+                <div class="card-head"><h3>Respiratory</h3></div>
+                <ul class="manifest-list" id="list-respiratory"></ul>
+              </article>
+              <article class="system-card">
+                <div class="card-head"><h3>Gastrointestinal</h3></div>
+                <ul class="manifest-list" id="list-gastrointestinal"></ul>
+              </article>
+              <article class="system-card">
+                <div class="card-head"><h3>Musculoskeletal</h3></div>
+                <ul class="manifest-list" id="list-musculoskeletal"></ul>
+              </article>
+              <article class="system-card">
+                <div class="card-head"><h3>Thermal / skin</h3></div>
+                <ul class="manifest-list" id="list-integumentary"></ul>
+              </article>
+              <article class="system-card">
+                <div class="card-head"><h3>Neurosensory</h3></div>
+                <ul class="manifest-list" id="list-neurosensory"></ul>
+              </article>
+            </div>
+            <div
+              class="system-visuals"
+              id="somatic-visuals"
+              role="region"
+              aria-label="Selected somatic reference"
+            >
+              <div class="visual-placeholder">
+                Select a claim to see its reference image or prompt.
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="tab-panel"
+          id="panel-facs"
+          role="tabpanel"
+          aria-labelledby="tab-facs"
+          hidden
+        >
+          <h2 class="sr-only">Facial movement references</h2>
+          <p class="panel-lead">
+            Posed examples of facial movements and combinations. These generated images are not
+            certified FACS coding or emotion assessments.
+          </p>
+          <div class="facs-split-grid">
+            <div class="facs-list" id="facs-list"></div>
+            <div
+              class="facs-visuals"
+              id="facs-visuals"
+              role="region"
+              aria-label="Selected facial reference"
+            >
+              <div class="visual-placeholder">Select a unit to see its image or prompt.</div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="tab-panel"
+          id="panel-actions"
+          role="tabpanel"
+          aria-labelledby="tab-actions"
+          hidden
+        >
+          <h2 class="sr-only">Action references</h2>
+          <article class="action-card">
+            <h3>Posed action references</h3>
+            <ul class="manifest-list large-list" id="list-actions"></ul>
+          </article>
+          <div
+            class="action-visuals"
+            id="action-visuals"
+            role="region"
+            aria-label="Selected action reference"
+          >
+            <div class="visual-placeholder">
+              Select an action to see its reference image or prompt.
+            </div>
+          </div>
+        </section>
+        <footer class="site-footer">
+          <p>
+            © 2026 Nicolas Ivan Larenas Bustamante · InteroMap ·
+            <a href="LICENSE">GNU AGPL version 3 license</a> ·
+            <a href="NOTICE">Author and license notice</a> ·
+            <a href="source.tar.gz" download>Download source archive</a>
+          </p>
+          <p>
+            Scientific publications retain their own rights. Review links are citations, not
+            endorsements.
+          </p>
+        </footer>
+      </main>
+    </div>
+    <div class="toast" id="copy-toast" role="status"></div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

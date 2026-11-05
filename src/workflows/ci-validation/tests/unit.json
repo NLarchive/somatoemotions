@@ -1,0 +1,30 @@
+[
+  {
+    "name": "A failed gate prevents candidate promotion",
+    "input": {
+      "gates": [
+        {
+          "name": "images",
+          "passed": false
+        },
+        {
+          "name": "contracts",
+          "passed": true
+        }
+      ]
+    },
+    "expected_output": {
+      "ok": false,
+      "failed": [
+        "images"
+      ]
+    }
+  },
+  {
+    "name": "Empty quality set must fail",
+    "input": {
+      "gates": []
+    },
+    "expected_error": "No quality gates"
+  }
+]

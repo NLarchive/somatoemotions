@@ -1,0 +1,33 @@
+{
+  "id": "app.atlas_service",
+  "type": "unit",
+  "version": "1.0.0",
+  "layer": "application/services",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "core.atlas_model",
+      "role": "depends_on"
+    },
+    {
+      "unit": "core.evidence_policy",
+      "role": "depends_on"
+    },
+    {
+      "unit": "core.visual_model",
+      "role": "depends_on"
+    },
+    {
+      "unit": "ports.atlas_resource_port",
+      "role": "calls_port"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "loadAtlas",
+    "run",
+    "validateResources"
+  ],
+  "lifecycle": "stable"
+}

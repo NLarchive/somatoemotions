@@ -1,0 +1,31 @@
+{
+  "provider": "local",
+  "node": "24.22.1",
+  "installation": "npm ci",
+  "entry": "npm run verify",
+  "checks": [
+    "check:json",
+    "check:plan",
+    "check:registry",
+    "check:unit",
+    "test",
+    "validate:content",
+    "validate:images",
+    "build",
+    "check:security",
+    "check:performance",
+    "test:e2e",
+    "format:check",
+    "check:browsers",
+    "verify:archive",
+    "check:documentation",
+    "verify:staging",
+    "verify:rollback"
+  ],
+  "artifacts": [
+    "dist",
+    "docs/reports",
+    "test-results"
+  ],
+  "publication": "No public deployment is configured. Owner requested local testing."
+}

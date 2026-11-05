@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Unsupported schema and empty catalogue are rejected",
+    "input": {
+      "data": {
+        "schema_version": "4.0.0",
+        "metadata": {
+          "external_shared_labels": []
+        },
+        "emotions": []
+      }
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "emotions must be a nonempty array"
+      ]
+    }
+  },
+  {
+    "name": "Reject legacy schema",
+    "input": {
+      "data": {
+        "schema_version": "3.1.0",
+        "emotions": []
+      }
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "Unsupported atlas schema_version",
+        "emotions must be a nonempty array"
+      ]
+    }
+  }
+]

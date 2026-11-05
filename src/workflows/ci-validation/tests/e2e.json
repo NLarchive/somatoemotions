@@ -1,0 +1,6 @@
+[
+  {
+    "scenario": "Locked install and full local pipeline",
+    "command": "npm run verify"
+  }
+]

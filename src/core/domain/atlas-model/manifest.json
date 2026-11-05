@@ -1,0 +1,17 @@
+{
+  "id": "core.atlas_model",
+  "type": "unit",
+  "version": "1.0.0",
+  "layer": "core/domain",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "SYSTEMS",
+    "records",
+    "run",
+    "validateAtlas"
+  ],
+  "lifecycle": "stable"
+}

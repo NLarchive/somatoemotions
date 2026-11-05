@@ -1,0 +1,51 @@
+{
+  "name": "interomap-atlas",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "engines": {
+    "node": ">=24.22.1 <25"
+  },
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "check:json": "node scripts/check-json.mjs",
+    "check:unit": "node scripts/test-unit.mjs",
+    "test:preview": "node --test --test-isolation=none tests/preview.test.mjs",
+    "test": "node --test --test-isolation=none tests/*.test.mjs",
+    "check:plan": "node scripts/audit.mjs plan",
+    "check:registry": "node scripts/audit.mjs registry",
+    "validate:content": "node scripts/audit.mjs content",
+    "validate:references": "node scripts/audit.mjs references",
+    "validate:images": "node scripts/audit.mjs images",
+    "verify:evidence-review": "node scripts/audit.mjs evidence",
+    "build": "node scripts/build.mjs",
+    "check:security": "node scripts/audit.mjs security",
+    "check:performance": "node scripts/audit.mjs performance",
+    "test:hosting-profile": "node scripts/audit.mjs hosting",
+    "verify:archive": "node scripts/verify-archive.mjs",
+    "test:e2e": "node scripts/playwright.mjs test",
+    "test:a11y": "node scripts/playwright.mjs test --grep accessibility",
+    "browsers:install": "node scripts/playwright.mjs install chromium firefox webkit",
+    "verify": "node scripts/verify.mjs",
+    "check:documentation": "node scripts/finish-checks.mjs documentation",
+    "check:browsers": "node scripts/finish-checks.mjs browsers",
+    "verify:staging": "node scripts/finish-checks.mjs staging",
+    "verify:rollback": "node scripts/finish-checks.mjs rollback",
+    "verify:manual-review": "node scripts/finish-checks.mjs manual",
+    "verify:release": "node scripts/finish-checks.mjs readiness",
+    "test:runtime": "node scripts/playwright.mjs test --grep reachable",
+    "test:image-pipeline": "node --test --test-isolation=none --test-name-pattern=image tests/contracts.test.mjs",
+    "test:packaging": "node --test --test-isolation=none tests/release.test.mjs",
+    "spec": "node scripts/project-spec.mjs",
+    "format:check": "node scripts/format.mjs",
+    "format": "node scripts/format.mjs --write"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "ajv": "8.20.0",
+    "prettier": "3.9.10",
+    "sharp": "0.35.5"
+  }
+}

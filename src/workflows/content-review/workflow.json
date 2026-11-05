@@ -1,0 +1,10 @@
+{
+  "steps": [
+    "core.atlas_model",
+    "core.evidence_policy",
+    "core.visual_model",
+    "tools.content_audit",
+    "tools.image_pipeline",
+    "app.atlas_service"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "entry": "auditBrowsers",
+  "steps": [
+    "workflows.atlas_runtime",
+    "workflows.content_review"
+  ],
+  "runner": "npm run test:e2e"
+}

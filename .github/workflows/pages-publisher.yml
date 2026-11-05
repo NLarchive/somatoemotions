@@ -20,11 +20,16 @@ jobs:
         with:
           persist-credentials: false
       - run: |
-          test -s site/index.html
-          printf '%s\n' "$GITHUB_SHA" > site/pages-publisher-revision.txt
+          output="$RUNNER_TEMP/pages"
+          mkdir -p "$output"
+          git archive HEAD | tar -xf - -C "$output"
+          rm -rf "$output/.github"
+          rm -f "$output/.pages-publisher-files.json" "$output/pages-publisher-v1.txt"
+          test -s "$output/index.html"
+          printf '%s\n' "$GITHUB_SHA" > "$output/pages-publisher-revision.txt"
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: site
+          path: ${{ runner.temp }}/pages
 
   deploy:
     needs: build

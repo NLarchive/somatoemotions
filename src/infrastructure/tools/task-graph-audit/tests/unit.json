@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Empty graph fails explicitly",
+    "input": {
+      "plan": {}
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "No tasks"
+      ]
+    }
+  }
+]

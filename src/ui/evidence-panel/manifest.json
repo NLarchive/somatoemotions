@@ -1,0 +1,26 @@
+{
+  "id": "ui.evidence_panel",
+  "type": "unit",
+  "version": "1.0.0",
+  "layer": "ui",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "app.atlas_service",
+      "role": "depends_on"
+    },
+    {
+      "unit": "ui.safe_rendering",
+      "role": "depends_on"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "evidenceNote",
+    "references",
+    "renderEvidence",
+    "run"
+  ],
+  "lifecycle": "stable"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Failure permits retry",
+    "input": {
+      "state": "error",
+      "event": "load"
+    },
+    "expected_output": {
+      "state": "loading"
+    }
+  },
+  {
+    "name": "Validated success",
+    "input": {
+      "state": "loading",
+      "event": "success"
+    },
+    "expected_output": {
+      "state": "ready"
+    }
+  },
+  {
+    "name": "No implicit ready transition",
+    "input": {
+      "state": "idle",
+      "event": "success"
+    },
+    "expected_error": "Invalid runtime transition"
+  }
+]

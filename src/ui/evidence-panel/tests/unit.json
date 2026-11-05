@@ -1,0 +1,45 @@
+[
+  {
+    "name": "No invented sources",
+    "input": {
+      "record": {
+        "evidence": {
+          "source_ids": [
+            "unknown"
+          ]
+        }
+      },
+      "catalog": {
+        "sources": []
+      }
+    },
+    "expected_error": "Unknown source reference"
+  },
+  {
+    "name": "Known source is linked",
+    "input": {
+      "record": {
+        "evidence": {
+          "source_ids": [
+            "paper"
+          ]
+        },
+        "method_source_ids": [
+          "paper"
+        ]
+      },
+      "catalog": {
+        "sources": [
+          {
+            "id": "paper"
+          }
+        ]
+      }
+    },
+    "expected_output": {
+      "source_ids": [
+        "paper"
+      ]
+    }
+  }
+]

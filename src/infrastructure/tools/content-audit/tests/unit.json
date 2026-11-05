@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Strict valid input",
+    "input": {
+      "text": "{\"a\":[1,true,null]}"
+    },
+    "expected_output": {
+      "value": {
+        "a": [
+          1,
+          true,
+          null
+        ]
+      }
+    }
+  },
+  {
+    "name": "Reject duplicate key",
+    "input": {
+      "text": "{\"a\":1,\"a\":2}"
+    },
+    "expected_error": "Duplicate JSON key"
+  },
+  {
+    "name": "Escaped duplicate keys are still duplicates",
+    "input": {
+      "text": "{\"a\":1,\"\\u0061\":2}"
+    },
+    "expected_error": "Duplicate JSON key"
+  },
+  {
+    "name": "Reject malformed JSON",
+    "input": {
+      "text": "{\"a\":}"
+    },
+    "expected_error": "Invalid JSON value"
+  }
+]

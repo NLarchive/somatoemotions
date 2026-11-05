@@ -1,0 +1,16 @@
+{
+  "id": "core.visual_model",
+  "type": "unit",
+  "version": "1.0.0",
+  "layer": "core/domain",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "run",
+    "validImageKey",
+    "validateVisualIndex"
+  ],
+  "lifecycle": "stable"
+}

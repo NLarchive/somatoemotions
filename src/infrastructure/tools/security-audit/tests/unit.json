@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Safe text allowed",
+    "input": {
+      "text": "textContent = value;"
+    },
+    "expected_output": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "name": "Dynamic HTML rejected",
+    "input": {
+      "text": "node.innerHTML = value"
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "Unsafe dynamic HTML or code"
+      ]
+    }
+  },
+  {
+    "name": "Developer path rejected",
+    "input": {
+      "text": "D:/IMAGES/private"
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "Developer filesystem path"
+      ]
+    }
+  },
+  {
+    "name": "Inline image handler rejected",
+    "input": {
+      "text": "<img onerror=\"run()\">"
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "Inline event handler"
+      ]
+    }
+  }
+]

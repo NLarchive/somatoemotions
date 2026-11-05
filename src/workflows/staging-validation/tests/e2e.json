@@ -1,0 +1,10 @@
+[
+  {
+    "scenario": "Root and subpath delivery match the package",
+    "command": "npm run verify:staging"
+  },
+  {
+    "scenario": "Retained candidate recovery",
+    "command": "npm run verify:rollback"
+  }
+]

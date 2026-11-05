@@ -1,0 +1,33 @@
+{
+  "id": "workflows.release_handoff",
+  "type": "organ",
+  "version": "1.0.0",
+  "layer": "workflows",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "tools.source_archive",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.content_review",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.release_runbook",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.staging_validation",
+      "role": "depends_on"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "evaluateReadiness",
+    "readinessReport",
+    "run"
+  ],
+  "lifecycle": "active_development"
+}

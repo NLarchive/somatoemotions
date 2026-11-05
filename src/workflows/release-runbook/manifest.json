@@ -1,0 +1,37 @@
+{
+  "id": "workflows.release_runbook",
+  "type": "organ",
+  "version": "1.0.0",
+  "layer": "workflows",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "tools.source_archive",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.atlas_runtime",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.content_review",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.release_package",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.hosting_profile",
+      "role": "depends_on"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "auditDocumentation",
+    "checkCommands",
+    "run"
+  ],
+  "lifecycle": "stable"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Keep canonical nested JPEG path",
+    "input": {
+      "key": "action/anger-act-3"
+    },
+    "expected_output": {
+      "jpg": "images/jpg/action/anger-act-3.jpg",
+      "webp": "images/action/anger-act-3.webp"
+    }
+  },
+  {
+    "name": "Reject traversal key",
+    "input": {
+      "key": "action/../secret"
+    },
+    "expected_error": "Unsafe image key"
+  },
+  {
+    "name": "Reject unknown category",
+    "input": {
+      "key": "other/one"
+    },
+    "expected_error": "Unsafe image key"
+  }
+]

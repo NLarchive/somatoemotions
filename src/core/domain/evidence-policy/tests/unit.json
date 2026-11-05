@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Reject unsupported scientific assertion",
+    "input": {
+      "record": {
+        "content_type": "scientific_claim",
+        "evidence": {
+          "review_method": "source-based editorial audit",
+          "decision": "qualified",
+          "support": "direct",
+          "source_ids": []
+        }
+      }
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "Scientific claim lacks direct qualified support"
+      ]
+    }
+  },
+  {
+    "name": "Allow explicitly bounded sourced statement",
+    "input": {
+      "record": {
+        "content_type": "scientific_claim",
+        "evidence": {
+          "review_method": "source-based editorial audit",
+          "decision": "qualified",
+          "support": "direct",
+          "source_ids": [
+            "paper"
+          ]
+        }
+      },
+      "source_ids": [
+        "paper"
+      ]
+    },
+    "expected_output": {
+      "ok": true,
+      "errors": []
+    }
+  },
+  {
+    "name": "Unknown source rejected",
+    "input": {
+      "record": {
+        "content_type": "illustration",
+        "evidence": {
+          "review_method": "source-based editorial audit",
+          "decision": "replaced_with_visual_label",
+          "support": "illustration_only",
+          "source_ids": [
+            "bad"
+          ]
+        }
+      },
+      "source_ids": []
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "Unknown source reference"
+      ]
+    }
+  }
+]

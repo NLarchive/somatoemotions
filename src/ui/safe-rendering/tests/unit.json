@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Reject script URL",
+    "input": {
+      "url": "javascript:alert(1)"
+    },
+    "expected_output": {
+      "safe": false
+    }
+  },
+  {
+    "name": "Allow citation HTTPS URL",
+    "input": {
+      "url": "https://doi.org/10.1073/pnas.1321664111"
+    },
+    "expected_output": {
+      "safe": true
+    }
+  },
+  {
+    "name": "Reject embedded credentials",
+    "input": {
+      "url": "https://user:secret@example.org/"
+    },
+    "expected_output": {
+      "safe": false
+    }
+  }
+]

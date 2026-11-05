@@ -1,0 +1,36 @@
+[
+  {
+    "name": "No invented commands in documentation",
+    "input": {
+      "commands": [
+        "build",
+        "serve"
+      ],
+      "available": [
+        "build",
+        "serve"
+      ]
+    },
+    "expected_output": {
+      "ok": true,
+      "missing": []
+    }
+  },
+  {
+    "name": "Unknown command fails documentation audit",
+    "input": {
+      "commands": [
+        "does-not-exist"
+      ],
+      "available": [
+        "build"
+      ]
+    },
+    "expected_output": {
+      "ok": false,
+      "missing": [
+        "does-not-exist"
+      ]
+    }
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "id": "workflows.content_review",
+  "type": "organ",
+  "version": "1.0.0",
+  "layer": "workflows",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "core.atlas_model",
+      "role": "depends_on"
+    },
+    {
+      "unit": "core.evidence_policy",
+      "role": "depends_on"
+    },
+    {
+      "unit": "core.visual_model",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.content_audit",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.image_pipeline",
+      "role": "depends_on"
+    },
+    {
+      "unit": "app.visual_resolver",
+      "role": "depends_on"
+    },
+    {
+      "unit": "ui.reference_gallery",
+      "role": "depends_on"
+    },
+    {
+      "unit": "app.atlas_service",
+      "role": "depends_on"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "auditContent",
+    "run"
+  ],
+  "lifecycle": "stable"
+}

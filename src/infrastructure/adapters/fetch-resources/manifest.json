@@ -1,0 +1,20 @@
+{
+  "id": "adapters.fetch_resources",
+  "type": "unit",
+  "version": "1.0.0",
+  "layer": "infrastructure/adapters",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "ports.atlas_resource_port",
+      "role": "implements"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "createResourceLoader",
+    "run"
+  ],
+  "lifecycle": "stable"
+}

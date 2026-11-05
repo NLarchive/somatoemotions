@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Malformed resources cannot enter UI",
+    "input": {
+      "data": {},
+      "sources": {},
+      "visuals": {}
+    },
+    "expected_output": {
+      "ok": false,
+      "errors": [
+        "Unsupported atlas schema_version",
+        "emotions must be a nonempty array",
+        "Invalid source catalogue",
+        "Invalid visual index"
+      ]
+    }
+  }
+]

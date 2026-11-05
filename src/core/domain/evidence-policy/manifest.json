@@ -1,0 +1,16 @@
+{
+  "id": "core.evidence_policy",
+  "type": "unit",
+  "version": "1.0.0",
+  "layer": "core/domain",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "evaluateEvidence",
+    "run",
+    "validateSources"
+  ],
+  "lifecycle": "stable"
+}

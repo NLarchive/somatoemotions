@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Pending manual evidence cannot be silently passed",
+    "input": {
+      "gates": [
+        {
+          "name": "browsers",
+          "passed": true
+        },
+        {
+          "name": "screen-reader",
+          "passed": false
+        }
+      ]
+    },
+    "expected_output": {
+      "ready": false,
+      "pending": [
+        "screen-reader"
+      ]
+    }
+  },
+  {
+    "name": "No empty sign-off",
+    "input": {
+      "gates": []
+    },
+    "expected_error": "No readiness evidence"
+  }
+]

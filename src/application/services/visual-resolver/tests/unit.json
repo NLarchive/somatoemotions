@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Reject AU-derived unsafe path",
+    "input": {
+      "record": {
+        "image_key": "face/AU1, AU2"
+      },
+      "index": {}
+    },
+    "expected_output": {
+      "state": "missing",
+      "message": "This record has an invalid reference key."
+    }
+  },
+  {
+    "name": "Missing reference is explicit",
+    "input": {
+      "record": {
+        "image_key": "face/anger-full-face"
+      },
+      "index": {
+        "images": {}
+      },
+      "prompts": {
+        "face/anger-full-face": "A posed face"
+      }
+    },
+    "expected_output": {
+      "state": "missing",
+      "message": "This reference image is not available.",
+      "prompt": "A posed face"
+    }
+  },
+  {
+    "name": "Resolve canonical reference",
+    "input": {
+      "record": {
+        "image_key": "face/anger-full-face"
+      },
+      "index": {
+        "images": {
+          "face/anger-full-face": {
+            "webp": "images/face/anger-full-face.webp",
+            "alt": "Posed adult face"
+          }
+        }
+      }
+    },
+    "expected_output": {
+      "state": "ready",
+      "key": "face/anger-full-face",
+      "webp": "images/face/anger-full-face.webp",
+      "alt": "Posed adult face"
+    }
+  }
+]

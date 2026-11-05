@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Report separates qualified statements and illustrations",
+    "input": {
+      "qualified": 21,
+      "illustrations": 186
+    },
+    "expected_output": {
+      "records": 207
+    }
+  },
+  {
+    "name": "Invalid review totals rejected",
+    "input": {
+      "qualified": -1,
+      "illustrations": 1
+    },
+    "expected_error": "Invalid counts"
+  }
+]

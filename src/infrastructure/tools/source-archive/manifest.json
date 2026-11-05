@@ -1,0 +1,18 @@
+{
+  "id": "tools.source_archive",
+  "type": "unit",
+  "version": "1.0.0",
+  "layer": "infrastructure/tools",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "buildSourceArchive",
+    "digest",
+    "packTar",
+    "run",
+    "unpackTar"
+  ],
+  "lifecycle": "stable"
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Successful required data",
+    "input": {
+      "name": "data",
+      "body": {
+        "ok": true
+      }
+    },
+    "expected_output": {
+      "ok": true,
+      "value": {
+        "ok": true
+      }
+    }
+  },
+  {
+    "name": "HTTP errors are typed",
+    "input": {
+      "name": "data",
+      "status": 404
+    },
+    "expected_output": {
+      "ok": false,
+      "code": "HTTP_ERROR"
+    }
+  },
+  {
+    "name": "Parse error is typed",
+    "input": {
+      "name": "data",
+      "invalidJson": true
+    },
+    "expected_output": {
+      "ok": false,
+      "code": "INVALID_JSON"
+    }
+  },
+  {
+    "name": "Arbitrary resource rejected",
+    "input": {
+      "name": "../secret"
+    },
+    "expected_output": {
+      "ok": false,
+      "code": "INVALID_RESOURCE"
+    }
+  }
+]

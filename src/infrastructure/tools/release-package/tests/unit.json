@@ -1,0 +1,29 @@
+[
+  {
+    "name": "WebP is public runtime asset",
+    "input": {
+      "path": "images/face/anger-full-face.webp"
+    },
+    "expected_output": {
+      "public": true
+    }
+  },
+  {
+    "name": "JPG source not a direct runtime asset",
+    "input": {
+      "path": "images/jpg/face/anger-full-face.jpg"
+    },
+    "expected_output": {
+      "public": false
+    }
+  },
+  {
+    "name": "Generation logs are not public runtime assets",
+    "input": {
+      "path": "images/generation-progress.json"
+    },
+    "expected_output": {
+      "public": false
+    }
+  }
+]

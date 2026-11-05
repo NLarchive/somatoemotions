@@ -1,0 +1,39 @@
+{
+  "id": "workflows.staging_validation",
+  "type": "organ",
+  "version": "1.0.0",
+  "layer": "workflows",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "tools.source_archive",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.browser_validation",
+      "role": "depends_on"
+    },
+    {
+      "unit": "tools.hosting_profile",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.release_runbook",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.ci_validation",
+      "role": "depends_on"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "evaluateResponses",
+    "hash",
+    "run",
+    "verifyRollback",
+    "verifyStaging"
+  ],
+  "lifecycle": "stable"
+}

@@ -1,0 +1,6 @@
+[
+  {
+    "scenario": "Browser, keyboard, accessibility and failure paths",
+    "command": "npm run test:e2e"
+  }
+]

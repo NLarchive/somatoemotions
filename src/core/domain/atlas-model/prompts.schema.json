@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "4.0.0"
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompts": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+        "^(somatic|face|action)/[a-z0-9][a-z0-9_-]*$": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "notes",
+    "prompts"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,25 @@
+{
+  "id": "workflows.browser_validation",
+  "type": "organ",
+  "version": "1.0.0",
+  "layer": "workflows",
+  "entry": "main.js",
+  "export": "run",
+  "dependencies": [
+    {
+      "unit": "workflows.atlas_runtime",
+      "role": "depends_on"
+    },
+    {
+      "unit": "workflows.content_review",
+      "role": "depends_on"
+    }
+  ],
+  "license": "AGPL-3.0-only",
+  "api_exports": [
+    "auditBrowsers",
+    "evaluateBrowserSummary",
+    "run"
+  ],
+  "lifecycle": "active_development"
+}

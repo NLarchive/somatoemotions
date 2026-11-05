@@ -1,0 +1,730 @@
+{
+  "version": "1.0.0",
+  "units": [
+    {
+      "name": "core.atlas_model",
+      "path": "src/core/domain/atlas-model",
+      "kind": "unit",
+      "layer": "core/domain",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "dataset.schema.json",
+        "prompts.schema.json"
+      ]
+    },
+    {
+      "name": "core.evidence_policy",
+      "path": "src/core/domain/evidence-policy",
+      "kind": "unit",
+      "layer": "core/domain",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "evidence.schema.json"
+      ]
+    },
+    {
+      "name": "core.visual_model",
+      "path": "src/core/domain/visual-model",
+      "kind": "unit",
+      "layer": "core/domain",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "visual-index.schema.json"
+      ]
+    },
+    {
+      "name": "ports.atlas_resource_port",
+      "path": "src/core/ports/atlas-resource-port",
+      "kind": "unit",
+      "layer": "core/ports",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "core.atlas_model",
+          "role": "depends_on"
+        },
+        {
+          "unit": "core.evidence_policy",
+          "role": "depends_on"
+        },
+        {
+          "unit": "core.visual_model",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "tools.task_graph_audit",
+      "path": "src/infrastructure/tools/task-graph-audit",
+      "kind": "unit",
+      "layer": "infrastructure/tools",
+      "interface_type": "cli",
+      "transport": "cli",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "tasks.schema.json"
+      ]
+    },
+    {
+      "name": "tools.content_audit",
+      "path": "src/infrastructure/tools/content-audit",
+      "kind": "unit",
+      "layer": "infrastructure/tools",
+      "interface_type": "cli",
+      "transport": "cli",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "tools.image_pipeline",
+      "path": "src/infrastructure/tools/image-pipeline",
+      "kind": "unit",
+      "layer": "infrastructure/tools",
+      "interface_type": "cli",
+      "transport": "cli",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "tools.source_archive",
+      "path": "src/infrastructure/tools/source-archive",
+      "kind": "unit",
+      "layer": "infrastructure/tools",
+      "interface_type": "cli",
+      "transport": "cli",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "adapters.fetch_resources",
+      "path": "src/infrastructure/adapters/fetch-resources",
+      "kind": "unit",
+      "layer": "infrastructure/adapters",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "ports.atlas_resource_port",
+          "role": "implements"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "app.atlas_service",
+      "path": "src/application/services/atlas-service",
+      "kind": "unit",
+      "layer": "application/services",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "core.atlas_model",
+          "role": "depends_on"
+        },
+        {
+          "unit": "core.evidence_policy",
+          "role": "depends_on"
+        },
+        {
+          "unit": "core.visual_model",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ports.atlas_resource_port",
+          "role": "calls_port"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "app.visual_resolver",
+      "path": "src/application/services/visual-resolver",
+      "kind": "unit",
+      "layer": "application/services",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "core.atlas_model",
+          "role": "depends_on"
+        },
+        {
+          "unit": "core.visual_model",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ports.atlas_resource_port",
+          "role": "calls_port"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "app.navigation_service",
+      "path": "src/application/services/navigation-service",
+      "kind": "unit",
+      "layer": "application/services",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "core.atlas_model",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ports.atlas_resource_port",
+          "role": "calls_port"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "ui.safe_rendering",
+      "path": "src/ui/safe-rendering",
+      "kind": "unit",
+      "layer": "ui",
+      "interface_type": "ui",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "ui.atlas_shell",
+      "path": "src/ui/atlas-shell",
+      "kind": "unit",
+      "layer": "ui",
+      "interface_type": "ui",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "app.atlas_service",
+          "role": "depends_on"
+        },
+        {
+          "unit": "app.navigation_service",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ui.safe_rendering",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "ui.reference_gallery",
+      "path": "src/ui/reference-gallery",
+      "kind": "unit",
+      "layer": "ui",
+      "interface_type": "ui",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "app.atlas_service",
+          "role": "depends_on"
+        },
+        {
+          "unit": "app.visual_resolver",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ui.safe_rendering",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "ui.evidence_panel",
+      "path": "src/ui/evidence-panel",
+      "kind": "unit",
+      "layer": "ui",
+      "interface_type": "ui",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "app.atlas_service",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ui.safe_rendering",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "workflows.atlas_runtime",
+      "path": "src/workflows/atlas-runtime",
+      "kind": "organ",
+      "layer": "workflows",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "adapters.fetch_resources",
+          "role": "depends_on"
+        },
+        {
+          "unit": "app.atlas_service",
+          "role": "depends_on"
+        },
+        {
+          "unit": "app.visual_resolver",
+          "role": "depends_on"
+        },
+        {
+          "unit": "app.navigation_service",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ui.safe_rendering",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ui.atlas_shell",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ui.reference_gallery",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ui.evidence_panel",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "workflow.json",
+        "state.js",
+        "tests/e2e.json"
+      ]
+    },
+    {
+      "name": "workflows.content_review",
+      "path": "src/workflows/content-review",
+      "kind": "organ",
+      "layer": "workflows",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "core.atlas_model",
+          "role": "depends_on"
+        },
+        {
+          "unit": "core.evidence_policy",
+          "role": "depends_on"
+        },
+        {
+          "unit": "core.visual_model",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.content_audit",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.image_pipeline",
+          "role": "depends_on"
+        },
+        {
+          "unit": "app.visual_resolver",
+          "role": "depends_on"
+        },
+        {
+          "unit": "ui.reference_gallery",
+          "role": "depends_on"
+        },
+        {
+          "unit": "app.atlas_service",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "workflow.json",
+        "state.js",
+        "tests/e2e.json"
+      ]
+    },
+    {
+      "name": "workflows.browser_validation",
+      "path": "src/workflows/browser-validation",
+      "kind": "organ",
+      "layer": "workflows",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "active_development",
+      "depends_on": [
+        {
+          "unit": "workflows.atlas_runtime",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.content_review",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "workflow.json",
+        "state.js",
+        "tests/e2e.json"
+      ]
+    },
+    {
+      "name": "tools.security_audit",
+      "path": "src/infrastructure/tools/security-audit",
+      "kind": "unit",
+      "layer": "infrastructure/tools",
+      "interface_type": "cli",
+      "transport": "cli",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "tools.performance_audit",
+      "path": "src/infrastructure/tools/performance-audit",
+      "kind": "unit",
+      "layer": "infrastructure/tools",
+      "interface_type": "cli",
+      "transport": "cli",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "tools.release_package",
+      "path": "src/infrastructure/tools/release-package",
+      "kind": "unit",
+      "layer": "infrastructure/tools",
+      "interface_type": "cli",
+      "transport": "cli",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "tools.hosting_profile",
+      "path": "src/infrastructure/tools/hosting-profile",
+      "kind": "unit",
+      "layer": "infrastructure/tools",
+      "interface_type": "cli",
+      "transport": "cli",
+      "status": "stable",
+      "depends_on": [],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json"
+      ]
+    },
+    {
+      "name": "workflows.release_runbook",
+      "path": "src/workflows/release-runbook",
+      "kind": "organ",
+      "layer": "workflows",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "tools.source_archive",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.atlas_runtime",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.content_review",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.release_package",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.hosting_profile",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "workflow.json",
+        "state.js",
+        "tests/e2e.json"
+      ]
+    },
+    {
+      "name": "workflows.ci_validation",
+      "path": "src/workflows/ci-validation",
+      "kind": "organ",
+      "layer": "workflows",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "tools.task_graph_audit",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.content_audit",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.image_pipeline",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.atlas_runtime",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.content_review",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.browser_validation",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.security_audit",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.performance_audit",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.release_package",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.source_archive",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "workflow.json",
+        "state.js",
+        "tests/e2e.json"
+      ]
+    },
+    {
+      "name": "workflows.staging_validation",
+      "path": "src/workflows/staging-validation",
+      "kind": "organ",
+      "layer": "workflows",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "stable",
+      "depends_on": [
+        {
+          "unit": "tools.source_archive",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.browser_validation",
+          "role": "depends_on"
+        },
+        {
+          "unit": "tools.hosting_profile",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.release_runbook",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.ci_validation",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "workflow.json",
+        "state.js",
+        "tests/e2e.json"
+      ]
+    },
+    {
+      "name": "workflows.release_handoff",
+      "path": "src/workflows/release-handoff",
+      "kind": "organ",
+      "layer": "workflows",
+      "interface_type": "internal",
+      "transport": "function",
+      "status": "active_development",
+      "depends_on": [
+        {
+          "unit": "tools.source_archive",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.content_review",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.release_runbook",
+          "role": "depends_on"
+        },
+        {
+          "unit": "workflows.staging_validation",
+          "role": "depends_on"
+        }
+      ],
+      "files": [
+        "schema.json",
+        "manifest.json",
+        "main.js",
+        "tests/unit.json",
+        "workflow.json",
+        "state.js",
+        "tests/e2e.json"
+      ]
+    }
+  ]
+}

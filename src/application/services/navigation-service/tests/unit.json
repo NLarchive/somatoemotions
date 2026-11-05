@@ -1,0 +1,120 @@
+[
+  {
+    "name": "Normalize whitespace/case",
+    "input": {
+      "data": {
+        "emotions": [
+          {
+            "id": "anger",
+            "display_name": "Anger",
+            "category": "Basic",
+            "notes": "",
+            "somatic_profile": {
+              "one": [
+                {
+                  "claim": "Jaw clench"
+                }
+              ]
+            },
+            "behavioral_action_tendencies": [],
+            "facial_motor_units_fused": []
+          },
+          {
+            "id": "shame",
+            "display_name": "Shame",
+            "category": "Complex / Social",
+            "notes": "",
+            "somatic_profile": {},
+            "behavioral_action_tendencies": [],
+            "facial_motor_units_fused": []
+          }
+        ]
+      },
+      "query": "  JAW  "
+    },
+    "expected_output": {
+      "ids": [
+        "anger"
+      ],
+      "selectedId": "anger"
+    }
+  },
+  {
+    "name": "External category component",
+    "input": {
+      "data": {
+        "emotions": [
+          {
+            "id": "anger",
+            "display_name": "Anger",
+            "category": "Basic",
+            "notes": "",
+            "somatic_profile": {
+              "one": [
+                {
+                  "claim": "Jaw clench"
+                }
+              ]
+            },
+            "behavioral_action_tendencies": [],
+            "facial_motor_units_fused": []
+          },
+          {
+            "id": "shame",
+            "display_name": "Shame",
+            "category": "Complex / Social",
+            "notes": "",
+            "somatic_profile": {},
+            "behavioral_action_tendencies": [],
+            "facial_motor_units_fused": []
+          }
+        ]
+      },
+      "category": "Social"
+    },
+    "expected_output": {
+      "ids": [
+        "shame"
+      ],
+      "selectedId": "shame"
+    }
+  },
+  {
+    "name": "Explicit no-result state",
+    "input": {
+      "data": {
+        "emotions": [
+          {
+            "id": "anger",
+            "display_name": "Anger",
+            "category": "Basic",
+            "notes": "",
+            "somatic_profile": {
+              "one": [
+                {
+                  "claim": "Jaw clench"
+                }
+              ]
+            },
+            "behavioral_action_tendencies": [],
+            "facial_motor_units_fused": []
+          },
+          {
+            "id": "shame",
+            "display_name": "Shame",
+            "category": "Complex / Social",
+            "notes": "",
+            "somatic_profile": {},
+            "behavioral_action_tendencies": [],
+            "facial_motor_units_fused": []
+          }
+        ]
+      },
+      "query": "nothing matches"
+    },
+    "expected_output": {
+      "ids": [],
+      "selectedId": null
+    }
+  }
+]

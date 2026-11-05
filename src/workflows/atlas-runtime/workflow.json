@@ -1,0 +1,11 @@
+{
+  "entry": "startApp",
+  "steps": [
+    "adapters.fetch_resources",
+    "app.atlas_service",
+    "app.navigation_service",
+    "ui.atlas_shell",
+    "ui.reference_gallery",
+    "ui.evidence_panel"
+  ]
+}

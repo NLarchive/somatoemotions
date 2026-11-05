@@ -1,0 +1,6 @@
+[
+  {
+    "scenario": "All atlas records load through the static runtime",
+    "command": "npm run test:e2e"
+  }
+]

@@ -1,0 +1,6 @@
+[
+  {
+    "scenario": "All automated and manual release gates have real evidence",
+    "command": "npm run verify:release"
+  }
+]
