@@ -1,0 +1,1231 @@
+{
+  "id": "286bc95ba947dfc72a9c949bb10d5e94b89b36040dd811babbf943aae6ed4c3b",
+  "content_id": "79731967946d8006e55d76d3b151abcc88215afe9f1d9cce5a42371dcd0686dc",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "app.js",
+      "bytes": 78,
+      "sha256": "910292efb4c8d5af9df9f5ac624855b3c269bd373808b5d0c36541d35b149bf1"
+    },
+    {
+      "path": "data.json",
+      "bytes": 176569,
+      "sha256": "1e4ee95e43533d99d58f9805d25d70fe67c515a390a9390f04f342bea93c4c09"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 174,
+      "sha256": "c1c9905a1b306f80e959b5f326031f597c5ae548a5d69d51cfe87f8458c067c7"
+    },
+    {
+      "path": "images/action/anger-act-0.webp",
+      "bytes": 27014,
+      "sha256": "baaaccf2d1f42177e86b3a489cf37c8bf7dfd173d13221cd59a4f5037a3004ca"
+    },
+    {
+      "path": "images/action/anger-act-1.webp",
+      "bytes": 61552,
+      "sha256": "9a62b9fc078ab88b4f6559838d72303e95423222eac75b82f6ddb918522dcacc"
+    },
+    {
+      "path": "images/action/anger-act-2.webp",
+      "bytes": 36744,
+      "sha256": "d409cc5e8916721ca27d402ab53d9db594bb02750aee7afe074b7148803a3f75"
+    },
+    {
+      "path": "images/action/anger-act-3.webp",
+      "bytes": 76046,
+      "sha256": "8fbfc5e31b8846282db07a8db8165860414db658bf2e2dab460b6acca06101aa"
+    },
+    {
+      "path": "images/action/anxiety-act-0.webp",
+      "bytes": 40250,
+      "sha256": "123e1ac6083f16e915c44d51d0131f32c806576613083cdfac610ae737aac528"
+    },
+    {
+      "path": "images/action/anxiety-act-1.webp",
+      "bytes": 131808,
+      "sha256": "1272ecf2a3cd3f2bc1d75a5eda9d598f3126367c470b5d564d18d0309ec8f981"
+    },
+    {
+      "path": "images/action/anxiety-act-2.webp",
+      "bytes": 83964,
+      "sha256": "a57e6f92426f5ee537cb4eb2fb00f224215b358ecfdd1642555b507553b2466e"
+    },
+    {
+      "path": "images/action/awe-act-0.webp",
+      "bytes": 38586,
+      "sha256": "f4476dc48912b2daa3be9d9e00392337909782532939549937820c43c861bb88"
+    },
+    {
+      "path": "images/action/awe-act-1.webp",
+      "bytes": 39828,
+      "sha256": "fa64b347d6d57e4626bd0c2473b219d5318a64db30997d75f07cbfbeebbb5a96"
+    },
+    {
+      "path": "images/action/baseline-neutral-act-0.webp",
+      "bytes": 47974,
+      "sha256": "9e927a0e50e45a7f525df3b34af2bdbea6ed65c24073be86a4c88ad0552f1111"
+    },
+    {
+      "path": "images/action/baseline-neutral-act-1.webp",
+      "bytes": 42982,
+      "sha256": "89f8b596b48ff359f6520a1582f0a66d93589c531e8d871df281b0edd0208ee7"
+    },
+    {
+      "path": "images/action/contempt-act-0.webp",
+      "bytes": 104232,
+      "sha256": "7855a35498671bb5d119e3f4dad9a4e7d85a0b54e4629f44d31c869c43343eb8"
+    },
+    {
+      "path": "images/action/contempt-act-1.webp",
+      "bytes": 113802,
+      "sha256": "0c37d967a6aa708376d16a07f10369f97132ac023cec5dc95705f199dd6de6cc"
+    },
+    {
+      "path": "images/action/disgust-act-0.webp",
+      "bytes": 58586,
+      "sha256": "43b09022c32eee08cd1c8ef9e37783e4b980d3869654cfd9cb8303478edc3458"
+    },
+    {
+      "path": "images/action/disgust-act-1.webp",
+      "bytes": 90630,
+      "sha256": "b1fa2ebb8124a781a5f168bd3735e3e3333551385a1c1f2d02d52ad69806fc74"
+    },
+    {
+      "path": "images/action/disgust-act-2.webp",
+      "bytes": 62086,
+      "sha256": "9f7a803112b8c468db436861f1c8ea67c77e92939443c6d50ccd93e81b297705"
+    },
+    {
+      "path": "images/action/fear-act-0.webp",
+      "bytes": 51966,
+      "sha256": "0ed534ce10091160aa0f2fd56453ef8583389dcb527b81534ec97adea989b1ff"
+    },
+    {
+      "path": "images/action/fear-act-1.webp",
+      "bytes": 43174,
+      "sha256": "c9207dca069dac0a7ee66e963a5f91f073c1b185c5d372922a801de4fcf22c71"
+    },
+    {
+      "path": "images/action/fear-act-2.webp",
+      "bytes": 74692,
+      "sha256": "d9c0c47cabaeb4d42c85850e237044d644688627f942c8a14a46a1e99482a9ed"
+    },
+    {
+      "path": "images/action/happiness-act-0.webp",
+      "bytes": 41684,
+      "sha256": "fcf010ba921657e0f1635b9f821e51708af8534fa79f079c0b25b26c6781bf8b"
+    },
+    {
+      "path": "images/action/happiness-act-1.webp",
+      "bytes": 49238,
+      "sha256": "793fbd64472043aea26dbfd96cb89dedf9b01b0ca976c1e0855721d0754e0f20"
+    },
+    {
+      "path": "images/action/happiness-act-2.webp",
+      "bytes": 52616,
+      "sha256": "b6a07ee97c7718a4e830234991653d4adb08bb5874eab516745d2dbca5aac865"
+    },
+    {
+      "path": "images/action/love-act-0.webp",
+      "bytes": 98740,
+      "sha256": "e65a175ed6f1f66aba8b9739ec3c3687440bb9aa6a4be8b64fd263e68cc844e3"
+    },
+    {
+      "path": "images/action/love-act-1.webp",
+      "bytes": 103000,
+      "sha256": "e2f3d83900dfdd896fbeb026f1b5228fff912fd604c03c78b75c3ecbfbcc5b67"
+    },
+    {
+      "path": "images/action/love-act-2.webp",
+      "bytes": 51368,
+      "sha256": "6bd9d832c4b224c092fc68abc915193d8e75de7e57a9f1d08109552486a93f27"
+    },
+    {
+      "path": "images/action/panic-act-0.webp",
+      "bytes": 55744,
+      "sha256": "7ca8e4c23c1eb97ec19097394bcd5ce49bb03ba27b04b254775a0ff94ba151a2"
+    },
+    {
+      "path": "images/action/panic-act-1.webp",
+      "bytes": 146630,
+      "sha256": "5993f6b5c2f65bc603f51ada44ae0780373a1da9f30c15c352199a94ba76625b"
+    },
+    {
+      "path": "images/action/panic-act-2.webp",
+      "bytes": 77922,
+      "sha256": "09db1ddb183283d88b176ed3f9a78a0d5cfa18d8a97300244b57a57bd42a434f"
+    },
+    {
+      "path": "images/action/pride-act-0.webp",
+      "bytes": 65938,
+      "sha256": "1066d23dceff1d9ba8b4603a33edef18d65545f2a5f1c1b4767df23e98ea6282"
+    },
+    {
+      "path": "images/action/pride-act-1.webp",
+      "bytes": 41428,
+      "sha256": "eaa3bd12ec1c646c696fe4e34dc4bc495037da694d5ff9daa0e346550e70c466"
+    },
+    {
+      "path": "images/action/pride-act-2.webp",
+      "bytes": 83758,
+      "sha256": "dc946f10fa4deabb2b8b6c2006bbd27eb9e789a8e95e25340cc036a6f3d269c1"
+    },
+    {
+      "path": "images/action/sadness-act-0.webp",
+      "bytes": 40504,
+      "sha256": "bcede4e1b83a25587cbcaffe99a523b160840728b93e359bf89eed582ae6dafb"
+    },
+    {
+      "path": "images/action/sadness-act-1.webp",
+      "bytes": 93710,
+      "sha256": "a47381e365a3afc611b517f2e01fe6ac74da197c836e4cc12cb8c4849b7e86f5"
+    },
+    {
+      "path": "images/action/sadness-act-2.webp",
+      "bytes": 98980,
+      "sha256": "d8890725b25884b0ca42f886a7ce88259d07932e7de81bb293ef66afe8dcf268"
+    },
+    {
+      "path": "images/action/shame-act-0.webp",
+      "bytes": 125748,
+      "sha256": "2f809a4918c25ffceaeb13bd4cb1286bbce128b7dbdeac8917c2f8adb9b5deb8"
+    },
+    {
+      "path": "images/action/shame-act-1.webp",
+      "bytes": 73138,
+      "sha256": "d6034bcebead886eab59a5a94b063ccd3c50beffe9a79cd417a12a744d2a6f9a"
+    },
+    {
+      "path": "images/action/shame-act-2.webp",
+      "bytes": 107456,
+      "sha256": "b74959deae7701c2cccb9408ba8e973e67a61b72d765d475546409457da6a3ae"
+    },
+    {
+      "path": "images/action/surprise-act-0.webp",
+      "bytes": 98284,
+      "sha256": "4b477cd90606db4aade95a2d81f7f207c213e5b8ea0d721d4a526e16305eab74"
+    },
+    {
+      "path": "images/action/surprise-act-1.webp",
+      "bytes": 66480,
+      "sha256": "e180fe2c62f69e60d97ea089f9db4b349866293b715899c1225b237958475e1f"
+    },
+    {
+      "path": "images/face/anger-au23.webp",
+      "bytes": 58736,
+      "sha256": "8c7fb2f6a675d25ed40053f3d6bf7d8323f03a71040178314b1aea2020e95265"
+    },
+    {
+      "path": "images/face/anger-au24.webp",
+      "bytes": 73480,
+      "sha256": "537c3a472beb6a9805d30dccf31c1e92aa7385ea338c07c10080ad32251ac01e"
+    },
+    {
+      "path": "images/face/anger-au4.webp",
+      "bytes": 118478,
+      "sha256": "ee2139374a3371e8370fff1df0f2787d502c8b1a70177e30336b50cecc5fe832"
+    },
+    {
+      "path": "images/face/anger-au5.webp",
+      "bytes": 103590,
+      "sha256": "e851342e16f7c5cd670aeb2cbdfe7978a9156ab0b227b4ab3c279ec99a86a22d"
+    },
+    {
+      "path": "images/face/anger-au7.webp",
+      "bytes": 122320,
+      "sha256": "18c4afc6e461c01b0efb041af23150bfe301a7cd19bdcef6d07c2f70d6fe5d43"
+    },
+    {
+      "path": "images/face/anger-full-face.webp",
+      "bytes": 97786,
+      "sha256": "6f424565d0d587b3a84f664c3e4895296a055bbdd2277c505844204429e4ed77"
+    },
+    {
+      "path": "images/face/anxiety-au1-4.webp",
+      "bytes": 88488,
+      "sha256": "3960d52caedfb99783835b921f4ffab299bc15c2c3e2d2a18deb740c9988af8e"
+    },
+    {
+      "path": "images/face/anxiety-au24.webp",
+      "bytes": 52596,
+      "sha256": "96f551241c889a094beec95fc0ed1a3d4aea267b8006d9b8f79e7430bccfd091"
+    },
+    {
+      "path": "images/face/anxiety-full-face.webp",
+      "bytes": 98624,
+      "sha256": "7308ab8fe8b99070eb26187285fbd8a1c3c227d93a54239951c173d1b3125aff"
+    },
+    {
+      "path": "images/face/awe-au1-2.webp",
+      "bytes": 94286,
+      "sha256": "caaa41c426470b26d3195541178078844baaf8f99b99f07150d78ae686172d56"
+    },
+    {
+      "path": "images/face/awe-au26.webp",
+      "bytes": 64130,
+      "sha256": "690cf6e0e76721d8c4bbd759daec244cc9a84ec96ae92e306dd2c24f8c18f531"
+    },
+    {
+      "path": "images/face/awe-au5.webp",
+      "bytes": 90170,
+      "sha256": "bdaee3428a86d3fab9d90b3f979158d9a70f580aa9b79c372c28ce8a7d52f826"
+    },
+    {
+      "path": "images/face/awe-full-face.webp",
+      "bytes": 120818,
+      "sha256": "05b21360683aedf6f8821aec5221ad4ac469632832685f20ef04356e137e21ef"
+    },
+    {
+      "path": "images/face/baseline-neutral-au0.webp",
+      "bytes": 55842,
+      "sha256": "56afa6ed5cfae108243fb4d86d56dc342f21140a27b7261ddcf2dd4d36292d46"
+    },
+    {
+      "path": "images/face/contempt-au10-unilateral.webp",
+      "bytes": 70810,
+      "sha256": "d91c77e7b54c0df98b66f9162c4703fc5ace2ffed6b0084ac10f67de2ee09ee3"
+    },
+    {
+      "path": "images/face/contempt-au14-unilateral.webp",
+      "bytes": 66924,
+      "sha256": "f314702fcfa3d46b10b09d1837c6473ca12adb13b09721c543571064b824bd21"
+    },
+    {
+      "path": "images/face/contempt-full-face.webp",
+      "bytes": 101470,
+      "sha256": "522c57781a6216d0d1df11608bc81f1aad8fe24d1e0187a534b297b204982168"
+    },
+    {
+      "path": "images/face/disgust-au10.webp",
+      "bytes": 58914,
+      "sha256": "df993ce22bf56003bd95f86c2f2c3c27aa8bf5f31ec01372737a9e24006ab1b0"
+    },
+    {
+      "path": "images/face/disgust-au15.webp",
+      "bytes": 60894,
+      "sha256": "9aa0de41d9b6e171edd9af9cb7df56028f319f8319c6a4e25fc98e46442f9dea"
+    },
+    {
+      "path": "images/face/disgust-au16.webp",
+      "bytes": 62956,
+      "sha256": "b9f66f1ac2ce842577b8927c398f40e23a3bc6fa075ffe381932a21729ed024e"
+    },
+    {
+      "path": "images/face/disgust-au9.webp",
+      "bytes": 82656,
+      "sha256": "09cf5d66cf38de0cfb789bd1be50897fdbe13a84b26879e9eff6453e0a356520"
+    },
+    {
+      "path": "images/face/disgust-full-face.webp",
+      "bytes": 130878,
+      "sha256": "beaa9b983e08d4a83280458f4419dab0a0a3dcb545239913c136d8b99c6f211e"
+    },
+    {
+      "path": "images/face/fear-au1.webp",
+      "bytes": 116192,
+      "sha256": "20a2ac36c92c7a9b4a7d0fed33b1bec1b155b73a01b13a02d7d031e9a9c76a5a"
+    },
+    {
+      "path": "images/face/fear-au2.webp",
+      "bytes": 63562,
+      "sha256": "334d67736b4096e91d652a35682b0ad763794ad88ff53c0f9ac079f3cb608674"
+    },
+    {
+      "path": "images/face/fear-au20.webp",
+      "bytes": 64100,
+      "sha256": "28cca502ae63827eeb4eff01f6131c2fd8bc24960f4478dc3c180466322730bc"
+    },
+    {
+      "path": "images/face/fear-au4.webp",
+      "bytes": 95194,
+      "sha256": "4d38be1fa6b0171e40f25731fd0117fe91174594af54eb9d84841d2fbced8d18"
+    },
+    {
+      "path": "images/face/fear-au5.webp",
+      "bytes": 104174,
+      "sha256": "11085d3405a6302ef255af157e39bafdd7478bfdee1b89b7201ff906ca474303"
+    },
+    {
+      "path": "images/face/fear-full-face.webp",
+      "bytes": 103756,
+      "sha256": "30c67115413ff417e543c97d0ba120a8238629a96a00de7c52175fc80ce973a8"
+    },
+    {
+      "path": "images/face/happiness-au12.webp",
+      "bytes": 74092,
+      "sha256": "852a57266e27d72c18319993a5a7939b210055e965c76fa32d7220b27d1bf4cb"
+    },
+    {
+      "path": "images/face/happiness-au25.webp",
+      "bytes": 68248,
+      "sha256": "174988367ec1339374c4258fdd14a2334a2275409cf961ac4002e3ca022882d7"
+    },
+    {
+      "path": "images/face/happiness-au6.webp",
+      "bytes": 94266,
+      "sha256": "c8fc15394d27183160afb162b8f5f2534e064d80e4fc222f7813229fbbf9d969"
+    },
+    {
+      "path": "images/face/happiness-full-face.webp",
+      "bytes": 116866,
+      "sha256": "bdcd380486d5288318b43bb315b3bda5f18f121fe685e0cfebd84f7f9537612a"
+    },
+    {
+      "path": "images/face/love-au12.webp",
+      "bytes": 57706,
+      "sha256": "7fb44f381ba75581eeae7607bdd0f563bc0431cbc35b417a77a419de189f9253"
+    },
+    {
+      "path": "images/face/love-au6.webp",
+      "bytes": 81044,
+      "sha256": "c05c0e6295d89bd7c414d23bd61c5182aac66108534952e972fc60c9c96292fd"
+    },
+    {
+      "path": "images/face/love-full-face.webp",
+      "bytes": 144584,
+      "sha256": "0045b3c12a97f1702d4983176497a384db6c6651de67aae3a83ca49531ce6a1c"
+    },
+    {
+      "path": "images/face/panic-au1-2-5.webp",
+      "bytes": 107646,
+      "sha256": "60cebe7ff05e8cd94d2035a27c790357e7fa97176a086f05e74a774eb94fdf78"
+    },
+    {
+      "path": "images/face/panic-au26.webp",
+      "bytes": 53974,
+      "sha256": "5a7747a3f1f8c206dbf1e19a71ddc55c30228324b06e518a5a45699218ed1012"
+    },
+    {
+      "path": "images/face/panic-full-face.webp",
+      "bytes": 99358,
+      "sha256": "0a9eec61637a0532bd3eaa68e30e594b615058f80c8d5b28bf6881dd03912e5f"
+    },
+    {
+      "path": "images/face/pride-au12.webp",
+      "bytes": 53032,
+      "sha256": "48a2b0978b5f0fb1eb4c1a36f97e278ebb9c58b25bd6a6004e797372f4ee8e7c"
+    },
+    {
+      "path": "images/face/pride-au53.webp",
+      "bytes": 34374,
+      "sha256": "7e809770a576b2c7631e636dcbb449c636e77d2622837dbbddee3b0253c038bf"
+    },
+    {
+      "path": "images/face/pride-full-face.webp",
+      "bytes": 85844,
+      "sha256": "e4f9149eadcc36cc93a32a70218d0aa11e4d2850759b784bcb074fbeee94549a"
+    },
+    {
+      "path": "images/face/sadness-au1.webp",
+      "bytes": 91064,
+      "sha256": "c8e052e90758999f5b0df1eebb3945c3272fdb82c5389583339aaf276c8f29e6"
+    },
+    {
+      "path": "images/face/sadness-au15.webp",
+      "bytes": 50236,
+      "sha256": "01f0fe91a070010346e346f3ffa69efc2548ae638e235840cbd3c51b7997e36c"
+    },
+    {
+      "path": "images/face/sadness-au17.webp",
+      "bytes": 57510,
+      "sha256": "35a7ab8288970c9f4f582058bbd87989513d8772eea8238ab57d615801a0a25d"
+    },
+    {
+      "path": "images/face/sadness-au4.webp",
+      "bytes": 56626,
+      "sha256": "720dadd4d35c9b21edd6d3b895b624c22b0a8a7488f164fdc4178e0d4ab84f83"
+    },
+    {
+      "path": "images/face/sadness-full-face.webp",
+      "bytes": 90314,
+      "sha256": "e33dd4e5c7a0ba55c8c49253125c9242b6974e91d935d1c57d5f403f1ef40e86"
+    },
+    {
+      "path": "images/face/shame-au15.webp",
+      "bytes": 51802,
+      "sha256": "8ad33605694df4dc6417e0b6e224e7284f453380010815316fda2fcef370ce8d"
+    },
+    {
+      "path": "images/face/shame-au54.webp",
+      "bytes": 38738,
+      "sha256": "997767c820410497f0bd7d237adf999bc2f33238807a4450861938c00fab7f0f"
+    },
+    {
+      "path": "images/face/shame-au64.webp",
+      "bytes": 78760,
+      "sha256": "1ab1d803db358a21f7a8669dc7fc78a28e15f98abaaed377710b791e81cf99a8"
+    },
+    {
+      "path": "images/face/shame-full-face.webp",
+      "bytes": 83048,
+      "sha256": "14ed5192c4fc06df65d4727e0c8f49ea29ffd074f954482ff34db89367a0c3fa"
+    },
+    {
+      "path": "images/face/surprise-au1-2.webp",
+      "bytes": 101854,
+      "sha256": "b24b224af276fe20b60f4e46ba8f82a6ad691c69ccf919f8e23e6f921a87701a"
+    },
+    {
+      "path": "images/face/surprise-au26.webp",
+      "bytes": 61154,
+      "sha256": "c4d94d187928e4b04b34e3d7d6b725542d005b121d63dac2298a41563c1f4b99"
+    },
+    {
+      "path": "images/face/surprise-au5.webp",
+      "bytes": 119588,
+      "sha256": "170eee1edb22d577de2b8af0747439bfce164ea9364e583c365e24a4a336753f"
+    },
+    {
+      "path": "images/face/surprise-full-face.webp",
+      "bytes": 117278,
+      "sha256": "e555ba27c20f7a0a01cf2b08d804ef8af7bc0e540a980b8cd9822080830021ab"
+    },
+    {
+      "path": "images/somatic/anger-cardiovascular-0.webp",
+      "bytes": 64168,
+      "sha256": "28a9c1b240d3df241a836d2e8b1fe050563c55eabae240a7d72918ce197070db"
+    },
+    {
+      "path": "images/somatic/anger-cardiovascular-1.webp",
+      "bytes": 156762,
+      "sha256": "f4cdba74adb3dafdfe12b61450000ea629be3b066181e3441840e164788b6505"
+    },
+    {
+      "path": "images/somatic/anger-cardiovascular-2.webp",
+      "bytes": 71876,
+      "sha256": "c3a1522292096c029b1c9fea390698bdafe1ec513933db21ac473813e28f7ba8"
+    },
+    {
+      "path": "images/somatic/anger-gastrointestinal-0.webp",
+      "bytes": 148598,
+      "sha256": "7cc9a4de804ef991cccbe7661fbd4817f214c0a4b94c41af36ec013cecd21ffa"
+    },
+    {
+      "path": "images/somatic/anger-integumentary_thermal-0.webp",
+      "bytes": 85516,
+      "sha256": "8b79b2eb57bc1a6a9fc9f951472ff3a76b106ac44b21a84699a3707d2a6092ef"
+    },
+    {
+      "path": "images/somatic/anger-integumentary_thermal-1.webp",
+      "bytes": 88494,
+      "sha256": "93d27259299201db540a517dca95d1deafa81771dd75735f7470c284e847617c"
+    },
+    {
+      "path": "images/somatic/anger-musculoskeletal-0.webp",
+      "bytes": 130744,
+      "sha256": "c192f3a3c3fa0d4997e1d12aba56f77226a67d224f27567572a08bd610dae3c1"
+    },
+    {
+      "path": "images/somatic/anger-musculoskeletal-1.webp",
+      "bytes": 66126,
+      "sha256": "b40cc80e8a7c330384489fe8f3bff094099b9bc8fd2edad22c9bb884bb688c15"
+    },
+    {
+      "path": "images/somatic/anger-musculoskeletal-2.webp",
+      "bytes": 80478,
+      "sha256": "2a8e1e394bd03a663f558c99bf201c5556205bdb7b819d2d6f4266ef85883dce"
+    },
+    {
+      "path": "images/somatic/anger-neurosensory-0.webp",
+      "bytes": 93688,
+      "sha256": "507455d4a4cb75646fc690a29975b830b47e90fe60e9587fc40f77870f846afd"
+    },
+    {
+      "path": "images/somatic/anger-neurosensory-1.webp",
+      "bytes": 73780,
+      "sha256": "2929a19a981bb0209b92d71fcb13a5bdfc4d7d44f5e7236ca9f8d9a3c0b020e2"
+    },
+    {
+      "path": "images/somatic/anger-respiratory-0.webp",
+      "bytes": 31142,
+      "sha256": "73100c04a21b8d53f6ce35f694c692c3f17da21efb22b6a5fba5c2bf649bac8a"
+    },
+    {
+      "path": "images/somatic/anger-respiratory-1.webp",
+      "bytes": 82800,
+      "sha256": "cabac066cd755eea1c5283c73a44093a848e1b4af5ea6e61e5d3e8ea573b11fb"
+    },
+    {
+      "path": "images/somatic/anxiety-cardiovascular-0.webp",
+      "bytes": 122354,
+      "sha256": "1d8b6454738364d90fe0a5811ea6325838a6ad1a4f7f352ca2f3190fd374821f"
+    },
+    {
+      "path": "images/somatic/anxiety-cardiovascular-1.webp",
+      "bytes": 116480,
+      "sha256": "ef3075acd36ebb9c0dfea9942a81b6ba260722d9dc1f26c8641cc93b6698829c"
+    },
+    {
+      "path": "images/somatic/anxiety-gastrointestinal-0.webp",
+      "bytes": 110350,
+      "sha256": "8e5dd54a822cb1c1d6ed80c6a9f0a88f75654c691469958bd1a9634828391613"
+    },
+    {
+      "path": "images/somatic/anxiety-integumentary_thermal-0.webp",
+      "bytes": 98038,
+      "sha256": "2803d008a4d74cd58b6e57c1c2d5d0e32baf3b0a6ce42970061c1d060b3d722b"
+    },
+    {
+      "path": "images/somatic/anxiety-integumentary_thermal-1.webp",
+      "bytes": 111462,
+      "sha256": "6c9a5c65ebca182bbacc84bc0aa8a16fd16792fc81b586660270ac6b0803dc43"
+    },
+    {
+      "path": "images/somatic/anxiety-musculoskeletal-0.webp",
+      "bytes": 131026,
+      "sha256": "201705dc2d6336cf118f174fbbaf821fcff33d5aad32c2a247154e991f7aeb6e"
+    },
+    {
+      "path": "images/somatic/anxiety-musculoskeletal-1.webp",
+      "bytes": 100140,
+      "sha256": "881e6569341d3650fcfa7b1171b00f329bdc9b29c34e79dd3eae98e6bcabedd8"
+    },
+    {
+      "path": "images/somatic/anxiety-musculoskeletal-2.webp",
+      "bytes": 66836,
+      "sha256": "cef6206930a5438ff0b74a1efcdf771917163a5deb48b94297c92fb9108b4eb5"
+    },
+    {
+      "path": "images/somatic/anxiety-neurosensory-0.webp",
+      "bytes": 68156,
+      "sha256": "6debf7aaba7d19a81a7acb88da870ea7399c80d8091358f9147df1af57365483"
+    },
+    {
+      "path": "images/somatic/anxiety-neurosensory-1.webp",
+      "bytes": 74320,
+      "sha256": "9a3e7c61511a3610b12158729ce190fa3b83091b48693aaa9a85f33b7d7e279a"
+    },
+    {
+      "path": "images/somatic/anxiety-respiratory-0.webp",
+      "bytes": 172120,
+      "sha256": "9814c6e8e0fc562e73e43721ab082a9a99570a3e834b5fac4c44a92752f8bc38"
+    },
+    {
+      "path": "images/somatic/anxiety-respiratory-1.webp",
+      "bytes": 122778,
+      "sha256": "8057b58b53851152aae213eae4ffbb00528902955a902a17b79a74b4c9980528"
+    },
+    {
+      "path": "images/somatic/awe-cardiovascular-0.webp",
+      "bytes": 92054,
+      "sha256": "0a4dd49b4db9ee0e70455099bdfd8dc2b75d7ccee0e033e0abad840db266c8ff"
+    },
+    {
+      "path": "images/somatic/awe-gastrointestinal-0.webp",
+      "bytes": 75656,
+      "sha256": "1026f7cbacad0f880942f3e8242c4fff0979f362ed9cc5930ccbd5adfe221fee"
+    },
+    {
+      "path": "images/somatic/awe-integumentary_thermal-0.webp",
+      "bytes": 103186,
+      "sha256": "5b7b2014d09c9f5cfeb3d9c76b93475a4a070e59270ea17fe9b949971c5d33d5"
+    },
+    {
+      "path": "images/somatic/awe-musculoskeletal-0.webp",
+      "bytes": 41268,
+      "sha256": "da3e8d7f34f5f410afec276a5054effcce226b80c2c8468383b85aed8d58607c"
+    },
+    {
+      "path": "images/somatic/awe-neurosensory-0.webp",
+      "bytes": 128092,
+      "sha256": "74034c3f3bbd12399863d8169c959e12830016b73f5959536c66549886cc3ada"
+    },
+    {
+      "path": "images/somatic/awe-respiratory-0.webp",
+      "bytes": 59326,
+      "sha256": "5d77147f8e98c6378ad9f404a9f416ea21e396aaf1da16b4764d222b1881b517"
+    },
+    {
+      "path": "images/somatic/baseline-neutral-cardiovascular-0.webp",
+      "bytes": 71246,
+      "sha256": "9a0f07423c5ee7fba4e222fd1108eee144a17adabcb2a26c0ba916d9e6b81d3a"
+    },
+    {
+      "path": "images/somatic/baseline-neutral-gastrointestinal-0.webp",
+      "bytes": 67358,
+      "sha256": "6f053d249e1694aeb0149e75784c75d0c21d5262116965830081cac582c583c3"
+    },
+    {
+      "path": "images/somatic/baseline-neutral-integumentary_thermal-0.webp",
+      "bytes": 168538,
+      "sha256": "8f4e300f769845abef20cfcb6d7a0a2941ef3b084818a3f11dba7994bb25d5e2"
+    },
+    {
+      "path": "images/somatic/baseline-neutral-musculoskeletal-0.webp",
+      "bytes": 110108,
+      "sha256": "e9da518d1bde7ca1ce43a8ea1ecf9a2cf9632041c4dfdae3ae4229d1b70a0cb8"
+    },
+    {
+      "path": "images/somatic/baseline-neutral-neurosensory-0.webp",
+      "bytes": 98294,
+      "sha256": "468b8261667d700beb7646b60258d65019b0407d6a84ca538441fef84a41af18"
+    },
+    {
+      "path": "images/somatic/baseline-neutral-respiratory-0.webp",
+      "bytes": 52790,
+      "sha256": "9bf5d76575030142a84d725c4847401cc251ff323a3f1767c27a696da8336247"
+    },
+    {
+      "path": "images/somatic/contempt-cardiovascular-0.webp",
+      "bytes": 97932,
+      "sha256": "943dcd796729d24e0b872e3f4312acc73ca1fefbe31b15161ac2e75d970c46a5"
+    },
+    {
+      "path": "images/somatic/contempt-gastrointestinal-0.webp",
+      "bytes": 73324,
+      "sha256": "168d76268173728a8d1c93d02f4650773109a6d567258863cbd85cb44728459f"
+    },
+    {
+      "path": "images/somatic/contempt-integumentary_thermal-0.webp",
+      "bytes": 95906,
+      "sha256": "69bafc4b244bde4e8b854fa5a65fb7b8b91a13f683f39bd800ca10f98423630e"
+    },
+    {
+      "path": "images/somatic/contempt-musculoskeletal-0.webp",
+      "bytes": 93732,
+      "sha256": "da90adf9cdb7a6d01457096e32e280b55941cf5e2e3690373e76f39f9320637d"
+    },
+    {
+      "path": "images/somatic/contempt-neurosensory-0.webp",
+      "bytes": 131666,
+      "sha256": "05d2139644bc01e1a11406e2104ab3a90ba7c1b61927b994c513c6f6c4435edd"
+    },
+    {
+      "path": "images/somatic/contempt-respiratory-0.webp",
+      "bytes": 190004,
+      "sha256": "ce1a41d1d92da1f9a2504147fafe13eaa0a57f48e87d028435c14465ed61dd53"
+    },
+    {
+      "path": "images/somatic/disgust-cardiovascular-0.webp",
+      "bytes": 101046,
+      "sha256": "65e515b6d3ed045040ba8940ef9f1091687eca7da72b63515a7875a2d6a5a484"
+    },
+    {
+      "path": "images/somatic/disgust-gastrointestinal-0.webp",
+      "bytes": 120960,
+      "sha256": "c5c145ad853b767d1332fe4cf34e37fbfc5c8331c856dff3f11c0ad553758d9f"
+    },
+    {
+      "path": "images/somatic/disgust-gastrointestinal-1.webp",
+      "bytes": 67610,
+      "sha256": "d50da1dd6d7107c5267826707fa37190430bf3ca3530c00c79a2794678df34e4"
+    },
+    {
+      "path": "images/somatic/disgust-integumentary_thermal-0.webp",
+      "bytes": 80990,
+      "sha256": "e544690f30c197d6eb5091b6b372cfc138d8aaa87f1cc13165c246919410c8b9"
+    },
+    {
+      "path": "images/somatic/disgust-integumentary_thermal-1.webp",
+      "bytes": 103056,
+      "sha256": "042900264ce6a637a75290e95817c6ad2aaabfaedfe572eb70ef4b2b9aebad4e"
+    },
+    {
+      "path": "images/somatic/disgust-musculoskeletal-0.webp",
+      "bytes": 123380,
+      "sha256": "dd860ce11ce4682452ebc87473d82c8d9b4c3a71ff0025cb64d17dce1ca92cd6"
+    },
+    {
+      "path": "images/somatic/disgust-musculoskeletal-1.webp",
+      "bytes": 80436,
+      "sha256": "672fe122fc7a84ca5247dc712287a33c29cbc9cfc02871e2c5dbb8dea740f04c"
+    },
+    {
+      "path": "images/somatic/disgust-neurosensory-0.webp",
+      "bytes": 56090,
+      "sha256": "d282eada8ce409ec8f88ff5f756665752e1db84a8db5ac6acb37749a8c0be37f"
+    },
+    {
+      "path": "images/somatic/disgust-respiratory-0.webp",
+      "bytes": 206864,
+      "sha256": "bd67d474b51b6ca6d635679facd6c045ab2bf0afe889ce136ea211fc0d8a840b"
+    },
+    {
+      "path": "images/somatic/fear-cardiovascular-0.webp",
+      "bytes": 74844,
+      "sha256": "820ac9b17ff6bc1b2ef89d153fc345587f138f45dad098bd193b6e353b19bc44"
+    },
+    {
+      "path": "images/somatic/fear-cardiovascular-1.webp",
+      "bytes": 36608,
+      "sha256": "c071656975779b8e7b5121c5be4f15129a088d35ea6e09136a1c9d121ce84a37"
+    },
+    {
+      "path": "images/somatic/fear-cardiovascular-2.webp",
+      "bytes": 83550,
+      "sha256": "6195283ab12b09ad9447a97761bece6f1d0ce420f93966fe1f550029b3ed9550"
+    },
+    {
+      "path": "images/somatic/fear-gastrointestinal-0.webp",
+      "bytes": 103536,
+      "sha256": "cd096139932535384aadf6c9ac28611f52f1bd3fa51e09b8285ca62677af6d07"
+    },
+    {
+      "path": "images/somatic/fear-gastrointestinal-1.webp",
+      "bytes": 171728,
+      "sha256": "9659e86c2931434d5b080cb15b4578aebcb5481e5d6dd9ab260d7e34bb9c5312"
+    },
+    {
+      "path": "images/somatic/fear-integumentary_thermal-0.webp",
+      "bytes": 126970,
+      "sha256": "e1347844a8ae931d5585d10f80130a0c7c2a9aa699f02bacb9d62205487b63c7"
+    },
+    {
+      "path": "images/somatic/fear-integumentary_thermal-1.webp",
+      "bytes": 82004,
+      "sha256": "aacdd2106cf8dcf7c2f739dffa32d42b7c5056a726d0b37189a6bc5b29431dbf"
+    },
+    {
+      "path": "images/somatic/fear-musculoskeletal-0.webp",
+      "bytes": 56836,
+      "sha256": "cc3aefb4f4d9b2ba894f05fbd477296bd5bd33147e8b5cc6745a749ef6acd1a1"
+    },
+    {
+      "path": "images/somatic/fear-musculoskeletal-1.webp",
+      "bytes": 162818,
+      "sha256": "966a342e50943f8c81115649ba9bb86c15c3418a6d9aa183603f443643e6a81d"
+    },
+    {
+      "path": "images/somatic/fear-musculoskeletal-2.webp",
+      "bytes": 47230,
+      "sha256": "b60da19eea1c602fabc430e3f1dfe3022ac0bcee316d0c9b372d36b0cf17fc84"
+    },
+    {
+      "path": "images/somatic/fear-neurosensory-0.webp",
+      "bytes": 75712,
+      "sha256": "ef1227583a69d901ceabd2e6bf8e8e58e3bfab47db44350c7937d46962814b90"
+    },
+    {
+      "path": "images/somatic/fear-neurosensory-1.webp",
+      "bytes": 133748,
+      "sha256": "3571ef771385f68732cbee067a36c9b7e167767510bf534d8da2e5f535abf940"
+    },
+    {
+      "path": "images/somatic/fear-respiratory-0.webp",
+      "bytes": 80708,
+      "sha256": "ea2cd1a71db582587fd5cbb1024b5f6425d13ac6f2bfc1f03bf57e3ab3fd95c1"
+    },
+    {
+      "path": "images/somatic/fear-respiratory-1.webp",
+      "bytes": 103482,
+      "sha256": "a6a6a23cd0e5b9b36d3aacfddac006c063259c62a40c24593a4246fab3155d6a"
+    },
+    {
+      "path": "images/somatic/happiness-cardiovascular-0.webp",
+      "bytes": 105614,
+      "sha256": "b761bfbfa9df06558d3f1ef33bdbbcd8de8cb9b31d575a00be8689b702565a1b"
+    },
+    {
+      "path": "images/somatic/happiness-cardiovascular-1.webp",
+      "bytes": 88222,
+      "sha256": "6a198926603e8493bcab2318401ac832f2aaee69da7b3590b921804e21c10149"
+    },
+    {
+      "path": "images/somatic/happiness-gastrointestinal-0.webp",
+      "bytes": 99824,
+      "sha256": "0f10b57c2ea3eed5cf2025f6a488f76d578747bae76ccbe2dcc8c1d72aebc4d5"
+    },
+    {
+      "path": "images/somatic/happiness-integumentary_thermal-0.webp",
+      "bytes": 101818,
+      "sha256": "714ea9b62553bf719b922403861c5dcc9ad0a8cb24fb29c7b670669846f10420"
+    },
+    {
+      "path": "images/somatic/happiness-integumentary_thermal-1.webp",
+      "bytes": 113966,
+      "sha256": "6602b1a81539096ef89b0df2f11789930b7640b07eb833690918a61192ba7c2c"
+    },
+    {
+      "path": "images/somatic/happiness-musculoskeletal-0.webp",
+      "bytes": 82820,
+      "sha256": "14812c5978d105862ab5741189a7486f7fd0b783f1834393bea70813c04c55de"
+    },
+    {
+      "path": "images/somatic/happiness-musculoskeletal-1.webp",
+      "bytes": 90006,
+      "sha256": "548de5e8b6c84feef9cec5c48ee09d24eae87eb56e7c9a485b5bc8d47fa1bd38"
+    },
+    {
+      "path": "images/somatic/happiness-neurosensory-0.webp",
+      "bytes": 110660,
+      "sha256": "7d5ad2ec16803b2d33abb27f4c226414cf14d916899f8e75def2349ee6992066"
+    },
+    {
+      "path": "images/somatic/happiness-neurosensory-1.webp",
+      "bytes": 45532,
+      "sha256": "574db0b7ebf16a6521fb64ebf31ea02d3cb4074658feff7aa4d413db13a1f16d"
+    },
+    {
+      "path": "images/somatic/happiness-respiratory-0.webp",
+      "bytes": 84470,
+      "sha256": "5755b2ae7b59aa7b083ee4d02ff740ad24d5f912cca1b14e4c965469d6eeb657"
+    },
+    {
+      "path": "images/somatic/happiness-respiratory-1.webp",
+      "bytes": 109006,
+      "sha256": "7af0d5809de7899dde63cc0256cd336efb520baa229a4a4de88c6dd054a403ab"
+    },
+    {
+      "path": "images/somatic/love-cardiovascular-0.webp",
+      "bytes": 132566,
+      "sha256": "cf7cb05f84e5e4f2c54cefcd97b7d7026ce24794cf6f4badd6f9ead524cf1c14"
+    },
+    {
+      "path": "images/somatic/love-gastrointestinal-0.webp",
+      "bytes": 80804,
+      "sha256": "eed3529cd2748828511d9a4a02f993c64a937e3829be5ddea71440c59eceecd5"
+    },
+    {
+      "path": "images/somatic/love-integumentary_thermal-0.webp",
+      "bytes": 89338,
+      "sha256": "f88fee6b6d164b88beeb836e0967c387d20505689a192a10e5e5e90490ad547a"
+    },
+    {
+      "path": "images/somatic/love-musculoskeletal-0.webp",
+      "bytes": 96618,
+      "sha256": "a7bcbdd29ef7bb711572fb8e7c02a365b46d0c00d69dd2c4ab90e76c2cc54e5b"
+    },
+    {
+      "path": "images/somatic/love-musculoskeletal-1.webp",
+      "bytes": 43926,
+      "sha256": "78d10f1f7b2539ef92a25b55ce0ba9458146b6a9a514ebb19b65aec37e7b036b"
+    },
+    {
+      "path": "images/somatic/love-neurosensory-0.webp",
+      "bytes": 107128,
+      "sha256": "24b6fe247b95e8cc896cd545e65eebb8a5767a5d0ecdceca66126fd21941626c"
+    },
+    {
+      "path": "images/somatic/love-respiratory-0.webp",
+      "bytes": 89492,
+      "sha256": "e23212468b2f590173f316116a7ac9d7f848f86fe1c3a494e41c4c83ee9757bc"
+    },
+    {
+      "path": "images/somatic/panic-cardiovascular-0.webp",
+      "bytes": 93800,
+      "sha256": "230ada90fb778d36a73a1ff7985ea94545368305af877d07d998ed167abb2dd1"
+    },
+    {
+      "path": "images/somatic/panic-gastrointestinal-0.webp",
+      "bytes": 81168,
+      "sha256": "5bf95c9fbd9b2338138d64c90badb1c19c8121ba4f67afb8dc1625ed5aa6344f"
+    },
+    {
+      "path": "images/somatic/panic-integumentary_thermal-0.webp",
+      "bytes": 118882,
+      "sha256": "23cd63f28ac2771c761d6dc52742348006447570041ea8b05bd7f191cd058bee"
+    },
+    {
+      "path": "images/somatic/panic-musculoskeletal-0.webp",
+      "bytes": 58410,
+      "sha256": "8814182bfa37de9ead36a71a69f595fb2263517c14a35b800ca73f719936d549"
+    },
+    {
+      "path": "images/somatic/panic-musculoskeletal-1.webp",
+      "bytes": 49924,
+      "sha256": "2a730b95620d1775d21e1d58563bc42ab3c25e687ea1322678f2691753353d06"
+    },
+    {
+      "path": "images/somatic/panic-musculoskeletal-2.webp",
+      "bytes": 57240,
+      "sha256": "f291fb6933f3eaf021cdd7effef424c647a49f55489135f264414293b6485c42"
+    },
+    {
+      "path": "images/somatic/panic-neurosensory-0.webp",
+      "bytes": 77482,
+      "sha256": "3ce094f54749f8dd9ed2d9f73e82574d5dfc0e7139390cb7a2928f692301dbfd"
+    },
+    {
+      "path": "images/somatic/panic-neurosensory-1.webp",
+      "bytes": 107180,
+      "sha256": "1605fc2cf9d60b57df2ee4a97ddae7ab1de80fb0503a2c56f6c2122c167e3fa0"
+    },
+    {
+      "path": "images/somatic/panic-respiratory-0.webp",
+      "bytes": 120664,
+      "sha256": "b80835ddba0ee2aebef38d30d170041da4654bd546e28e988bc9d76e83848f89"
+    },
+    {
+      "path": "images/somatic/pride-cardiovascular-0.webp",
+      "bytes": 56730,
+      "sha256": "f3005bac84555e77886995d59b9013395d97d572d50b27bc18d6a29747c32cab"
+    },
+    {
+      "path": "images/somatic/pride-gastrointestinal-0.webp",
+      "bytes": 71240,
+      "sha256": "532260208f77ad0e8efb7e9d69c2d9da329ab0e8288d62a1c2324475ca22c5a9"
+    },
+    {
+      "path": "images/somatic/pride-integumentary_thermal-0.webp",
+      "bytes": 144678,
+      "sha256": "e81f47a97d42e72b26e6a8c2529c1465da7b9f140806430ef732a6aeca3a1245"
+    },
+    {
+      "path": "images/somatic/pride-musculoskeletal-0.webp",
+      "bytes": 51126,
+      "sha256": "6305f43e050db2b2158f5690fdab8d776087605e2c646519f98f78f652d36041"
+    },
+    {
+      "path": "images/somatic/pride-musculoskeletal-1.webp",
+      "bytes": 53720,
+      "sha256": "319a90cc4cf1ca7b63ff66088526e4227d4949575a23e90f98471442a6c8c81e"
+    },
+    {
+      "path": "images/somatic/pride-musculoskeletal-2.webp",
+      "bytes": 45830,
+      "sha256": "df3b1059247c87873ee1a17e6c0898755ddc05ef0eca156313fedc9eead5d694"
+    },
+    {
+      "path": "images/somatic/pride-neurosensory-0.webp",
+      "bytes": 49772,
+      "sha256": "589ba9fa42643cf73bf8eb11c4bdff477980bb0336dd078720811c8913d2618f"
+    },
+    {
+      "path": "images/somatic/pride-respiratory-0.webp",
+      "bytes": 39446,
+      "sha256": "acb0ef572798739a01b93fe27f165f56edad4151f31bc10e6c0f82e88be5e5da"
+    },
+    {
+      "path": "images/somatic/sadness-cardiovascular-0.webp",
+      "bytes": 91056,
+      "sha256": "5f33598256104dfbc08aa8b32e6aa55449a37a7860939e3c367c7233199f28bc"
+    },
+    {
+      "path": "images/somatic/sadness-cardiovascular-1.webp",
+      "bytes": 98164,
+      "sha256": "4fa9db1f643e1a022aa659f83436741fbb6008fb5862ea00b1dd867a193911ed"
+    },
+    {
+      "path": "images/somatic/sadness-gastrointestinal-0.webp",
+      "bytes": 120662,
+      "sha256": "d23c77292314f7279be46788cf2156c6e6d14defdb6badc7e1a1fdd5503d2a46"
+    },
+    {
+      "path": "images/somatic/sadness-gastrointestinal-1.webp",
+      "bytes": 95680,
+      "sha256": "e0b780225e624b1aee8144e47dc672a4568b4583bb181549edea52a8e31a4b03"
+    },
+    {
+      "path": "images/somatic/sadness-integumentary_thermal-0.webp",
+      "bytes": 132480,
+      "sha256": "4b571b029c6d84f33aa0ac39b251c07d29ce28cc537fd5289befb69b2e815c0c"
+    },
+    {
+      "path": "images/somatic/sadness-integumentary_thermal-1.webp",
+      "bytes": 74870,
+      "sha256": "09fb61caed7ab5fc18172557aa002f3986c08a2346d4e1556e496ee3e175338c"
+    },
+    {
+      "path": "images/somatic/sadness-musculoskeletal-0.webp",
+      "bytes": 75430,
+      "sha256": "1e42e530f92a9ab7ca1d577cb6e2debb3c82c20ab1a2d3745d53792a1b98d081"
+    },
+    {
+      "path": "images/somatic/sadness-musculoskeletal-1.webp",
+      "bytes": 56174,
+      "sha256": "afd13319f52be224143596ada720b879b35d263b5a663c3e991c57d4c404ea86"
+    },
+    {
+      "path": "images/somatic/sadness-musculoskeletal-2.webp",
+      "bytes": 159278,
+      "sha256": "95aff1cc75865f241d7b4e2a8a312293542f2e4b31fe25f1541bfd6355c4d410"
+    },
+    {
+      "path": "images/somatic/sadness-neurosensory-0.webp",
+      "bytes": 87976,
+      "sha256": "3ec14cb88385ba382a4aa750d1f2db1492721edb43fd8142bd47c99a9a180749"
+    },
+    {
+      "path": "images/somatic/sadness-neurosensory-1.webp",
+      "bytes": 70410,
+      "sha256": "5f7d781f33ad2f5dc0411a92c31c08bb28618a69dd2ba6b8a551be0f71922ef5"
+    },
+    {
+      "path": "images/somatic/sadness-respiratory-0.webp",
+      "bytes": 111404,
+      "sha256": "ccb03eca1048169c7ec21e3fb17c1fa0d0195f31ad5096bd041caa619b9ae94f"
+    },
+    {
+      "path": "images/somatic/sadness-respiratory-1.webp",
+      "bytes": 149040,
+      "sha256": "344d7c7c62a8d4b623aeaf064ffa597d6b03daadff8c3c94647a8fec739b474c"
+    },
+    {
+      "path": "images/somatic/shame-cardiovascular-0.webp",
+      "bytes": 99072,
+      "sha256": "9ee66c2776e53165500c4a7531f6fdbf3993cdcd1a9b36d3a55a5a16250b6312"
+    },
+    {
+      "path": "images/somatic/shame-gastrointestinal-0.webp",
+      "bytes": 79726,
+      "sha256": "fae36183f89780067f9c6b1d544250b8f41e31bb2654ef723e5189297445b968"
+    },
+    {
+      "path": "images/somatic/shame-integumentary_thermal-0.webp",
+      "bytes": 111448,
+      "sha256": "ad81a6d04f5c6c6a1ae004f68f2575568205d73bb60d2ee21fe56b1d175e43b1"
+    },
+    {
+      "path": "images/somatic/shame-musculoskeletal-0.webp",
+      "bytes": 88816,
+      "sha256": "3d735f28dc325ba9a56ccb5cfa4645536b8cf5ace874c7e12b5793d0c1b31512"
+    },
+    {
+      "path": "images/somatic/shame-musculoskeletal-1.webp",
+      "bytes": 90114,
+      "sha256": "62611bb5acd9affb5ca044ec3cd8926713cb8e798484dec30ec94b50e9f5128d"
+    },
+    {
+      "path": "images/somatic/shame-neurosensory-0.webp",
+      "bytes": 100462,
+      "sha256": "0ec6130e65cc93c1e64589401750adf8c3edb40468b6ebd76903b126bc87cfc3"
+    },
+    {
+      "path": "images/somatic/shame-respiratory-0.webp",
+      "bytes": 228448,
+      "sha256": "876b23b0253e3abb42d5bc51dd787990120c0240a75e90c08f1347aefbdba206"
+    },
+    {
+      "path": "images/somatic/surprise-cardiovascular-0.webp",
+      "bytes": 89946,
+      "sha256": "33f7260f3c1c52ca1949aa0b2bda3a841f9952ddf04f26d3482ad0b8c83a0623"
+    },
+    {
+      "path": "images/somatic/surprise-gastrointestinal-0.webp",
+      "bytes": 111958,
+      "sha256": "bd8bfb6330df743afde6663ad03c59bb9deba8079f347baba9500fdc29f7ca2d"
+    },
+    {
+      "path": "images/somatic/surprise-integumentary_thermal-0.webp",
+      "bytes": 84802,
+      "sha256": "7042c2bdb6c545de49b797ee1a99e9d87a79d9bad72fddb00f8bd00a14187bb0"
+    },
+    {
+      "path": "images/somatic/surprise-musculoskeletal-0.webp",
+      "bytes": 41562,
+      "sha256": "5df6ec3b78e213af7716cd6f22d16746696c1933d8a77b52e4ff0a15e4b5b964"
+    },
+    {
+      "path": "images/somatic/surprise-musculoskeletal-1.webp",
+      "bytes": 49346,
+      "sha256": "ca61be6875dd4cd618dd152bfd20a28c6672c32b96ee4cefd9e3360e41ff04ca"
+    },
+    {
+      "path": "images/somatic/surprise-neurosensory-0.webp",
+      "bytes": 79608,
+      "sha256": "0388c69b51b2f55a9ee1216532e5c86fc97ccd949f33ea737853163d2139d383"
+    },
+    {
+      "path": "images/somatic/surprise-respiratory-0.webp",
+      "bytes": 80886,
+      "sha256": "1f388a66057e446f506f038be2f3719d6302e027b174828ef3f0281850a3cbc9"
+    },
+    {
+      "path": "index.html",
+      "bytes": 8713,
+      "sha256": "d91e4ba8b8b16f710481fbb496306dd65c2b848e3b79f2baf40ef841d4fd3b0c"
+    },
+    {
+      "path": "prompts.json",
+      "bytes": 41371,
+      "sha256": "daf493eeeedf8a6c1fd28fc998527c54cb7b79ae05fb440967061b6aba1ca30c"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 26,
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 5714,
+      "sha256": "4ebda2e902afb494bea94d2f69854412692a6db9a02ec81785b610367955bb3e"
+    },
+    {
+      "path": "src/application/services/atlas-service/main.js",
+      "bytes": 2247,
+      "sha256": "a99962c4d256c9e7fd0d91628e630fabc730ef04ff73ac7a41613441f4471ccc"
+    },
+    {
+      "path": "src/application/services/navigation-service/main.js",
+      "bytes": 1159,
+      "sha256": "844c2012d475ed47c1c493bdf3f0b7c0040c376960c37b3cb2b37668b857970e"
+    },
+    {
+      "path": "src/application/services/visual-resolver/main.js",
+      "bytes": 647,
+      "sha256": "9c6ff39d24b2fe43c254984b66d3096f598bdda7edd117b4d8c4112b13aae5a1"
+    },
+    {
+      "path": "src/core/domain/atlas-model/main.js",
+      "bytes": 3576,
+      "sha256": "85ab97f80d32254523402c1d88f7bd1666980504123bd3271824d9a76c48d323"
+    },
+    {
+      "path": "src/core/domain/evidence-policy/main.js",
+      "bytes": 2071,
+      "sha256": "7813c8341fd7c4f04158c33b25e5103c8dc7aa0d544f942f01078a69d18ca105"
+    },
+    {
+      "path": "src/core/domain/visual-model/main.js",
+      "bytes": 1226,
+      "sha256": "3d71cb4038a512307eba99ed45bf8bde63912d6b7c7282fe8ef5ab0114bcbd35"
+    },
+    {
+      "path": "src/core/ports/atlas-resource-port/main.js",
+      "bytes": 597,
+      "sha256": "acc7ef7e59014d7057845bd210ea7bdc1505fa946738e9c64b9ef38b5d5c4805"
+    },
+    {
+      "path": "src/infrastructure/adapters/fetch-resources/main.js",
+      "bytes": 2544,
+      "sha256": "8d3f07b4f42986f87a97e3e0dbc968595927280a0f9c83bc9e6aee30e8c438fa"
+    },
+    {
+      "path": "src/ui/atlas-shell/main.js",
+      "bytes": 3329,
+      "sha256": "4bc125196850c8d680ed9e04df98136e8d37074b8fd22a6cfdaf52723ee443a2"
+    },
+    {
+      "path": "src/ui/evidence-panel/main.js",
+      "bytes": 2059,
+      "sha256": "8a8d014e55277ab166c1147f8ded81d577b7a3d089fbb78154c739565e909e12"
+    },
+    {
+      "path": "src/ui/reference-gallery/main.js",
+      "bytes": 6163,
+      "sha256": "bb7f4b8dc9adca3008839c18b4ef19f9328b515b07288cd85eb5b376e098222b"
+    },
+    {
+      "path": "src/ui/safe-rendering/main.js",
+      "bytes": 1284,
+      "sha256": "83f1512260297129da5756282033e299e952260f44e0a748573755cce7f9dafa"
+    },
+    {
+      "path": "src/workflows/atlas-runtime/main.js",
+      "bytes": 3609,
+      "sha256": "825118fd7b5c1218075f8560a701357637efa9c1229d94ca55c9f1661dc1e644"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 12394,
+      "sha256": "85d5d27281f0aa01a6435114c2396a5bf3d6f2ed534420b0b9d1b1c3abe01766"
+    },
+    {
+      "path": "visual-index.json",
+      "bytes": 91580,
+      "sha256": "84ef041ecc55bce482a4cf0b19d7fdf188ef51bebfaf65dc4480de577b6acb1b"
+    },
+    {
+      "path": "source.tar.gz",
+      "bytes": 79316394,
+      "sha256": "54a33cc98863126fa936e2b055ed622390451300675b3ddc816bb3b86c941195"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "review_method": "source-based editorial audit",
+  "human_certification": false,
+  "sources": [
+    {
+      "id": "bodily-maps-2014",
+      "title": "Bodily maps of emotions",
+      "authors": "Nummenmaa, Glerean, Hari & Hietanen",
+      "year": 2014,
+      "url": "https://doi.org/10.1073/pnas.1321664111",
+      "type": "primary study",
+      "scope": "Participants marked emotion-associated sensations on body silhouettes.",
+      "limitations": "Self-report maps are not direct physiological measurements or diagnostic probabilities.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    },
+    {
+      "id": "ans-meta-2018",
+      "title": "Emotion fingerprints or emotion populations?",
+      "authors": "Siegel et al.",
+      "year": 2018,
+      "url": "https://doi.org/10.1037/bul0000128",
+      "type": "meta-analysis",
+      "scope": "Meta-analysis of autonomic measures across emotion categories.",
+      "limitations": "Variation and overlap limit inference of a unique emotion from an isolated bodily sign.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    },
+    {
+      "id": "faces-review-2019",
+      "title": "Emotional Expressions Reconsidered",
+      "authors": "Barrett, Adolphs, Marsella, Martinez & Pollak",
+      "year": 2019,
+      "url": "https://doi.org/10.1177/1529100619832930",
+      "type": "research review",
+      "scope": "Evaluates facial movements and emotion inference.",
+      "limitations": "Facial appearance alone is insufficient to establish an emotional state across contexts.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    },
+    {
+      "id": "ans-experiment-1983",
+      "title": "Autonomic nervous system activity distinguishes among emotions",
+      "authors": "Ekman, Levenson & Friesen",
+      "year": 1983,
+      "url": "https://doi.org/10.1126/science.6612338",
+      "type": "primary study",
+      "scope": "Autonomic measures during posed facial actions and relived experiences.",
+      "limitations": "Task-specific group findings do not supply probabilities for the atlas claims.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    },
+    {
+      "id": "fear-sadness-2007",
+      "title": "Cardiovascular, electrodermal, and respiratory response patterns to fear- and sadness-inducing films",
+      "authors": "Kreibig, Wilhelm, Roth & Gross",
+      "year": 2007,
+      "url": "https://doi.org/10.1111/j.1469-8986.2007.00550.x",
+      "type": "primary study",
+      "scope": "Measured cardiovascular, skin-conductance and respiratory responses to films.",
+      "limitations": "Experimental induction and selected measures do not imply a universal everyday response.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    },
+    {
+      "id": "pride-shame-2008",
+      "title": "The spontaneous expression of pride and shame",
+      "authors": "Tracy & Matsumoto",
+      "year": 2008,
+      "url": "https://doi.org/10.1073/pnas.0802686105",
+      "type": "primary study",
+      "scope": "Observed postures after victory or defeat among sighted and blind athletes.",
+      "limitations": "Sporting context and cultural modulation, particularly of shame, limit generalization.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    },
+    {
+      "id": "awe-piloerection-2021",
+      "title": "Piloerection is not a reliable physiological correlate of awe",
+      "authors": "McPhetres & Shtulman",
+      "year": 2021,
+      "url": "https://doi.org/10.1016/j.ijpsycho.2020.11.011",
+      "type": "primary study",
+      "scope": "Two preregistered samples tested objective goosebumps after awe stimuli.",
+      "limitations": "Results concern the tested laboratory stimuli, not all possible awe experiences.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    },
+    {
+      "id": "nimh-panic",
+      "title": "Panic Disorder: What You Need to Know",
+      "authors": "National Institute of Mental Health",
+      "year": null,
+      "url": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms",
+      "type": "official clinical information",
+      "scope": "Descriptions of panic symptoms and evaluation.",
+      "limitations": "Symptoms overlap other conditions; this catalogue is not a diagnostic instrument.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    },
+    {
+      "id": "facs-authority",
+      "title": "Facial Action Coding System",
+      "authors": "Paul Ekman Group",
+      "year": 2002,
+      "url": "https://www.paulekman.com/facial-action-coding-system/",
+      "type": "method authority",
+      "scope": "FACS describes visible facial actions; scoring requires trained observation.",
+      "limitations": "The full licensed manual was not reproduced or independently certified against these generated images.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    },
+    {
+      "id": "openface-au",
+      "title": "OpenFace Action Units",
+      "authors": "Tadas Baltrusaitis / OpenFace",
+      "year": 2019,
+      "url": "https://github.com/TadasBaltrusaitis/OpenFace/wiki/Action-Units",
+      "type": "research software documentation",
+      "scope": "Lists the action-unit subset recognized by the research tool.",
+      "limitations": "Tool outputs and generated reference images are not proof of an emotional state.",
+      "accessed": "2026-10-24",
+      "review_method": "source-based editorial audit"
+    }
+  ]
+}
