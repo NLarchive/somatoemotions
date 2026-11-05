@@ -9,16 +9,16 @@
       "jpg": "images/jpg/action/anger-act-0.jpg",
       "webp": "images/action/anger-act-0.webp",
       "status": "complete",
-      "jpg_sha256": "db190a740e27ba65caa4799ee39b523ab4b690d95bea33136a8cc2dc7f17e7d7",
-      "webp_sha256": "baaaccf2d1f42177e86b3a489cf37c8bf7dfd173d13221cd59a4f5037a3004ca"
+      "jpg_sha256": "39031f6340b426ad3292209b38361389eb1c59e0e93495d300d25232d0fbd070",
+      "webp_sha256": "86f7a5b8c984e4d872e338ae48caef88b72cf55579198096655a669def1cf214"
     },
     {
       "key": "action/anger-act-1",
       "jpg": "images/jpg/action/anger-act-1.jpg",
       "webp": "images/action/anger-act-1.webp",
       "status": "complete",
-      "jpg_sha256": "cebbeaee09688643ea1adf49b1dba6a35b8392373255d0aa46e142a1de149029",
-      "webp_sha256": "9a62b9fc078ab88b4f6559838d72303e95423222eac75b82f6ddb918522dcacc"
+      "jpg_sha256": "ce94d32a9e62067a9e45f45ad588c006641ca9dceb65c0938603063895b57cdc",
+      "webp_sha256": "9e8d24d8631f7ffed4aa05c2647048b90637bd8c46c165db18984148074b17ce"
     },
     {
       "key": "action/anger-act-2",
@@ -41,8 +41,8 @@
       "jpg": "images/jpg/action/anxiety-act-0.jpg",
       "webp": "images/action/anxiety-act-0.webp",
       "status": "complete",
-      "jpg_sha256": "116ff5061e6fc8429d9513f7e0e7d08c00c6743c8b31780802c8959ddee42b86",
-      "webp_sha256": "123e1ac6083f16e915c44d51d0131f32c806576613083cdfac610ae737aac528"
+      "jpg_sha256": "50d1486737893e25e017b293d783a6aa89be1b242b8d432c1afd104dacbe85b1",
+      "webp_sha256": "7c7ccd4dc43a4755998ee2b3342e1a60eadc1fd8b1caf298258ca040c7897059"
     },
     {
       "key": "action/anxiety-act-1",
@@ -65,16 +65,16 @@
       "jpg": "images/jpg/action/awe-act-0.jpg",
       "webp": "images/action/awe-act-0.webp",
       "status": "complete",
-      "jpg_sha256": "740c9d30cc5f66c136350dae4b20658a11a4fc04122cc7b4d61598c76a829360",
-      "webp_sha256": "f4476dc48912b2daa3be9d9e00392337909782532939549937820c43c861bb88"
+      "jpg_sha256": "91dc94edcdd3056e4b2bd00d83ac4f7fb208231d4e3cf10cb044c69279cae3c8",
+      "webp_sha256": "68e4d4eabf9fd434135c23097ccca69149582ce1d6f45eae1ae76d2279fd2b8d"
     },
     {
       "key": "action/awe-act-1",
       "jpg": "images/jpg/action/awe-act-1.jpg",
       "webp": "images/action/awe-act-1.webp",
       "status": "complete",
-      "jpg_sha256": "9e9af9469b8dddce7f825aa5b151b7453d926a67d6200a950c412f3970d3940d",
-      "webp_sha256": "fa64b347d6d57e4626bd0c2473b219d5318a64db30997d75f07cbfbeebbb5a96"
+      "jpg_sha256": "eae37ebae5caa2eb490b040a95083105846e0917e46b24155310e5e6d964fd9d",
+      "webp_sha256": "302b10b2b5650df3b374e4c7b63af94496dd0c770900e1c2343a39447aba8e1b"
     },
     {
       "key": "action/baseline-neutral-act-0",
@@ -97,8 +97,8 @@
       "jpg": "images/jpg/action/contempt-act-0.jpg",
       "webp": "images/action/contempt-act-0.webp",
       "status": "complete",
-      "jpg_sha256": "212b2c8c0d3cbe56010ccc606d31f946a83bf6d581c7428177d6ef13e787ee61",
-      "webp_sha256": "7855a35498671bb5d119e3f4dad9a4e7d85a0b54e4629f44d31c869c43343eb8"
+      "jpg_sha256": "f1b16d7f1aff2cf4d1e3ad8115c54297c25c3acf908d20da4d7bbcaccc2cb10c",
+      "webp_sha256": "9de8fa11f7030340b58068ec4140c0411380ed82417045be64b1df8b409d2a8b"
     },
     {
       "key": "action/contempt-act-1",
@@ -241,16 +241,16 @@
       "jpg": "images/jpg/action/pride-act-1.jpg",
       "webp": "images/action/pride-act-1.webp",
       "status": "complete",
-      "jpg_sha256": "50089b4c946f9ece2fec4224d1b467c352cb3a8fc91966252f4b2f03cc9f058a",
-      "webp_sha256": "eaa3bd12ec1c646c696fe4e34dc4bc495037da694d5ff9daa0e346550e70c466"
+      "jpg_sha256": "21f02f153befbe4d15170f7d5f945abae1020ceec7cce47f0bd64cfcca913bce",
+      "webp_sha256": "436670e6eb007f70ef8dc2858eb1e0d2712b62c551dd193fa548038bdb467798"
     },
     {
       "key": "action/pride-act-2",
       "jpg": "images/jpg/action/pride-act-2.jpg",
       "webp": "images/action/pride-act-2.webp",
       "status": "complete",
-      "jpg_sha256": "7fc30115f1305810168d605e76dcecde8a0cb9b44dc5402dd30f40ce8cbada50",
-      "webp_sha256": "dc946f10fa4deabb2b8b6c2006bbd27eb9e789a8e95e25340cc036a6f3d269c1"
+      "jpg_sha256": "005db7e1b82fa7e96c29cb64d1039da20fe7088fcdcbc1e465c9fcd35a8e9987",
+      "webp_sha256": "4f467ecc0105d539d4e776688fa2a52d050a8416b939770f4ddecf8a5ba308cf"
     },
     {
       "key": "action/sadness-act-0",
