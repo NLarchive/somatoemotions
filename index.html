@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InteroMap · Emotion reference atlas</title>
+    <title>InteroMap · Atlas de referencia emocional</title>
     <meta
       name="description"
-      content="An educational atlas of posed body and facial illustrations with source-qualified context and clear limits on emotion inference."
+      content="Un atlas educativo de ilustraciones corporales y faciales posadas, con fuentes y límites claros para inferir emociones."
     />
     <meta name="robots" content="index, follow" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#content-viewport">Skip to atlas content</a>
+    <a class="skip-link" href="#content-viewport" data-i18n="skip">Saltar al contenido del atlas</a>
     <noscript
       ><p class="context-notice">
-        JavaScript is required to explore this catalogue. Illustrations are educational and do not
-        establish an emotion or diagnosis.
+        Se necesita JavaScript para explorar este catálogo. Las ilustraciones son educativas y no
+        permiten determinar una emoción ni un diagnóstico.
       </p></noscript
     >
     <div class="app-shell">
@@ -26,6 +26,9 @@
           <h2>InteroMap</h2>
           <div class="version-tag">4.0 · atlas</div>
         </div>
+        <button class="language-toggle" id="language-toggle" type="button" lang="en">
+          English
+        </button>
         <div class="search-box">
           <label class="filter-label" for="global-search">Search the catalogue</label>
           <input
@@ -213,10 +216,9 @@
         </section>
         <footer class="site-footer">
           <p>
-            © 2026 Nicolas Ivan Larenas Bustamante · InteroMap ·
+            © 2026 Nicolás Iván Larenas Bustamante · InteroMap ·
             <a href="LICENSE">GNU AGPL version 3 license</a> ·
-            <a href="NOTICE">Author and license notice</a> ·
-            <a href="source.tar.gz" download>Download source archive</a>
+            <a href="NOTICE">Author and license notice</a>
           </p>
           <p>
             Scientific publications retain their own rights. Review links are citations, not

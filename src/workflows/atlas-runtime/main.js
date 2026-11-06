@@ -3,6 +3,7 @@ import { loadAtlas } from '../../application/services/atlas-service/main.js';
 import { createShell } from '../../ui/atlas-shell/main.js';
 import { createGallery } from '../../ui/reference-gallery/main.js';
 import { renderEvidence, evidenceNote } from '../../ui/evidence-panel/main.js';
+import { createI18n } from '../../ui/i18n/main.js';
 export function transition(state, event) {
   const next = {
     idle: { load: 'loading' },
@@ -14,6 +15,7 @@ export function transition(state, event) {
   return next;
 }
 export async function startApp(doc = globalThis.document) {
+  const i18n = createI18n(doc);
   const load = createResourceLoader({ baseURL: doc.baseURI });
   const status = doc.getElementById('app-status'),
     retry = doc.getElementById('retry-load');
@@ -33,29 +35,64 @@ export async function startApp(doc = globalThis.document) {
     for (const b of doc.querySelectorAll('#category-filters button,[role=tab]')) b.disabled = true;
     retry.hidden = true;
     status.hidden = false;
-    status.textContent = 'Loading the atlas…';
+    status.textContent = i18n.locale() === 'es' ? 'Cargando el atlas…' : 'Loading the atlas…';
     try {
       const model = await loadAtlas(load, { signal: requestController.signal });
       if (requestController.signal.aborted) return;
       state = transition(state, 'success');
-      status.textContent = model.warnings.join(' ');
-      status.hidden = false;
-      renderEvidence(model.sources, doc);
-      const gallery = createGallery(model, doc, evidenceNote);
+      const updateWarnings = () => {
+        status.textContent =
+          i18n.locale() === 'es' && model.warnings.length
+            ? 'Las instrucciones de generación no están disponibles. Las imágenes de referencia siguen disponibles.'
+            : model.warnings.join(' ');
+        status.hidden = !status.textContent;
+      };
+      updateWarnings();
+      renderEvidence(model.sources, doc, i18n);
+      doc.addEventListener(
+        'interomap-language-change',
+        () => {
+          renderEvidence(model.sources, doc, i18n);
+          updateWarnings();
+        },
+        { signal: requestController.signal },
+      );
+      const gallery = createGallery(model, doc, (...args) => evidenceNote(...args, i18n), i18n);
       shell = createShell(
         model.data,
         (emotion) => {
-          doc.getElementById('active-name').textContent =
-            emotion?.display_name || 'No emotion selected';
-          doc.getElementById('active-category').textContent = emotion?.category || '';
+          doc.getElementById('active-name').textContent = i18n.translate(
+            emotion?.display_name ||
+              (i18n.locale() === 'es' ? 'Ninguna emoción seleccionada' : 'No emotion selected'),
+            emotion?.id,
+          );
+          const categories = {
+            Basic: 'Básica',
+            Complex: 'Compleja',
+            Social: 'Social',
+            Baseline: 'Referencia',
+            'Complex / Social': 'Compleja / social',
+          };
+          doc.getElementById('active-category').textContent =
+            i18n.locale() === 'es'
+              ? categories[emotion?.category] || emotion?.category || ''
+              : emotion?.category || '';
           doc.getElementById('active-summary').textContent =
-            emotion?.notes || 'Change your search or category to see the catalogue.';
+            i18n.locale() === 'es' && emotion
+              ? `Ilustraciones clasificadas bajo ${i18n.translate(emotion.display_name, emotion.id)}. La apariencia y las sensaciones corporales no determinan la emoción ni el diagnóstico de una persona.${emotion.id === 'panic' ? ' El dolor de pecho, la dificultad para respirar u otros síntomas nuevos o preocupantes requieren evaluación médica.' : ''}`
+              : emotion?.notes ||
+                (i18n.locale() === 'es'
+                  ? 'Cambia la búsqueda o la categoría para ver el catálogo.'
+                  : 'Change your search or category to see the catalogue.');
           doc.title = emotion
-            ? `${emotion.display_name} · InteroMap`
-            : 'InteroMap · Emotion reference atlas';
+            ? `${i18n.translate(emotion.display_name, emotion.id)} · InteroMap`
+            : i18n.locale() === 'es'
+              ? 'InteroMap · Atlas de referencia emocional'
+              : 'InteroMap · Emotion reference atlas';
           gallery.renderEmotion(emotion);
         },
         doc,
+        i18n,
       );
       doc.getElementById('content-viewport').classList.remove('atlas-loading');
       doc.getElementById('global-search').disabled = false;
@@ -66,8 +103,11 @@ export async function startApp(doc = globalThis.document) {
       if (error.code === 'ABORTED') return;
       state = transition(state, 'failure');
       status.textContent =
-        'The atlas could not load its required resources. Check the local server or network, then retry.';
-      doc.getElementById('active-name').textContent = 'Atlas unavailable';
+        i18n.locale() === 'es'
+          ? 'No se pudieron cargar los recursos necesarios. Comprueba el servidor o la conexión e inténtalo de nuevo.'
+          : 'The atlas could not load its required resources. Check the local server or network, then retry.';
+      doc.getElementById('active-name').textContent =
+        i18n.locale() === 'es' ? 'Atlas no disponible' : 'Atlas unavailable';
       retry.hidden = false;
     }
   }

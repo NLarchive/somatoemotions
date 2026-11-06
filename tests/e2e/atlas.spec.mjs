@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { readFile, writeFile } from 'node:fs/promises';
+import { emotionNames } from '../../src/ui/i18n/main.js';
 const data = JSON.parse(await readFile('data.json', 'utf8'));
 const ready = async (page) => {
   await page.goto('./');
@@ -19,7 +20,7 @@ test('all emotions, records and combined images are reachable without console or
   let selected = 0;
   for (const emotion of data.emotions) {
     await page.locator(`[data-emotion="${emotion.id}"]`).click();
-    await expect(page.locator('#active-name')).toHaveText(emotion.display_name);
+    await expect(page.locator('#active-name')).toHaveText(emotionNames[emotion.id]);
     for (const view of ['somatic', 'facs', 'actions']) {
       await page.locator(`#tab-${view}`).click();
       const panel = page.locator(`#panel-${view}`);
@@ -47,10 +48,16 @@ test('search, category, keyboard tabs, empty results and hostile text remain usa
 }) => {
   await ready(page);
   await page.locator('#global-search').fill('nothing-will-match-this');
-  await expect(page.locator('#result-count')).toContainText('No matching');
-  await expect(page.locator('#active-name')).toHaveText('No emotion selected');
-  await page.locator('#global-search').fill('  shame  ');
+  await expect(page.locator('#result-count')).toContainText('No hay emociones');
+  await expect(page.locator('#active-name')).toHaveText('Ninguna emoción seleccionada');
+  await page.locator('#global-search').fill('  vergüenza  ');
+  await expect(page.locator('#active-name')).toHaveText('Vergüenza');
+  await page.getByRole('button', { name: 'English', exact: true }).click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.locator('#active-name')).toHaveText('Shame');
+  await page.getByRole('button', { name: 'Español', exact: true }).click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'es');
+  await expect(page.locator('#active-name')).toHaveText('Vergüenza');
   await page.locator('#global-search').fill('');
   await page.locator('[data-filter="Social"]').click();
   await expect(page.locator('#emotion-list button')).toHaveCount(3);
@@ -88,7 +95,7 @@ test('required resource failures offer retry; optional prompt failure remains lo
   await page.route('**/prompts.json', (route) => route.fulfill({ status: 404, body: 'missing' }));
   await page.reload();
   await expect(page.locator('#global-search')).toBeEnabled();
-  await expect(page.locator('#app-status')).toContainText('prompts are unavailable');
+  await expect(page.locator('#app-status')).toContainText('no están disponibles');
 });
 
 test('image errors and denied clipboard provide accessible fallback feedback', async ({ page }) => {
@@ -109,7 +116,7 @@ test('image errors and denied clipboard provide accessible fallback feedback', a
     }),
   );
   await page.locator('#somatic-visuals .btn-copy').click();
-  await expect(page.locator('#copy-toast')).toContainText('denied');
+  await expect(page.locator('#copy-toast')).toContainText('No se pudo copiar');
 });
 
 test('automated accessibility, responsive layout, and local performance profile', async ({

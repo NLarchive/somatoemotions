@@ -34,7 +34,7 @@ All 221 pairs include the 13 combined-face references. Fifteen supplementary ori
 
 ## Source, license and readiness
 
-Copyright © 2026 Nicolas Ivan Larenas Bustamante. This project is licensed under the GNU Affero General Public License v3.0; see [LICENSE](LICENSE) and [NOTICE](NOTICE). The app links to a corresponding source archive, generated from the repository. Scientific publications retain their own rights.
+Copyright © 2026 Nicolás Iván Larenas Bustamante. This project is licensed under the GNU Affero General Public License v3.0; see [LICENSE](LICENSE) and [NOTICE](NOTICE). The repository provides the source code, and the release bundle includes a corresponding source archive. Scientific publications retain their own rights.
 
 ## Publish with GitHub Pages
 

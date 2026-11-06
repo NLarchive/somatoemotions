@@ -4,7 +4,10 @@ export const normalize = (text) =>
     .toLocaleLowerCase('en')
     .replace(/\s+/g, ' ')
     .trim();
-export function searchEmotions(data, { query = '', category = 'All', selectedId = null } = {}) {
+export function searchEmotions(
+  data,
+  { query = '', category = 'All', selectedId = null, extraText = () => '' } = {},
+) {
   const q = normalize(query);
   const results = (data?.emotions || []).filter((e) => {
     if (category !== 'All' && !e.category.split(' / ').includes(category)) return false;
@@ -13,6 +16,7 @@ export function searchEmotions(data, { query = '', category = 'All', selectedId 
       e.display_name,
       e.category,
       e.notes,
+      extraText(e),
       ...somatic.map((x) => x.claim),
       ...e.behavioral_action_tendencies.map((x) => x.claim),
       ...e.facial_motor_units_fused.flatMap((x) => [x.claim, x.code, x.name, ...(x.muscles || [])]),

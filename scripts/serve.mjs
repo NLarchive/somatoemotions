@@ -23,6 +23,10 @@ const mime = {
   '.txt': 'text/plain; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
 };
+function contentType(name) {
+  if (name === 'LICENSE' || name === 'NOTICE') return 'text/plain; charset=utf-8';
+  return mime[path.extname(name)] || 'application/octet-stream';
+}
 function allowed(name) {
   if (
     [
@@ -37,6 +41,7 @@ function allowed(name) {
       'robots.txt',
       'sitemap.xml',
       'LICENSE',
+      'NOTICE',
       'source.tar.gz',
       'release-manifest.json',
     ].includes(name)
@@ -102,10 +107,7 @@ export function createPreviewServer({ root = process.cwd(), basePath = '/' } = {
       }
       if (req.method === 'HEAD') {
         res.writeHead(200, {
-          'Content-Type':
-            name === 'LICENSE'
-              ? 'text/plain; charset=utf-8'
-              : mime[path.extname(name)] || 'application/octet-stream',
+          'Content-Type': contentType(name),
           'Content-Length': info.size,
         });
         res.end();
@@ -113,10 +115,7 @@ export function createPreviewServer({ root = process.cwd(), basePath = '/' } = {
       }
       const body = await readFile(file);
       res.writeHead(200, {
-        'Content-Type':
-          name === 'LICENSE'
-            ? 'text/plain; charset=utf-8'
-            : mime[path.extname(name)] || 'application/octet-stream',
+        'Content-Type': contentType(name),
         'Content-Length': body.length,
       });
       res.end(req.method === 'HEAD' ? undefined : body);

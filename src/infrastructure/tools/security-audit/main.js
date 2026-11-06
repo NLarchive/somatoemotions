@@ -28,8 +28,8 @@ export async function auditBundle() {
       );
   }
   const html = await readFile('dist/index.html', 'utf8');
-  if (!html.includes('source.tar.gz') || !html.includes('LICENSE'))
-    errors.push('Missing license/source access');
+  if (!html.includes('href="LICENSE"') || !html.includes('href="NOTICE"'))
+    errors.push('Missing license or author notice');
   if (!manifest.files.some((f) => f.path === 'source.tar.gz'))
     errors.push('Missing corresponding source archive');
   return {

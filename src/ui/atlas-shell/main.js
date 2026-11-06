@@ -1,11 +1,18 @@
 import { element } from '../safe-rendering/main.js';
 import { searchEmotions } from '../../application/services/navigation-service/main.js';
+import { translateCatalog } from '../i18n/catalog.js';
+import { emotionNames } from '../i18n/main.js';
 export const TAB_IDS = ['somatic', 'facs', 'actions'];
 export function panelId(tab) {
   if (!TAB_IDS.includes(tab)) throw Error('Unknown tab');
   return `panel-${tab}`;
 }
-export function createShell(data, onSelect, doc = globalThis.document) {
+export function createShell(
+  data,
+  onSelect,
+  doc = globalThis.document,
+  i18n = { locale: () => 'en', translate: (x) => x },
+) {
   const scope = new doc.defaultView.AbortController();
   const on = (target, event, handler) =>
     target.addEventListener(event, handler, { signal: scope.signal });
@@ -23,11 +30,24 @@ export function createShell(data, onSelect, doc = globalThis.document) {
     }
   }
   function refresh() {
-    const out = searchEmotions(data, { query, category, selectedId });
+    const out = searchEmotions(data, {
+      query,
+      category,
+      selectedId,
+      extraText: (e) =>
+        [
+          emotionNames[e.id],
+          ...Object.values(e.somatic_profile)
+            .flat()
+            .map((r) => translateCatalog(r.claim, 'es')),
+          ...e.facial_motor_units_fused.map((r) => translateCatalog(r.claim, 'es')),
+          ...e.behavioral_action_tendencies.map((r) => translateCatalog(r.claim, 'es')),
+        ].join(' '),
+    });
     selectedId = out.selectedId;
     nav.replaceChildren();
     for (const e of out.results) {
-      const b = element('button', e.display_name, 'nav-item', doc);
+      const b = element('button', i18n.translate(e.display_name, e.id), 'nav-item', doc);
       b.type = 'button';
       b.dataset.emotion = e.id;
       on(b, 'click', () => {
@@ -38,9 +58,14 @@ export function createShell(data, onSelect, doc = globalThis.document) {
       nav.append(b);
     }
     markActive();
-    count.textContent = out.results.length
-      ? `${out.results.length} emotions shown`
-      : 'No matching emotions. Try another search or category.';
+    count.textContent =
+      i18n.locale() === 'es'
+        ? out.results.length
+          ? `${out.results.length} emociones`
+          : 'No hay emociones coincidentes. Prueba otra búsqueda o categoría.'
+        : out.results.length
+          ? `${out.results.length} emotions shown`
+          : 'No matching emotions. Try another search or category.';
     onSelect(data.emotions.find((e) => e.id === selectedId) || null);
   }
   const search = doc.getElementById('global-search');
@@ -58,6 +83,7 @@ export function createShell(data, onSelect, doc = globalThis.document) {
       }
       refresh();
     });
+  doc.addEventListener('interomap-language-change', refresh, { signal: scope.signal });
   const tabs = [...doc.querySelectorAll('[role=tab]')];
   const activate = (tab) => {
     for (const b of tabs) {

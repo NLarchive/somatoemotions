@@ -66,6 +66,23 @@ body {
   color: #d9b99a;
   font-family: var(--font-mono);
 }
+.language-toggle {
+  align-self: flex-start;
+  border: 1px solid #5a5248;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--sidebar-ink);
+  padding: 5px 12px;
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  background: #3a342d;
+  outline: 2px solid #d9b99a;
+  outline-offset: 2px;
+}
 
 .search-box input {
   width: 100%;
