@@ -10,10 +10,23 @@ export function describeRecord(record) {
   };
 }
 export function createGallery(model, doc = globalThis.document, i18n = { locale: () => 'en' }) {
+  const visualHosts = new Map(
+    ['somatic-visuals', 'facs-visuals', 'action-visuals'].map((id) => {
+      const visuals = doc.getElementById(id);
+      return [visuals, visuals.parentElement];
+    }),
+  );
   const notify = (message) => {
     doc.getElementById('copy-toast').textContent = message;
   };
-  function show(record, visuals) {
+  function show(record, visuals, origin) {
+    const host = visualHosts.get(visuals);
+    if (doc.defaultView.matchMedia('(max-width: 600px)').matches) {
+      const card = origin.closest('li, article');
+      if (card) card.append(visuals);
+    } else {
+      host.append(visuals);
+    }
     const ref = resolveReference(record, model.visuals, model.prompts.prompts);
     visuals.replaceChildren();
     const figure = element('figure', '', 'visual-block', doc);
@@ -125,7 +138,7 @@ export function createGallery(model, doc = globalThis.document, i18n = { locale:
         x.classList.toggle('active', active);
         x.setAttribute('aria-pressed', String(active));
       }
-      show(record, visuals);
+      show(record, visuals, b);
     });
     if (facs) b.classList.add('facs-select');
     return b;
@@ -137,19 +150,20 @@ export function createGallery(model, doc = globalThis.document, i18n = { locale:
     const somatic = doc.getElementById('somatic-list'),
       facs = doc.getElementById('facs-list'),
       actions = doc.getElementById('list-actions');
-    for (const id of ['somatic-visuals', 'facs-visuals', 'action-visuals'])
-      doc
-        .getElementById(id)
-        .replaceChildren(
-          element(
-            'p',
-            i18n.locale() === 'es'
-              ? 'Selecciona una referencia para ver su ilustración y descripción.'
-              : 'Select a reference to view its illustration and description.',
-            'visual-placeholder',
-            doc,
-          ),
-        );
+    for (const id of ['somatic-visuals', 'facs-visuals', 'action-visuals']) {
+      const visuals = doc.getElementById(id);
+      visualHosts.get(visuals).append(visuals);
+      visuals.replaceChildren(
+        element(
+          'p',
+          i18n.locale() === 'es'
+            ? 'Selecciona una referencia para ver su ilustración y descripción.'
+            : 'Select a reference to view its illustration and description.',
+          'visual-placeholder',
+          doc,
+        ),
+      );
+    }
     facs.replaceChildren();
     actions.replaceChildren();
     const channels = {
