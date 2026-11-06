@@ -138,6 +138,6 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     process.exitCode = 1;
   });
   server.listen(port, host, () =>
-    console.log(`InteroMap preview: http://${host}:${server.address().port}${basePath}`),
+    console.log(`SomatoEmotions preview: http://${host}:${server.address().port}${basePath}`),
   );
 }

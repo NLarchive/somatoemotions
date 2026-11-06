@@ -501,8 +501,8 @@ structure from .prettierrc.json:
 structure from LICENSE:  (no extractable definitions)
 
 structure from README.md:
-    [file-summary] InteroMap 4.0
-    [trust-moderate] [heading-1] # InteroMap 4.0
+    [file-summary] SomatoEmotions 4.0
+    [trust-moderate] [heading-1] # SomatoEmotions 4.0
     [trust-moderate] [heading-2] ## Run locally
     [trust-moderate] [heading-2] ## Validate and build
     [trust-moderate] [heading-2] ## Data and evidence
@@ -556,11 +556,11 @@ structure from favicon.svg:  (no extractable definitions)
 
 structure from index.html:
     [file-summary] An educational atlas of posed body and facial illustrations with source-qualified context and clear limits on emotion inference.
-    [title] <title>InteroMap · Emotion reference atlas</title>
+    [title] <title>SomatoEmotions · Emotion reference atlas</title>
     [meta] meta[description]  «An educational atlas of posed body and facial illustrations with source-qualified context and clear limits on emotion in»
     [meta] meta[robots]  «noindex, nofollow»
     [section] <aside id="sidebar">
-    [heading-2] <h2>InteroMap</h2>
+    [heading-2] <h2>SomatoEmotions</h2>
     [section] <nav id="emotion-list">
     [section] <main id="content-viewport">
     [section] <header id="emotion-header">
@@ -589,11 +589,11 @@ structure from index.html:
     [section] <footer id="site-footer">
 
 structure from node.tasks.json:
-    [file-summary] InteroMap production-readiness task graph adapted from supplied project_task_template v3.3. Planned atomic units keep the atlas a static browser application; gateway APIs, persistence and AI-agent run
+    [file-summary] SomatoEmotions production-readiness task graph adapted from supplied project_task_template v3.3. Planned atomic units keep the atlas a static browser application; gateway APIs, persistence and AI-agent run
     [json-key] $schema: "https://json-schema.org/draft/2020-12/schema"
     [json-key] template_type: "project_task_template"
     [json-key] version: "3.3"
-    [json-key] description: "InteroMap production-readiness task graph adapted from suppl..."
+    [json-key] description: "SomatoEmotions production-readiness task graph adapted from suppl..."
     [json-key] enums: {status, project_status, priority, complexity, dependency_type, +14 more}
     [json-key] project: {name, description, start_date, end_date, status, +13 more}
     [json-key] project_structure: {root, architecture, architecture_guide, dependency_rules, atomic_unit_standard, +1 more}
@@ -606,8 +606,8 @@ structure from node.tasks.json:
     [json-key] navigation: {rootModule, modules}
 
 structure from package.json:
-    [file-summary] interomap-atlas
-    [json-key] name: "interomap-atlas"
+    [file-summary] SomatoEmotions-atlas
+    [json-key] name: "SomatoEmotions-atlas"
     [json-key] version: "4.0.0"
     [json-key] private: true
     [json-key] type: "module"

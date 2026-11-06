@@ -108,7 +108,7 @@ export const emotionNames = {
 export function createI18n(doc = document) {
   let locale = 'es';
   try {
-    if (doc.defaultView.localStorage.getItem('interomap-language') === 'en') locale = 'en';
+    if (doc.defaultView.localStorage.getItem('SomatoEmotions-language') === 'en') locale = 'en';
   } catch {
     // The language toggle also works when storage is blocked.
   }
@@ -150,7 +150,7 @@ export function createI18n(doc = document) {
     toggle.textContent = locale === 'es' ? 'English' : 'Español';
     toggle.lang = locale === 'es' ? 'en' : 'es';
     try {
-      doc.defaultView.localStorage.setItem('interomap-language', locale);
+      doc.defaultView.localStorage.setItem('SomatoEmotions-language', locale);
     } catch {
       // Keep the choice in memory for this visit.
     }
@@ -159,7 +159,7 @@ export function createI18n(doc = document) {
   doc.getElementById('language-toggle').addEventListener('click', () => {
     locale = locale === 'es' ? 'en' : 'es';
     apply();
-    doc.dispatchEvent(new CustomEvent('interomap-language-change', { detail: locale }));
+    doc.dispatchEvent(new CustomEvent('SomatoEmotions-language-change', { detail: locale }));
   });
   return {
     locale: () => locale,

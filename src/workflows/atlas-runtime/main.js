@@ -50,7 +50,7 @@ export async function startApp(doc = globalThis.document) {
       updateWarnings();
       renderEvidence(model.sources, doc, i18n);
       doc.addEventListener(
-        'interomap-language-change',
+        'SomatoEmotions-language-change',
         () => {
           renderEvidence(model.sources, doc, i18n);
           updateWarnings();
@@ -85,10 +85,10 @@ export async function startApp(doc = globalThis.document) {
                   ? 'Cambia la búsqueda o la categoría para ver el catálogo.'
                   : 'Change your search or category to see the catalogue.');
           doc.title = emotion
-            ? `${i18n.translate(emotion.display_name, emotion.id)} · InteroMap`
+            ? `${i18n.translate(emotion.display_name, emotion.id)} · SomatoEmotions`
             : i18n.locale() === 'es'
-              ? 'InteroMap · Atlas de referencia emocional'
-              : 'InteroMap · Emotion reference atlas';
+              ? 'SomatoEmotions · Atlas de referencia emocional'
+              : 'SomatoEmotions · Emotion reference atlas';
           gallery.renderEmotion(emotion);
         },
         doc,

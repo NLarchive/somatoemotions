@@ -1,4 +1,4 @@
-# InteroMap 4.0
+# SomatoEmotions 4.0
 
 A static educational atlas of body, facial and action illustrations. Body appearance does not determine a person's emotion or diagnosis.
 

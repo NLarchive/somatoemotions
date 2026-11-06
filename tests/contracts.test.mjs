@@ -96,7 +96,7 @@ test('resource adapter retries transient errors only and honors cancellation/tim
   );
 });
 test('image import produces a canonical pair, refuses replacement and can recover a matching staged JPEG', async () => {
-  const root = await mkdtemp(path.join(os.tmpdir(), 'interomap-images-'));
+  const root = await mkdtemp(path.join(os.tmpdir(), 'SomatoEmotions-images-'));
   try {
     const source = path.join(root, 'source.png');
     await sharp({ create: { width: 12, height: 16, channels: 4, background: '#128877' } })
@@ -121,7 +121,7 @@ test('image import produces a canonical pair, refuses replacement and can recove
     );
   } finally {
     assert.equal(path.dirname(root), path.resolve(os.tmpdir()));
-    assert.ok(path.basename(root).startsWith('interomap-images-'));
+    assert.ok(path.basename(root).startsWith('SomatoEmotions-images-'));
     await rm(root, { recursive: true, force: true, maxRetries: 3 });
   }
 });

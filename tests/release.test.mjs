@@ -22,7 +22,7 @@ test('source archive is deterministic, round trips bytes and rejects unsafe/tamp
   assert.throws(() => unpackTar(corrupt));
 });
 test('portable converter rejects collisions and invalid batches without replacing sources', async () => {
-  const root = await mkdtemp(path.join(os.tmpdir(), 'interomap-convert-'));
+  const root = await mkdtemp(path.join(os.tmpdir(), 'SomatoEmotions-convert-'));
   try {
     const source = path.join(root, 'sample.png'),
       missing = path.join(root, 'missing.png');
@@ -42,7 +42,7 @@ test('portable converter rejects collisions and invalid batches without replacin
     assert.deepEqual(await readFile(source), original);
   } finally {
     assert.equal(path.dirname(root), path.resolve(os.tmpdir()));
-    assert.ok(path.basename(root).startsWith('interomap-convert-'));
+    assert.ok(path.basename(root).startsWith('SomatoEmotions-convert-'));
     await rm(root, { recursive: true, force: true });
   }
 });

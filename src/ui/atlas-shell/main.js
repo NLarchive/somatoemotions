@@ -83,7 +83,7 @@ export function createShell(
       }
       refresh();
     });
-  doc.addEventListener('interomap-language-change', refresh, { signal: scope.signal });
+  doc.addEventListener('SomatoEmotions-language-change', refresh, { signal: scope.signal });
   const tabs = [...doc.querySelectorAll('[role=tab]')];
   const activate = (tab) => {
     for (const b of tabs) {

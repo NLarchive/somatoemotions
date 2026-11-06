@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "template_type": "project_task_template",
   "version": "3.3",
-  "description": "InteroMap production-readiness task graph adapted from supplied project_task_template v3.3. Planned atomic units keep the atlas a static browser application; gateway APIs, persistence and AI-agent runtime are outside scope. This file records proposed work, not completed validation or deployment.",
+  "description": "SomatoEmotions production-readiness task graph adapted from supplied project_task_template v3.3. Planned atomic units keep the atlas a static browser application; gateway APIs, persistence and AI-agent runtime are outside scope. This file records proposed work, not completed validation or deployment.",
   "enums": {
     "status": [
       "Not Started",
@@ -135,7 +135,7 @@
     ]
   },
   "project": {
-    "name": "emotions / InteroMap - production readiness",
+    "name": "emotions / SomatoEmotions - production readiness",
     "description": "Verified repository baseline on 2026-10-24: {\"emotions\": 14, \"somatic_claims\": 114, \"action_claims\": 38, \"facs_cards\": 55, \"prompt_assets\": 208, \"webp_files\": 208, \"jpg_files\": 208}. All 208 prompt keys have canonical WebP and categorized JPEG counterparts. Current runtime also derives 13 absent composite-face paths; checking the prompt inventory alone is insufficient. Six shared labels are outside the 14-emotion catalogue. Existing scientific claims and numeric confidence scores are NOT scientifically validated by file checks. Data schema is 3.1.0, prompt schema 3.2.0. No package.json or browser test suite exists. Source JPEGs are currently ignored by Git. Proposed weekday schedule starts 2026-10-26; dates are estimates, exclude holidays and are not capacity-leveled. Named workers are unassigned role slots; blank contacts and zero cost/capacity mean unknown, not approved budget or availability. Host, domain, CI provider and independent subject reviewer remain open decisions. Owner decisions recorded 2026-10-24: use the supplied GNU AGPL version 3 LICENSE, local-server testing, and source-based scientific validation by Codex. No independent human certification or public deployment is claimed. Owner clarified on 2026-10-24: supplied LICENSE, local-server testing and source-based scientific validation by Codex. Independent human/FACS certification is not claimed; manual screen-reader evidence remains a separate explicit gate.",
     "start_date": "2026-10-26",
     "end_date": "2026-12-03",
@@ -148,7 +148,7 @@
       "mode": "handoff",
       "summary": "Task 28 closes the readiness graph only after source, content, runtime, accessibility, staging and reproducibility evidence passes.",
       "next_step": "Use the verified candidate and runbooks in a separately requested deployment/operations graph. Public deployment is not performed by creating or completing this plan.",
-      "next_graph": "InteroMap deployment and maintenance",
+      "next_graph": "SomatoEmotions deployment and maintenance",
       "success_signal": "All tasks Done with evidence; no unresolved Critical/High blockers; reviewed scientific claims and complete runtime images; implemented units stable; reproducible candidate and rollback evidence retained.",
       "owner": "Project manager (unassigned)",
       "maintenance_rhythm": "On each data/contract/image change rerun dependent validation and browser checks; review evidence sources and dependencies at least quarterly or sooner when upstream findings change."
@@ -170,7 +170,7 @@
       }
     ],
     "tags": [
-      "interomap",
+      "SomatoEmotions",
       "static-site",
       "production-readiness",
       "data-provenance",
@@ -7428,8 +7428,8 @@
     "modules": [
       {
         "path": "node.tasks.json",
-        "label": "InteroMap production readiness",
-        "name": "emotions / InteroMap - production readiness",
+        "label": "SomatoEmotions production readiness",
+        "name": "emotions / SomatoEmotions - production readiness",
         "taskIds": [
           1,
           2,
