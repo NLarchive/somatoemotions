@@ -1,4 +1,17 @@
 const translations = {
+  'AU5: Subtle upper lid lift': 'AU5: Elevación leve del párpado superior',
+  'AU5: Wide eye opening': 'AU5: Abertura amplia del ojo',
+  'AU5: Upper lid lift with relaxed lower lid':
+    'AU5: Elevación del párpado superior con el inferior relajado',
+  'AU1: Peaked inner brow lift': 'AU1: Elevación interna de las cejas en pico',
+  'AU4: Inward brow pull with inner brow lift':
+    'AU4: Acercamiento de las cejas con elevación interna',
+  'AU15: Lowered mouth corners with nose wrinkles':
+    'AU15: Descenso de las comisuras con pliegues nasales',
+  'AU15: Slight downward turn of the mouth corners': 'AU15: Leve descenso de las comisuras',
+  'AU24: Firm, straight lip closure': 'AU24: Cierre firme y recto de los labios',
+  'AU26: Open mouth with slack jaw': 'AU26: Boca abierta con la mandíbula relajada',
+  'AU26: Slight jaw drop': 'AU26: Descenso leve de la mandíbula',
   'Full-face pose: Anger': 'Pose de rostro completo: ira',
   'Full-face pose: Fear': 'Pose de rostro completo: miedo',
   'Full-face pose: Sadness': 'Pose de rostro completo: tristeza',
@@ -14,7 +27,7 @@ const translations = {
   'Full-face pose: Love / affiliation': 'Pose de rostro completo: amor / afiliación',
   'Face and neck reference': 'Referencia del rostro y el cuello',
   'Hand over chest': 'Mano sobre el pecho',
-  'Upper-chest breathing pose': 'Pose de respiración en la parte superior del pecho',
+  'Upper-chest breathing pose': 'Postura de respiración con el pecho alto',
   'Neck and shoulder tension': 'Tensión en el cuello y los hombros',
   'Palms and facial skin': 'Palmas y piel del rostro',
   'Restless gaze': 'Mirada inquieta',
@@ -155,9 +168,10 @@ const translations = {
   'AU9: Nose Wrinkler': 'AU9: Arrugamiento de la nariz',
   'AU10: Upper Lip Raiser': 'AU10: Elevación del labio superior',
   'AU16: Lower Lip Depressor': 'AU16: Descenso del labio inferior',
-  'AU1+AU2: Full brow raise': 'AU1+AU2: Elevación completa de las cejas',
+  'AU1+AU2: Inner and outer brow lift': 'AU1+AU2: Elevación interna y externa de las cejas',
   'AU26: Jaw Drop': 'AU26: Descenso de la mandíbula',
-  'AU1+AU4: Worry brow': 'AU1+AU4: Cejas de preocupación',
+  'AU1+AU4: Inner brow lift and inward pull':
+    'AU1+AU4: Elevación interna y acercamiento de las cejas',
   'AU1+AU2+AU5: Maximal aperture': 'AU1+AU2+AU5: Apertura máxima',
   'AU54: Head down': 'AU54: Cabeza hacia abajo',
   'AU64: Eyes down': 'AU64: Ojos hacia abajo',
@@ -165,11 +179,10 @@ const translations = {
   'AU12: Mild Lip Corner Puller': 'AU12: Elevación leve de las comisuras',
   'AU14: Dimpler, unilateral': 'AU14: Formación unilateral del hoyuelo',
   'AU10: Upper Lip Raiser, unilateral': 'AU10: Elevación unilateral del labio superior',
-  'AU1+AU2: Brow arch without AU4': 'AU1+AU2: Arqueamiento de las cejas sin AU4',
+  'AU1+AU2: Brow arch with open glabella': 'AU1+AU2: Arco de las cejas sin fruncir el entrecejo',
   'AU6: Soft cheek raiser': 'AU6: Elevación suave de las mejillas',
   'AU12: Gentle Lip Corner Puller': 'AU12: Elevación suave de las comisuras',
   'AU0: Full Face Neutral Baseline': 'AU0: Referencia neutral del rostro completo',
-  'AU0: Neutral face': 'AU0: Rostro neutral',
   'Laboratory anger induction can change cardiovascular activity.':
     'La inducción de ira en laboratorio puede modificar la actividad cardiovascular.',
   'Temple close-up': 'Primer plano de la sien',

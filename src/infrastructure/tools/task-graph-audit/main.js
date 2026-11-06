@@ -105,7 +105,27 @@ export function auditPlan(plan) {
   for (const m of plan.project?.milestones || [])
     for (const n of m.linked_task_names || []) if (!names.has(n)) add('Unknown milestone task');
   const nav = plan.navigation?.modules?.flatMap((x) => x.taskIds) || [];
-  if (nav.length !== tasks.size || nav.some((id) => !tasks.has(id))) add('Navigation mismatch');
+  if (
+    nav.length !== tasks.size ||
+    new Set(nav).size !== tasks.size ||
+    nav.some((id) => !tasks.has(id))
+  )
+    add('Navigation mismatch');
+  const end = plan.project?.graph_end;
+  if (end?.terminal_task_id !== undefined) {
+    const prerequisites = new Set(end.required_task_ids || []);
+    if (
+      !tasks.has(end.terminal_task_id) ||
+      prerequisites.size !== tasks.size - 1 ||
+      [...tasks.keys()].some((id) => id !== end.terminal_task_id && !prerequisites.has(id))
+    )
+      add('Terminal task must account for all other project tasks');
+    if (
+      tasks.get(end.terminal_task_id)?.status === 'Done' &&
+      [...prerequisites].some((id) => !['Done', 'Cancelled'].includes(tasks.get(id)?.status))
+    )
+      add('Terminal task closed with unfinished prerequisites');
+  }
   if (
     plan.project?.status === 'Completed' &&
     [...tasks.values()].some((t) => !['Done', 'Cancelled'].includes(t.status))

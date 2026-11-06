@@ -18,9 +18,11 @@ Use Node 24.22.1 (`.nvmrc`). Run `npm ci`, then `npm run browsers:install` for t
 
 `npm run build` creates `dist/`, a file/hash manifest and a retained candidate. Preview that package with `node scripts/serve.mjs --root dist --port 4173`.
 
+The local release build needs the canonical JPEG originals and internal review inputs under `docs/`. Restore them from a verified corresponding-source archive when starting from a checkout. These inputs and the completed manual review stay outside Git. Use `ci/manual-review.example.json` to record review and acceptance against the `content_id` in `dist/release-manifest.json`.
+
 ## Data and evidence
 
-The catalogue has 14 emotion labels, 114 somatic records, 38 action records and 55 facial cards. Twenty-one narrowly qualified statements link to sources; the other records are neutral illustration labels. Unsupported original mechanisms and percentages are archived in `docs/legacy-data.json`. See `sources.json`, `docs/evidence-review.json` and `docs/EVIDENCE_METHOD.md`. Source-based review is not independent clinical or FACS certification.
+The catalogue has 14 emotion labels, 114 somatic records, 38 action records and 54 facial cards. The review panel lists the sources for the catalogue, which includes 21 qualified statements. Unsupported original mechanisms and percentages are archived in `docs/legacy-data.json`. See `sources.json`, `docs/evidence-review.json` and `docs/EVIDENCE_METHOD.md`. Source-based review is not independent clinical or FACS certification.
 
 Stable `id` and `image_key` values preserve mappings when records are reordered. Atlas/prompt contract 4.0.0 intentionally replaces the earlier schema and its unsupported confidence fields. The historical `emotional-somatic-map.html` is retained in the repository as legacy material and is excluded from the public package.
 
@@ -38,7 +40,7 @@ Copyright © 2026 Nicolás Iván Larenas Bustamante. This project is licensed un
 
 ## Publish with GitHub Pages
 
-The repository includes a GitHub Actions workflow at `.github/workflows/pages.yml`. Push to `main` (or run it from Actions) to build `dist/` and publish it with GitHub Pages. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. The workflow deploys the static release package, including its corresponding source archive, license and notice. The app uses relative asset URLs and supports both user/organization sites and project sites under `/<repository>/`.
+The repository includes a manually triggered GitHub Actions workflow at `.github/workflows/pages.yml`. After local release sign-off, attach `artifacts/pages-runtime.tar.gz` to a GitHub release and run the workflow with the release tag and SHA-256 from `artifacts/pages-runtime.json`. The workflow verifies the package before publishing its runtime files. JPEG originals and internal review files stay in the separate local source archive. Keep the corresponding source available separately from Pages. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**.
 
 Before publishing, confirm the repository's default branch is `main`, review all content and image rights, and ensure the repository is public or the GitHub plan supports Pages for its visibility. GitHub Pages provides the public HTTPS URL after the first successful deployment.
 

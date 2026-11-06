@@ -20,6 +20,7 @@
     "validate:images": "node scripts/audit.mjs images",
     "verify:evidence-review": "node scripts/audit.mjs evidence",
     "build": "node scripts/build.mjs",
+    "verify:pages-package": "node scripts/package-pages.mjs",
     "check:security": "node scripts/audit.mjs security",
     "check:performance": "node scripts/audit.mjs performance",
     "test:hosting-profile": "node scripts/audit.mjs hosting",

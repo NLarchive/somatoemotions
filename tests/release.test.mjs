@@ -7,6 +7,26 @@ import sharp from 'sharp';
 import { packTar, unpackTar, digest } from '../src/infrastructure/tools/source-archive/main.js';
 import { convertLocal } from '../src/infrastructure/tools/image-pipeline/main.js';
 import { inspectPublicText } from '../src/infrastructure/tools/security-audit/main.js';
+import { manualReviewGates } from '../src/workflows/release-handoff/main.js';
+
+test('manual accessibility evidence applies only to the reviewed content', () => {
+  const review = {
+    content_id: 'candidate-a',
+    keyboard: 'passed',
+    screen_reader: 'passed',
+    reviewer: 'Reviewer',
+    date: '2026-11-06',
+    browser: 'Firefox',
+    screen_reader_product: 'NVDA',
+    notes: 'Reviewed keyboard navigation and spoken feedback in both languages.',
+  };
+  assert.ok(manualReviewGates(review, 'candidate-a').every((gate) => gate.passed));
+  assert.ok(manualReviewGates(review, 'candidate-b').every((gate) => !gate.passed));
+  assert.equal(
+    manualReviewGates({ ...review, screen_reader_product: '' }, 'candidate-a')[1].passed,
+    false,
+  );
+});
 
 test('source archive is deterministic, round trips bytes and rejects unsafe/tampered entries', () => {
   const files = [
@@ -46,11 +66,30 @@ test('portable converter rejects collisions and invalid batches without replacin
     await rm(root, { recursive: true, force: true });
   }
 });
-test('the 208 original image pairs remain byte-for-byte unchanged', async () => {
+test('historical image pairs match the baseline or an explicitly recorded replacement', async () => {
   const baseline = JSON.parse(await readFile('docs/BASELINE.json', 'utf8'));
+  const { pairs } = JSON.parse(await readFile('ci/image-revisions.json', 'utf8'));
+  const { images } = JSON.parse(await readFile('visual-index.json', 'utf8'));
   const files = baseline.files.filter((f) => /\.(jpg|webp)$/.test(f.path));
   assert.equal(files.length, 416);
-  for (const f of files) assert.equal(digest(await readFile(f.path)), f.sha256, f.path);
+  const originalHashes = new Map(files.map((file) => [file.path, file.sha256]));
+  const replacements = new Map();
+  for (const [key, hashes] of Object.entries(pairs)) {
+    assert.ok(Object.hasOwn(images, key), key);
+    for (const format of ['jpg', 'webp']) {
+      const file = images[key][format];
+      assert.ok(originalHashes.has(file), file);
+      assert.match(hashes[format], /^[a-f0-9]{64}$/);
+      assert.notEqual(hashes[format], originalHashes.get(file), file);
+      replacements.set(file, hashes[format]);
+    }
+  }
+  for (const file of files)
+    assert.equal(
+      digest(await readFile(file.path)),
+      replacements.get(file.path) ?? file.sha256,
+      file.path,
+    );
 });
 test('security scanner rejects active content but not inert educational text', () => {
   assert.equal(inspectPublicText('node.textContent = sourceText;').ok, true);

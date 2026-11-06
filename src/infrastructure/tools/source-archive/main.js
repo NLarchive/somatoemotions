@@ -94,6 +94,7 @@ export async function buildSourceArchive() {
     '.npmrc',
     '.prettierrc.json',
     '.gitignore',
+    '.github/workflows/pages.yml',
     'node.tasks.json',
     'package.json',
     'package-lock.json',

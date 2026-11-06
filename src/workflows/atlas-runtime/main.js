@@ -2,7 +2,7 @@ import { createResourceLoader } from '../../infrastructure/adapters/fetch-resour
 import { loadAtlas } from '../../application/services/atlas-service/main.js';
 import { createShell } from '../../ui/atlas-shell/main.js';
 import { createGallery } from '../../ui/reference-gallery/main.js';
-import { renderEvidence, evidenceNote } from '../../ui/evidence-panel/main.js';
+import { renderEvidence } from '../../ui/evidence-panel/main.js';
 import { createI18n } from '../../ui/i18n/main.js';
 export function transition(state, event) {
   const next = {
@@ -57,7 +57,7 @@ export async function startApp(doc = globalThis.document) {
         },
         { signal: requestController.signal },
       );
-      const gallery = createGallery(model, doc, (...args) => evidenceNote(...args, i18n), i18n);
+      const gallery = createGallery(model, doc, i18n);
       shell = createShell(
         model.data,
         (emotion) => {

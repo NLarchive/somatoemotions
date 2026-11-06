@@ -1,0 +1,105 @@
+{
+  "description": "Current source and WebP hashes for the 25 revised pairs in the original 208-pair inventory. The historical baseline is retained. Revisions reflect committed WebP assets at 63e3118 and their matching local JPEG sources.",
+  "pairs": {
+    "action/anger-act-0": {
+      "jpg": "39031f6340b426ad3292209b38361389eb1c59e0e93495d300d25232d0fbd070",
+      "webp": "86f7a5b8c984e4d872e338ae48caef88b72cf55579198096655a669def1cf214"
+    },
+    "action/anger-act-1": {
+      "jpg": "ce94d32a9e62067a9e45f45ad588c006641ca9dceb65c0938603063895b57cdc",
+      "webp": "9e8d24d8631f7ffed4aa05c2647048b90637bd8c46c165db18984148074b17ce"
+    },
+    "action/anxiety-act-0": {
+      "jpg": "50d1486737893e25e017b293d783a6aa89be1b242b8d432c1afd104dacbe85b1",
+      "webp": "7c7ccd4dc43a4755998ee2b3342e1a60eadc1fd8b1caf298258ca040c7897059"
+    },
+    "action/anxiety-act-2": {
+      "jpg": "c549dc9b037fa73fbd20547066f34246b7aa8d88a8147bcf668fa75e42f16f96",
+      "webp": "a57e6f92426f5ee537cb4eb2fb00f224215b358ecfdd1642555b507553b2466e"
+    },
+    "action/awe-act-0": {
+      "jpg": "91dc94edcdd3056e4b2bd00d83ac4f7fb208231d4e3cf10cb044c69279cae3c8",
+      "webp": "68e4d4eabf9fd434135c23097ccca69149582ce1d6f45eae1ae76d2279fd2b8d"
+    },
+    "action/awe-act-1": {
+      "jpg": "eae37ebae5caa2eb490b040a95083105846e0917e46b24155310e5e6d964fd9d",
+      "webp": "302b10b2b5650df3b374e4c7b63af94496dd0c770900e1c2343a39447aba8e1b"
+    },
+    "action/baseline-neutral-act-0": {
+      "jpg": "6e95e4a8446b26a8c87b9a445225e582d53dad9bda47ec0100bc63cdec44a0b3",
+      "webp": "9e927a0e50e45a7f525df3b34af2bdbea6ed65c24073be86a4c88ad0552f1111"
+    },
+    "action/contempt-act-0": {
+      "jpg": "f1b16d7f1aff2cf4d1e3ad8115c54297c25c3acf908d20da4d7bbcaccc2cb10c",
+      "webp": "9de8fa11f7030340b58068ec4140c0411380ed82417045be64b1df8b409d2a8b"
+    },
+    "action/pride-act-1": {
+      "jpg": "21f02f153befbe4d15170f7d5f945abae1020ceec7cce47f0bd64cfcca913bce",
+      "webp": "436670e6eb007f70ef8dc2858eb1e0d2712b62c551dd193fa548038bdb467798"
+    },
+    "action/pride-act-2": {
+      "jpg": "005db7e1b82fa7e96c29cb64d1039da20fe7088fcdcbc1e465c9fcd35a8e9987",
+      "webp": "4f467ecc0105d539d4e776688fa2a52d050a8416b939770f4ddecf8a5ba308cf"
+    },
+    "action/sadness-act-1": {
+      "jpg": "358cc793b47b80f72b0916785e78f04246a7b076cc99895e38cf1981ec46a133",
+      "webp": "a47381e365a3afc611b517f2e01fe6ac74da197c836e4cc12cb8c4849b7e86f5"
+    },
+    "action/sadness-act-2": {
+      "jpg": "b49ea2d7d2d3b83982e6485ee3c685a28844aa33f7d9a7518a56863e8fef515f",
+      "webp": "d8890725b25884b0ca42f886a7ce88259d07932e7de81bb293ef66afe8dcf268"
+    },
+    "somatic/anxiety-integumentary_thermal-0": {
+      "jpg": "8fa079a790bc7e081ee6fef5932525d7958b05bccd67351990cc118cc8a09d74",
+      "webp": "2803d008a4d74cd58b6e57c1c2d5d0e32baf3b0a6ce42970061c1d060b3d722b"
+    },
+    "somatic/anxiety-respiratory-0": {
+      "jpg": "e2d1c40f7689c0472f11a66f612fe3b464c0d64a53fb1eb4d9f0b2c3736d2331",
+      "webp": "9814c6e8e0fc562e73e43721ab082a9a99570a3e834b5fac4c44a92752f8bc38"
+    },
+    "somatic/contempt-integumentary_thermal-0": {
+      "jpg": "0c75181a1bf28e45f3ff9f488f153f866a1adf79443c2e6d2f2e4e291c7bb5fa",
+      "webp": "69bafc4b244bde4e8b854fa5a65fb7b8b91a13f683f39bd800ca10f98423630e"
+    },
+    "somatic/contempt-respiratory-0": {
+      "jpg": "2862bc52cf691095fd1b34f7b275a1fc141a56a845fbfd6691f32082c3904fa2",
+      "webp": "ce1a41d1d92da1f9a2504147fafe13eaa0a57f48e87d028435c14465ed61dd53"
+    },
+    "somatic/disgust-respiratory-0": {
+      "jpg": "738bcf902fe429ff4766d00e8cbb025cf17ea6ffb99c897c79be525ece827c8d",
+      "webp": "bd67d474b51b6ca6d635679facd6c045ab2bf0afe889ce136ea211fc0d8a840b"
+    },
+    "somatic/fear-gastrointestinal-1": {
+      "jpg": "bfc0f7ec8b02f146fd1f1a6910d033a006ec5a887eb134dbc9f3a73125844189",
+      "webp": "9659e86c2931434d5b080cb15b4578aebcb5481e5d6dd9ab260d7e34bb9c5312"
+    },
+    "somatic/happiness-cardiovascular-1": {
+      "jpg": "633bb9f3653bfbb8949ce049910dde4abe9e35d847194c374026f215b32f2791",
+      "webp": "6a198926603e8493bcab2318401ac832f2aaee69da7b3590b921804e21c10149"
+    },
+    "somatic/happiness-integumentary_thermal-0": {
+      "jpg": "45e9d0da323baf2e5a84dd90fc3db7847bc8555dc6f61c8a6ca7908ab30e0b48",
+      "webp": "714ea9b62553bf719b922403861c5dcc9ad0a8cb24fb29c7b670669846f10420"
+    },
+    "somatic/happiness-integumentary_thermal-1": {
+      "jpg": "04c9a4066b72e5fe2b698a302dd65bb92c2193defc77e603e64f8dadecff7af3",
+      "webp": "6602b1a81539096ef89b0df2f11789930b7640b07eb833690918a61192ba7c2c"
+    },
+    "somatic/happiness-neurosensory-0": {
+      "jpg": "eadce5a436e855ea901cf39dc6f8e18300a182de9aeac815754fe92d70cfdef2",
+      "webp": "7d5ad2ec16803b2d33abb27f4c226414cf14d916899f8e75def2349ee6992066"
+    },
+    "somatic/happiness-respiratory-0": {
+      "jpg": "ca56f87d0728cf365a556e7aba6f3000b1b7e641e191f9b1b8b7ad477ffebf6e",
+      "webp": "5755b2ae7b59aa7b083ee4d02ff740ad24d5f912cca1b14e4c965469d6eeb657"
+    },
+    "somatic/pride-neurosensory-0": {
+      "jpg": "ce0d9b2cee078b8883778947df7b1e84a40d4263da619623a9e07873271e5a92",
+      "webp": "589ba9fa42643cf73bf8eb11c4bdff477980bb0336dd078720811c8913d2618f"
+    },
+    "somatic/shame-respiratory-0": {
+      "jpg": "eb2f8ba0c21ce6f457e4a34163adc29545d398a726590aaff367b18900ca0772",
+      "webp": "876b23b0253e3abb42d5bc51dd787990120c0240a75e90c08f1347aefbdba206"
+    }
+  }
+}

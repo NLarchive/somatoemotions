@@ -1,5 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { translateCatalog } from '../src/ui/i18n/catalog.js';
+import { describePhoto } from '../src/ui/reference-gallery/descriptions.js';
+import { explainRecord, explainSystem } from '../src/ui/reference-gallery/explanations.js';
+
 import { readFile, mkdtemp, rm, unlink } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
@@ -14,6 +18,43 @@ import {
 import { importGenerated } from '../src/infrastructure/tools/image-pipeline/main.js';
 import { auditPlan } from '../src/infrastructure/tools/task-graph-audit/main.js';
 const json = async (f) => parseJsonStrict(await readFile(f, 'utf8'));
+
+test('every reference has distinct bilingual editorial copy and AU0 appears once', async () => {
+  const { emotions } = JSON.parse(await readFile('data.json', 'utf8'));
+  const facial = emotions.flatMap((emotion) => emotion.facial_motor_units_fused);
+  assert.equal(facial.filter((record) => record.code === 'AU0').length, 1);
+  for (const locale of ['en', 'es']) {
+    const captions = new Set();
+    const explanations = new Set();
+    for (const emotion of emotions) {
+      const groups = [
+        ...Object.entries(emotion.somatic_profile),
+        ['face', emotion.facial_motor_units_fused],
+        ['action', emotion.behavioral_action_tendencies],
+      ];
+      for (const [context, group] of groups) {
+        const titles = new Set();
+        for (const record of group) {
+          const title = translateCatalog(record.claim, locale);
+          const caption = describePhoto(record, locale);
+          const explanation = explainRecord(record, context, locale);
+          if (locale === 'es') assert.notEqual(title, record.claim, record.id);
+          assert.ok(!titles.has(title), record.id);
+          assert.ok(caption && caption !== title && !captions.has(caption), record.id);
+          assert.ok(
+            explanation && explanation !== caption && !explanations.has(explanation),
+            record.id,
+          );
+          if (context !== 'face' && context !== 'action')
+            assert.notEqual(explanation, explainSystem(context, locale), record.id);
+          titles.add(title);
+          captions.add(caption);
+          explanations.add(explanation);
+        }
+      }
+    }
+  }
+});
 
 test('public resources satisfy their schemas, source policies and actual runtime mappings', async () => {
   const data = await json('data.json'),
@@ -32,7 +73,7 @@ test('public resources satisfy their schemas, source policies and actual runtime
   const valid = validateResources({ data, sources, visuals });
   assert.ok(valid.ok, JSON.stringify(valid.errors));
   assert.equal(data.emotions.length, 14);
-  assert.equal(records(data).length, 207);
+  assert.equal(records(data).length, 206);
   assert.equal(
     records(data).filter((x) => x.record.content_type === 'scientific_claim').length,
     21,

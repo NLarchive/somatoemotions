@@ -594,16 +594,6 @@ body {
   overflow: hidden;
   clip-path: inset(50%);
 }
-.btn-back {
-  min-height: 44px;
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  color: var(--ink);
-  border-radius: 6px;
-  cursor: pointer;
-  font: inherit;
-}
 :focus-visible {
   outline: 3px solid #94501e;
   outline-offset: 4px;

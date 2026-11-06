@@ -2,16 +2,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "template_type": "project_task_template",
   "version": "3.3",
-  "description": "SomatoEmotions production-readiness task graph adapted from supplied project_task_template v3.3. Planned atomic units keep the atlas a static browser application; gateway APIs, persistence and AI-agent runtime are outside scope. This file records proposed work, not completed validation or deployment.",
+  "description": "Current SomatoEmotions development and local release-readiness task graph. Completion requires verified deliverables and candidate-specific release evidence.",
   "enums": {
-    "status": [
-      "Not Started",
-      "In Progress",
-      "Blocked",
-      "In Review",
-      "Done",
-      "Cancelled"
-    ],
+    "status": ["Not Started", "In Progress", "Blocked", "In Review", "Done", "Cancelled"],
     "project_status": [
       "Not Started",
       "Planning",
@@ -20,63 +13,16 @@
       "Completed",
       "Cancelled"
     ],
-    "priority": [
-      "Critical",
-      "High",
-      "Medium",
-      "Low"
-    ],
-    "complexity": [
-      "Very Low",
-      "Low",
-      "Medium",
-      "High",
-      "Very High"
-    ],
-    "dependency_type": [
-      "FS",
-      "SS",
-      "FF",
-      "SF"
-    ],
-    "risk_probability": [
-      "Low",
-      "Medium",
-      "High"
-    ],
-    "risk_impact": [
-      "Low",
-      "Medium",
-      "High",
-      "Critical"
-    ],
-    "risk_score": [
-      "Low",
-      "Medium",
-      "High",
-      "Critical"
-    ],
-    "risk_status": [
-      "Open",
-      "Mitigated",
-      "Closed"
-    ],
-    "change_status": [
-      "Pending",
-      "Approved",
-      "Rejected"
-    ],
-    "milestone_status": [
-      "Not Started",
-      "In Progress",
-      "Achieved",
-      "Missed"
-    ],
-    "sprint_status": [
-      "Not Started",
-      "Active",
-      "Completed"
-    ],
+    "priority": ["Critical", "High", "Medium", "Low"],
+    "complexity": ["Very Low", "Low", "Medium", "High", "Very High"],
+    "dependency_type": ["FS", "SS", "FF", "SF"],
+    "risk_probability": ["Low", "Medium", "High"],
+    "risk_impact": ["Low", "Medium", "High", "Critical"],
+    "risk_score": ["Low", "Medium", "High", "Critical"],
+    "risk_status": ["Open", "Mitigated", "Closed"],
+    "change_status": ["Pending", "Approved", "Rejected"],
+    "milestone_status": ["Not Started", "In Progress", "Achieved", "Missed"],
+    "sprint_status": ["Not Started", "Active", "Completed"],
     "worker_role": [
       "Project Manager",
       "Developer",
@@ -87,30 +33,10 @@
       "Stakeholder",
       "Other"
     ],
-    "unit_kind": [
-      "unit",
-      "organ",
-      "registry",
-      "gateway"
-    ],
-    "interface_type": [
-      "api",
-      "cli",
-      "ui",
-      "internal"
-    ],
-    "transport_type": [
-      "function",
-      "http",
-      "cli",
-      "ipc"
-    ],
-    "unit_status": [
-      "planned",
-      "active_development",
-      "stable",
-      "deprecated"
-    ],
+    "unit_kind": ["unit", "organ", "registry", "gateway"],
+    "interface_type": ["api", "cli", "ui", "internal"],
+    "transport_type": ["function", "http", "cli", "ipc"],
+    "unit_status": ["planned", "active_development", "stable", "deprecated"],
     "hex_ring": [
       "core/domain",
       "core/ports",
@@ -136,7 +62,7 @@
   },
   "project": {
     "name": "emotions / SomatoEmotions - production readiness",
-    "description": "Verified repository baseline on 2026-10-24: {\"emotions\": 14, \"somatic_claims\": 114, \"action_claims\": 38, \"facs_cards\": 55, \"prompt_assets\": 208, \"webp_files\": 208, \"jpg_files\": 208}. All 208 prompt keys have canonical WebP and categorized JPEG counterparts. Current runtime also derives 13 absent composite-face paths; checking the prompt inventory alone is insufficient. Six shared labels are outside the 14-emotion catalogue. Existing scientific claims and numeric confidence scores are NOT scientifically validated by file checks. Data schema is 3.1.0, prompt schema 3.2.0. No package.json or browser test suite exists. Source JPEGs are currently ignored by Git. Proposed weekday schedule starts 2026-10-26; dates are estimates, exclude holidays and are not capacity-leveled. Named workers are unassigned role slots; blank contacts and zero cost/capacity mean unknown, not approved budget or availability. Host, domain, CI provider and independent subject reviewer remain open decisions. Owner decisions recorded 2026-10-24: use the supplied GNU AGPL version 3 LICENSE, local-server testing, and source-based scientific validation by Codex. No independent human certification or public deployment is claimed. Owner clarified on 2026-10-24: supplied LICENSE, local-server testing and source-based scientific validation by Codex. Independent human/FACS certification is not claimed; manual screen-reader evidence remains a separate explicit gate.",
+    "description": "Current state audited 2026-11-06. Static bilingual atlas with Spanish default, 14 emotion entries, 206 references (114 somatic, 54 facial and 38 action), 21 qualified statements and 221 JPEG/WebP pairs. Build and verification use Node 24.22.1. The reviewed scope is local staging and reproducible handoff. Public hosting and independent clinical certification are outside this development graph.",
     "start_date": "2026-10-26",
     "end_date": "2026-12-03",
     "status": "In Progress",
@@ -146,12 +72,24 @@
     "budget_spent": 0,
     "graph_end": {
       "mode": "handoff",
-      "summary": "Task 28 closes the readiness graph only after source, content, runtime, accessibility, staging and reproducibility evidence passes.",
-      "next_step": "Use the verified candidate and runbooks in a separately requested deployment/operations graph. Public deployment is not performed by creating or completing this plan.",
+      "summary": "Hand off a reproducible local release candidate with current automated, manual accessibility and owner acceptance evidence.",
+      "next_step": "After sign-off, provide corresponding source separately, attach the verified Pages runtime package to a release, configure Pages, dispatch the workflow and verify the hosted HTTPS candidate.",
       "next_graph": "SomatoEmotions deployment and maintenance",
-      "success_signal": "All tasks Done with evidence; no unresolved Critical/High blockers; reviewed scientific claims and complete runtime images; implemented units stable; reproducible candidate and rollback evidence retained.",
+      "success_signal": "npm run verify and npm run verify:release exit 0 against the same dist release manifest. Every prerequisite is Done or explicitly Cancelled, both manual accessibility reviews and owner acceptance reference that runtime content ID, and the terminal task is marked Done after evidence is recorded.",
       "owner": "Project manager (unassigned)",
-      "maintenance_rhythm": "On each data/contract/image change rerun dependent validation and browser checks; review evidence sources and dependencies at least quarterly or sooner when upstream findings change."
+      "maintenance_rhythm": "On each data/contract/image change rerun dependent validation and browser checks; review evidence sources and dependencies at least quarterly or sooner when upstream findings change.",
+      "terminal_task_id": 28,
+      "required_task_ids": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+        26, 27, 29, 30, 31, 32
+      ],
+      "evidence_paths": [
+        "dist/release-manifest.json",
+        "docs/reports/pipeline.json",
+        "docs/reports/readiness.json",
+        "docs/manual-review.json",
+        "artifacts/pages-runtime.json"
+      ]
     },
     "project_manager": {
       "name": "Project manager (unassigned)",
@@ -217,9 +155,7 @@
         "due_date": "2026-12-03",
         "description": "Staging/recovery evidence, ownership and candidate sign-off recorded.",
         "status": "In Progress",
-        "linked_task_names": [
-          "Close production readiness and hand off the verified candidate"
-        ]
+        "linked_task_names": ["Close production readiness and hand off the verified candidate"]
       }
     ],
     "sprints": [
@@ -441,21 +377,11 @@
     },
     "dependency_rules": {
       "core/domain": [],
-      "core/ports": [
-        "core/domain"
-      ],
-      "infrastructure/adapters": [
-        "core/ports"
-      ],
+      "core/ports": ["core/domain"],
+      "infrastructure/adapters": ["core/ports"],
       "infrastructure/tools": [],
-      "application/services": [
-        "core/domain",
-        "core/ports"
-      ],
-      "ui": [
-        "application/services",
-        "ui"
-      ],
+      "application/services": ["core/domain", "core/ports"],
+      "ui": ["application/services", "ui"],
       "workflows": [
         "core/domain",
         "core/ports",
@@ -467,18 +393,8 @@
       ]
     },
     "atomic_unit_standard": {
-      "required_slots": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ],
-      "optional_slots": [
-        "README.md",
-        "state.js",
-        "prompt.md",
-        "ui/"
-      ],
+      "required_slots": ["schema.json", "manifest.json", "main.js", "tests/unit.json"],
+      "optional_slots": ["README.md", "state.js", "prompt.md", "ui/"],
       "slot_roles": {
         "schema.json": "contract",
         "manifest.json": "manifest",
@@ -3278,12 +3194,7 @@
           "role": "depends_on"
         }
       ],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "tools.task_graph_audit",
@@ -3294,13 +3205,7 @@
       "transport": "cli",
       "status": "stable",
       "depends_on": [],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json",
-        "tasks.schema.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json", "tasks.schema.json"]
     },
     {
       "name": "tools.content_audit",
@@ -3311,12 +3216,7 @@
       "transport": "cli",
       "status": "stable",
       "depends_on": [],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "tools.image_pipeline",
@@ -3327,12 +3227,7 @@
       "transport": "cli",
       "status": "stable",
       "depends_on": [],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "tools.source_archive",
@@ -3343,12 +3238,7 @@
       "transport": "cli",
       "status": "stable",
       "depends_on": [],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "adapters.fetch_resources",
@@ -3364,12 +3254,7 @@
           "role": "implements"
         }
       ],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "app.atlas_service",
@@ -3397,12 +3282,7 @@
           "role": "calls_port"
         }
       ],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "app.visual_resolver",
@@ -3426,12 +3306,7 @@
           "role": "calls_port"
         }
       ],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "app.navigation_service",
@@ -3451,12 +3326,7 @@
           "role": "calls_port"
         }
       ],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "ui.safe_rendering",
@@ -3467,12 +3337,7 @@
       "transport": "function",
       "status": "stable",
       "depends_on": [],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "ui.atlas_shell",
@@ -3496,12 +3361,7 @@
           "role": "depends_on"
         }
       ],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "ui.reference_gallery",
@@ -3525,12 +3385,7 @@
           "role": "depends_on"
         }
       ],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "ui.evidence_panel",
@@ -3550,12 +3405,7 @@
           "role": "depends_on"
         }
       ],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "workflows.atlas_runtime",
@@ -3698,12 +3548,7 @@
       "transport": "cli",
       "status": "stable",
       "depends_on": [],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "tools.performance_audit",
@@ -3714,12 +3559,7 @@
       "transport": "cli",
       "status": "stable",
       "depends_on": [],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "tools.release_package",
@@ -3730,12 +3570,7 @@
       "transport": "cli",
       "status": "stable",
       "depends_on": [],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "tools.hosting_profile",
@@ -3746,12 +3581,7 @@
       "transport": "cli",
       "status": "stable",
       "depends_on": [],
-      "files": [
-        "schema.json",
-        "manifest.json",
-        "main.js",
-        "tests/unit.json"
-      ]
+      "files": ["schema.json", "manifest.json", "main.js", "tests/unit.json"]
     },
     {
       "name": "workflows.release_runbook",
@@ -3972,10 +3802,7 @@
       "name": "Project manager (unassigned)",
       "email": "",
       "role": "Project Manager",
-      "skills": [
-        "Release scope",
-        "Risk management"
-      ],
+      "skills": ["Release scope", "Risk management"],
       "hourly_rate": 0,
       "weekly_capacity_hours": 0,
       "timezone": "America/Santiago",
@@ -3985,12 +3812,7 @@
       "name": "Developer (unassigned)",
       "email": "",
       "role": "Developer",
-      "skills": [
-        "JavaScript",
-        "Static web",
-        "JSON Schema",
-        "Accessibility"
-      ],
+      "skills": ["JavaScript", "Static web", "JSON Schema", "Accessibility"],
       "hourly_rate": 0,
       "weekly_capacity_hours": 0,
       "timezone": "America/Santiago",
@@ -4000,11 +3822,7 @@
       "name": "QA engineer (unassigned)",
       "email": "",
       "role": "QA Engineer",
-      "skills": [
-        "Browser testing",
-        "Accessibility review",
-        "Contract validation"
-      ],
+      "skills": ["Browser testing", "Accessibility review", "Contract validation"],
       "hourly_rate": 0,
       "weekly_capacity_hours": 0,
       "timezone": "America/Santiago",
@@ -4014,12 +3832,7 @@
       "name": "Release engineer (unassigned)",
       "email": "",
       "role": "DevOps",
-      "skills": [
-        "Static hosting",
-        "CI",
-        "Packaging",
-        "Recovery"
-      ],
+      "skills": ["Static hosting", "CI", "Packaging", "Recovery"],
       "hourly_rate": 0,
       "weekly_capacity_hours": 0,
       "timezone": "America/Santiago",
@@ -4029,11 +3842,7 @@
       "name": "Content curator (unassigned)",
       "email": "",
       "role": "Other",
-      "skills": [
-        "Primary-source research",
-        "Evidence traceability",
-        "FACS terminology"
-      ],
+      "skills": ["Primary-source research", "Evidence traceability", "FACS terminology"],
       "hourly_rate": 0,
       "weekly_capacity_hours": 0,
       "timezone": "America/Santiago",
@@ -4043,11 +3852,7 @@
       "name": "Independent evidence reviewer (unassigned)",
       "email": "",
       "role": "Other",
-      "skills": [
-        "Scientific review",
-        "Physiology",
-        "FACS validity"
-      ],
+      "skills": ["Scientific review", "Physiology", "FACS validity"],
       "hourly_rate": 0,
       "weekly_capacity_hours": 0,
       "timezone": "America/Santiago",
@@ -4058,11 +3863,7 @@
       "email": "",
       "role": "Other",
       "worker_id": "codex-implementation",
-      "skills": [
-        "Implementation",
-        "Source-based review",
-        "Automated verification"
-      ],
+      "skills": ["Implementation", "Source-based review", "Automated verification"],
       "hourly_rate": 0,
       "weekly_capacity_hours": 0,
       "timezone": "America/Santiago"
@@ -4101,11 +3902,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "root",
-        "baseline"
-      ],
+      "tags": ["production-readiness", "root", "baseline"],
       "related_paths": [
         "src/",
         "node.tasks.json",
@@ -4126,11 +3923,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/registry.json",
           "node.tasks.json",
@@ -4155,11 +3948,7 @@
       },
       "verification": {
         "strategy": "command",
-        "commands": [
-          "npm ci",
-          "npm run check:json",
-          "npm run test:preview"
-        ],
+        "commands": ["npm ci", "npm run check:json", "npm run test:preview"],
         "expected_outputs": [
           "src/registry.json",
           "node.tasks.json",
@@ -4239,11 +4028,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "core/domain",
-        "atlas-model"
-      ],
+      "tags": ["production-readiness", "core/domain", "atlas-model"],
       "related_paths": [
         "src/core/domain/atlas-model/",
         "data.json",
@@ -4253,11 +4038,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/core/domain/atlas-model/",
           "data.json",
@@ -4267,9 +4048,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- core.atlas_model"
-        ],
+        "commands": ["npm run check:unit -- core.atlas_model"],
         "expected_outputs": [
           "src/core/domain/atlas-model/",
           "data.json",
@@ -4340,11 +4119,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "core/domain",
-        "evidence-policy"
-      ],
+      "tags": ["production-readiness", "core/domain", "evidence-policy"],
       "related_paths": [
         "src/core/domain/evidence-policy/",
         "data.json",
@@ -4374,9 +4149,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- core.evidence_policy"
-        ],
+        "commands": ["npm run check:unit -- core.evidence_policy"],
         "expected_outputs": [
           "src/core/domain/evidence-policy/",
           "data.json",
@@ -4449,11 +4222,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "core/domain",
-        "visual-model"
-      ],
+      "tags": ["production-readiness", "core/domain", "visual-model"],
       "related_paths": [
         "src/core/domain/visual-model/",
         "data.json",
@@ -4464,11 +4233,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/core/domain/visual-model/",
           "data.json",
@@ -4479,9 +4244,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- core.visual_model"
-        ],
+        "commands": ["npm run check:unit -- core.visual_model"],
         "expected_outputs": [
           "src/core/domain/visual-model/",
           "data.json",
@@ -4551,43 +4314,20 @@
           "implementation": "src/core/ports/atlas-resource-port/main.js",
           "tests": "src/core/ports/atlas-resource-port/tests/unit.json"
         },
-        "depends_on_units": [
-          "core.atlas_model",
-          "core.evidence_policy",
-          "core.visual_model"
-        ]
+        "depends_on_units": ["core.atlas_model", "core.evidence_policy", "core.visual_model"]
       },
-      "tags": [
-        "production-readiness",
-        "core/ports",
-        "atlas-resource-port"
-      ],
-      "related_paths": [
-        "src/core/ports/atlas-resource-port/",
-        "app.js"
-      ],
+      "tags": ["production-readiness", "core/ports", "atlas-resource-port"],
+      "related_paths": ["src/core/ports/atlas-resource-port/", "app.js"],
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
-        "output_artifacts": [
-          "src/core/ports/atlas-resource-port/",
-          "app.js"
-        ]
+        "tools_required": ["node", "npm", "git"],
+        "output_artifacts": ["src/core/ports/atlas-resource-port/", "app.js"]
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- ports.atlas_resource_port"
-        ],
-        "expected_outputs": [
-          "src/core/ports/atlas-resource-port/",
-          "app.js"
-        ],
+        "commands": ["npm run check:unit -- ports.atlas_resource_port"],
+        "expected_outputs": ["src/core/ports/atlas-resource-port/", "app.js"],
         "success_signal": "Contract specifies inputs, successful resource versions, cancellation and typed network/HTTP/parse/schema errors. Specify required versus optional resources and controlled fallback behavior; missing evidence cannot silently become validated content. Port imports only domain contracts and is implementable with browser fetch and deterministic test doubles. Keep the site static: no persistence API, accounts or AI-agent runtime is required."
       },
       "assigned_workers": [
@@ -4661,11 +4401,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "infrastructure/tools",
-        "task-graph-audit"
-      ],
+      "tags": ["production-readiness", "infrastructure/tools", "task-graph-audit"],
       "related_paths": [
         "src/infrastructure/tools/task-graph-audit/",
         "node.tasks.json",
@@ -4675,11 +4411,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/infrastructure/tools/task-graph-audit/",
           "node.tasks.json",
@@ -4689,10 +4421,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:plan",
-          "npm run check:registry"
-        ],
+        "commands": ["npm run check:plan", "npm run check:registry"],
         "expected_outputs": [
           "src/infrastructure/tools/task-graph-audit/",
           "node.tasks.json",
@@ -4763,11 +4492,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "infrastructure/tools",
-        "content-audit"
-      ],
+      "tags": ["production-readiness", "infrastructure/tools", "content-audit"],
       "related_paths": [
         "src/infrastructure/tools/content-audit/",
         "data.json",
@@ -4779,11 +4504,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/infrastructure/tools/content-audit/",
           "data.json",
@@ -4795,10 +4516,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run validate:content",
-          "npm run validate:references"
-        ],
+        "commands": ["npm run validate:content", "npm run validate:references"],
         "expected_outputs": [
           "src/infrastructure/tools/content-audit/",
           "data.json",
@@ -4871,11 +4589,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "infrastructure/tools",
-        "image-pipeline"
-      ],
+      "tags": ["production-readiness", "infrastructure/tools", "image-pipeline"],
       "related_paths": [
         "src/infrastructure/tools/image-pipeline/",
         "images/jpg",
@@ -4888,11 +4602,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/infrastructure/tools/image-pipeline/",
           "images/jpg",
@@ -4905,10 +4615,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run validate:images",
-          "npm run test:image-pipeline"
-        ],
+        "commands": ["npm run validate:images", "npm run test:image-pipeline"],
         "expected_outputs": [
           "src/infrastructure/tools/image-pipeline/",
           "images/jpg",
@@ -4982,11 +4689,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "infrastructure/tools",
-        "source-archive"
-      ],
+      "tags": ["production-readiness", "infrastructure/tools", "source-archive"],
       "related_paths": [
         "src/infrastructure/tools/source-archive/",
         ".gitignore",
@@ -4997,11 +4700,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/infrastructure/tools/source-archive/",
           ".gitignore",
@@ -5012,9 +4711,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run verify:archive"
-        ],
+        "commands": ["npm run verify:archive"],
         "expected_outputs": [
           "src/infrastructure/tools/source-archive/",
           ".gitignore",
@@ -5083,44 +4780,20 @@
           "implementation": "src/infrastructure/adapters/fetch-resources/main.js",
           "tests": "src/infrastructure/adapters/fetch-resources/tests/unit.json"
         },
-        "depends_on_units": [
-          "ports.atlas_resource_port"
-        ]
+        "depends_on_units": ["ports.atlas_resource_port"]
       },
-      "tags": [
-        "production-readiness",
-        "infrastructure/adapters",
-        "fetch-resources"
-      ],
-      "related_paths": [
-        "src/infrastructure/adapters/fetch-resources/",
-        "app.js",
-        "README.md"
-      ],
+      "tags": ["production-readiness", "infrastructure/adapters", "fetch-resources"],
+      "related_paths": ["src/infrastructure/adapters/fetch-resources/", "app.js", "README.md"],
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
-        "output_artifacts": [
-          "src/infrastructure/adapters/fetch-resources/",
-          "app.js",
-          "README.md"
-        ]
+        "tools_required": ["node", "npm", "git"],
+        "output_artifacts": ["src/infrastructure/adapters/fetch-resources/", "app.js", "README.md"]
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- adapters.fetch_resources"
-        ],
-        "expected_outputs": [
-          "src/infrastructure/adapters/fetch-resources/",
-          "app.js",
-          "README.md"
-        ],
+        "commands": ["npm run check:unit -- adapters.fetch_resources"],
+        "expected_outputs": ["src/infrastructure/adapters/fetch-resources/", "app.js", "README.md"],
         "success_signal": "Adapter implements the port and is injected by the composition root; application services never import the adapter. Cover 404, 500, offline, timeout, abort, invalid JSON and a malformed resource version. Distinguish missing optional prompt data from missing required atlas/evidence data; do not silently suppress fatal validation failures. Return user-facing error codes and recovery actions without leaking local paths or stack traces."
       },
       "assigned_workers": [
@@ -5189,11 +4862,7 @@
           "ports.atlas_resource_port"
         ]
       },
-      "tags": [
-        "production-readiness",
-        "application/services",
-        "atlas-service"
-      ],
+      "tags": ["production-readiness", "application/services", "atlas-service"],
       "related_paths": [
         "src/application/services/atlas-service/",
         "app.js",
@@ -5204,11 +4873,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/application/services/atlas-service/",
           "app.js",
@@ -5219,9 +4884,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- app.atlas_service"
-        ],
+        "commands": ["npm run check:unit -- app.atlas_service"],
         "expected_outputs": [
           "src/application/services/atlas-service/",
           "app.js",
@@ -5305,17 +4968,9 @@
           "implementation": "src/application/services/visual-resolver/main.js",
           "tests": "src/application/services/visual-resolver/tests/unit.json"
         },
-        "depends_on_units": [
-          "core.atlas_model",
-          "core.visual_model",
-          "ports.atlas_resource_port"
-        ]
+        "depends_on_units": ["core.atlas_model", "core.visual_model", "ports.atlas_resource_port"]
       },
-      "tags": [
-        "production-readiness",
-        "application/services",
-        "visual-resolver"
-      ],
+      "tags": ["production-readiness", "application/services", "visual-resolver"],
       "related_paths": [
         "src/application/services/visual-resolver/",
         "app.js",
@@ -5325,11 +4980,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/application/services/visual-resolver/",
           "app.js",
@@ -5339,9 +4990,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- app.visual_resolver"
-        ],
+        "commands": ["npm run check:unit -- app.visual_resolver"],
         "expected_outputs": [
           "src/application/services/visual-resolver/",
           "app.js",
@@ -5419,45 +5068,20 @@
           "implementation": "src/application/services/navigation-service/main.js",
           "tests": "src/application/services/navigation-service/tests/unit.json"
         },
-        "depends_on_units": [
-          "core.atlas_model",
-          "ports.atlas_resource_port"
-        ]
+        "depends_on_units": ["core.atlas_model", "ports.atlas_resource_port"]
       },
-      "tags": [
-        "production-readiness",
-        "application/services",
-        "navigation-service"
-      ],
-      "related_paths": [
-        "src/application/services/navigation-service/",
-        "app.js",
-        "data.json"
-      ],
+      "tags": ["production-readiness", "application/services", "navigation-service"],
+      "related_paths": ["src/application/services/navigation-service/", "app.js", "data.json"],
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
-        "output_artifacts": [
-          "src/application/services/navigation-service/",
-          "app.js",
-          "data.json"
-        ]
+        "tools_required": ["node", "npm", "git"],
+        "output_artifacts": ["src/application/services/navigation-service/", "app.js", "data.json"]
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- app.navigation_service"
-        ],
-        "expected_outputs": [
-          "src/application/services/navigation-service/",
-          "app.js",
-          "data.json"
-        ],
+        "commands": ["npm run check:unit -- app.navigation_service"],
+        "expected_outputs": ["src/application/services/navigation-service/", "app.js", "data.json"],
         "success_signal": "Search names, claims, AU codes and muscles with documented normalization and category semantics. Return result counts and a distinct no-results state; keep or reset selection according to one documented policy. External shared labels are not rendered as broken navigation links. Tests cover all 14 emotions, combined AU queries, whitespace, zero matches and category changes."
       },
       "assigned_workers": [
@@ -5526,40 +5150,18 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "ui",
-        "safe-rendering"
-      ],
-      "related_paths": [
-        "src/ui/safe-rendering/",
-        "app.js",
-        "index.html"
-      ],
+      "tags": ["production-readiness", "ui", "safe-rendering"],
+      "related_paths": ["src/ui/safe-rendering/", "app.js", "index.html"],
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
-        "output_artifacts": [
-          "src/ui/safe-rendering/",
-          "app.js",
-          "index.html"
-        ]
+        "tools_required": ["node", "npm", "git"],
+        "output_artifacts": ["src/ui/safe-rendering/", "app.js", "index.html"]
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- ui.safe_rendering"
-        ],
-        "expected_outputs": [
-          "src/ui/safe-rendering/",
-          "app.js",
-          "index.html"
-        ],
+        "commands": ["npm run check:unit -- ui.safe_rendering"],
+        "expected_outputs": ["src/ui/safe-rendering/", "app.js", "index.html"],
         "success_signal": "Render malicious HTML/attribute text fixtures as text; whitelist safe source link protocols and local image paths. Use addEventListener for image errors and action handling; no eval or inline event attributes remain. Clipboard operations handle unavailable API, denied permissions and insecure contexts with accessible success/failure feedback. Output is safe for all current dataset strings and future externally edited catalogues."
       },
       "assigned_workers": [
@@ -5621,49 +5223,20 @@
           "implementation": "src/ui/atlas-shell/main.js",
           "tests": "src/ui/atlas-shell/tests/unit.json"
         },
-        "depends_on_units": [
-          "app.atlas_service",
-          "app.navigation_service",
-          "ui.safe_rendering"
-        ]
+        "depends_on_units": ["app.atlas_service", "app.navigation_service", "ui.safe_rendering"]
       },
-      "tags": [
-        "production-readiness",
-        "ui",
-        "atlas-shell"
-      ],
-      "related_paths": [
-        "src/ui/atlas-shell/",
-        "app.js",
-        "index.html",
-        "styles.css"
-      ],
+      "tags": ["production-readiness", "ui", "atlas-shell"],
+      "related_paths": ["src/ui/atlas-shell/", "app.js", "index.html", "styles.css"],
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
-        "output_artifacts": [
-          "src/ui/atlas-shell/",
-          "app.js",
-          "index.html",
-          "styles.css"
-        ]
+        "tools_required": ["node", "npm", "git"],
+        "output_artifacts": ["src/ui/atlas-shell/", "app.js", "index.html", "styles.css"]
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- ui.atlas_shell"
-        ],
-        "expected_outputs": [
-          "src/ui/atlas-shell/",
-          "app.js",
-          "index.html",
-          "styles.css"
-        ],
+        "commands": ["npm run check:unit -- ui.atlas_shell"],
+        "expected_outputs": ["src/ui/atlas-shell/", "app.js", "index.html", "styles.css"],
         "success_signal": "Provide a persistent label for search, named navigation, selected emotion state and visible focus styles. Implement tablist/tab/tabpanel roles, aria-controls/aria-selected, appropriate focus and arrow-key behavior. Expose loading, fatal error, retry and empty-search states to assistive technology. Confirm sensible DOM order, skip-to-content behavior, reduced-motion preferences and mobile scrolling at 320/375/768px widths. Provide a meaningful page title, meta description, declared language and favicon; canonical/share URLs use only the owner-confirmed production domain."
       },
       "assigned_workers": [
@@ -5736,17 +5309,9 @@
           "implementation": "src/ui/reference-gallery/main.js",
           "tests": "src/ui/reference-gallery/tests/unit.json"
         },
-        "depends_on_units": [
-          "app.atlas_service",
-          "app.visual_resolver",
-          "ui.safe_rendering"
-        ]
+        "depends_on_units": ["app.atlas_service", "app.visual_resolver", "ui.safe_rendering"]
       },
-      "tags": [
-        "production-readiness",
-        "ui",
-        "reference-gallery"
-      ],
+      "tags": ["production-readiness", "ui", "reference-gallery"],
       "related_paths": [
         "src/ui/reference-gallery/",
         "app.js",
@@ -5757,11 +5322,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/ui/reference-gallery/",
           "app.js",
@@ -5772,9 +5333,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- ui.reference_gallery"
-        ],
+        "commands": ["npm run check:unit -- ui.reference_gallery"],
         "expected_outputs": [
           "src/ui/reference-gallery/",
           "app.js",
@@ -5854,16 +5413,9 @@
           "implementation": "src/ui/evidence-panel/main.js",
           "tests": "src/ui/evidence-panel/tests/unit.json"
         },
-        "depends_on_units": [
-          "app.atlas_service",
-          "ui.safe_rendering"
-        ]
+        "depends_on_units": ["app.atlas_service", "ui.safe_rendering"]
       },
-      "tags": [
-        "production-readiness",
-        "ui",
-        "evidence-panel"
-      ],
+      "tags": ["production-readiness", "ui", "evidence-panel"],
       "related_paths": [
         "src/ui/evidence-panel/",
         "app.js",
@@ -5875,11 +5427,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/ui/evidence-panel/",
           "app.js",
@@ -5891,9 +5439,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:unit -- ui.evidence_panel"
-        ],
+        "commands": ["npm run check:unit -- ui.evidence_panel"],
         "expected_outputs": [
           "src/ui/evidence-panel/",
           "app.js",
@@ -5982,11 +5528,7 @@
           "ui.evidence_panel"
         ]
       },
-      "tags": [
-        "production-readiness",
-        "workflows",
-        "atlas-runtime"
-      ],
+      "tags": ["production-readiness", "workflows", "atlas-runtime"],
       "related_paths": [
         "src/workflows/atlas-runtime/",
         "app.js",
@@ -5997,11 +5539,7 @@
       "execution_context": {
         "mode": "async",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/workflows/atlas-runtime/",
           "app.js",
@@ -6014,9 +5552,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run test:runtime"
-        ],
+        "commands": ["npm run test:runtime"],
         "expected_outputs": [
           "src/workflows/atlas-runtime/",
           "app.js",
@@ -6134,11 +5670,7 @@
           "app.atlas_service"
         ]
       },
-      "tags": [
-        "production-readiness",
-        "workflows",
-        "content-review"
-      ],
+      "tags": ["production-readiness", "workflows", "content-review"],
       "related_paths": [
         "src/workflows/content-review/",
         "data.json",
@@ -6266,12 +5798,12 @@
       "end_date": "2026-11-26",
       "due_date": "2026-11-26",
       "priority": "Critical",
-      "status": "In Review",
+      "status": "Blocked",
       "progress_percentage": 90,
       "estimated_hours": 18,
       "actual_hours": 0,
       "complexity": "High",
-      "blocker_reason": "All automated browser, keyboard, responsive and axe checks pass. Real screen-reader output review is not yet recorded.",
+      "blocker_reason": "A reviewer must exercise keyboard-only and actual screen-reader output on the staged candidate in Spanish and English, then record the content ID, reviewer, browser, screen-reader product, date and findings in docs/manual-review.json. Automated checks do not supply this evidence.",
       "sprint_name": "Week 5 - production readiness",
       "reviewer": {
         "name": "Developer (unassigned)",
@@ -6292,16 +5824,9 @@
           "entry": "src/workflows/browser-validation/workflow.json",
           "state": "src/workflows/browser-validation/state.js"
         },
-        "depends_on_units": [
-          "workflows.atlas_runtime",
-          "workflows.content_review"
-        ]
+        "depends_on_units": ["workflows.atlas_runtime", "workflows.content_review"]
       },
-      "tags": [
-        "production-readiness",
-        "workflows",
-        "browser-validation"
-      ],
+      "tags": ["production-readiness", "workflows", "browser-validation"],
       "related_paths": [
         "src/workflows/browser-validation/",
         "tests/e2e",
@@ -6312,11 +5837,7 @@
       "execution_context": {
         "mode": "async",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/workflows/browser-validation/",
           "tests/e2e",
@@ -6329,11 +5850,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run test:e2e",
-          "npm run test:a11y",
-          "npm run verify:manual-review"
-        ],
+        "commands": ["npm run test:e2e", "npm run verify:manual-review"],
         "expected_outputs": [
           "src/workflows/browser-validation/",
           "tests/e2e",
@@ -6341,7 +5858,7 @@
           "docs/ACCESSIBILITY_REVIEW.md",
           "docs/reports/browser-validation.json"
         ],
-        "success_signal": "Run Chromium, Firefox and WebKit coverage plus mobile viewport checks; record browser versions and supported scope. Visit all 14 emotions and three views; activate every current claim/AU/action, including all combined faces; assert image loads and no unexpected console/network errors. Exercise missing data, invalid JSON, slow/offline requests, image 404, no search results and denied clipboard permission. No critical/serious automated accessibility issues; manual keyboard-only and representative screen-reader review passes against the stated WCAG target. Produce reproducible reports, failure screenshots and trace artifacts; do not mark unrun manual checks passed."
+        "success_signal": "All three automated browser suites pass and verify:manual-review exits 0 for the current manifest content ID."
       },
       "assigned_workers": [
         {
@@ -6356,7 +5873,8 @@
         "Visit all 14 emotions and three views; activate every current claim/AU/action, including all combined faces; assert image loads and no unexpected console/network errors.",
         "Exercise missing data, invalid JSON, slow/offline requests, image 404, no search results and denied clipboard permission.",
         "No critical/serious automated accessibility issues; manual keyboard-only and representative screen-reader review passes against the stated WCAG target.",
-        "Produce reproducible reports, failure screenshots and trace artifacts; do not mark unrun manual checks passed."
+        "Produce reproducible reports, failure screenshots and trace artifacts; do not mark unrun manual checks passed.",
+        "Record manual keyboard and spoken screen-reader review against the current content ID using ci/manual-review.example.json."
       ],
       "dependencies": [
         {
@@ -6410,11 +5928,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "infrastructure/tools",
-        "security-audit"
-      ],
+      "tags": ["production-readiness", "infrastructure/tools", "security-audit"],
       "related_paths": [
         "src/infrastructure/tools/security-audit/",
         "app.js",
@@ -6426,11 +5940,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/infrastructure/tools/security-audit/",
           "app.js",
@@ -6442,9 +5952,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:security"
-        ],
+        "commands": ["npm run check:security"],
         "expected_outputs": [
           "src/infrastructure/tools/security-audit/",
           "app.js",
@@ -6516,11 +6024,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "infrastructure/tools",
-        "performance-audit"
-      ],
+      "tags": ["production-readiness", "infrastructure/tools", "performance-audit"],
       "related_paths": [
         "src/infrastructure/tools/performance-audit/",
         "styles.css",
@@ -6531,11 +6035,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/infrastructure/tools/performance-audit/",
           "styles.css",
@@ -6546,9 +6046,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:performance"
-        ],
+        "commands": ["npm run check:performance"],
         "expected_outputs": [
           "src/infrastructure/tools/performance-audit/",
           "styles.css",
@@ -6619,11 +6117,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "infrastructure/tools",
-        "release-package"
-      ],
+      "tags": ["production-readiness", "infrastructure/tools", "release-package"],
       "related_paths": [
         "src/infrastructure/tools/release-package/",
         "package.json",
@@ -6634,11 +6128,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/infrastructure/tools/release-package/",
           "package.json",
@@ -6649,10 +6139,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run test:packaging",
-          "npm run build"
-        ],
+        "commands": ["npm run test:packaging", "npm run build"],
         "expected_outputs": [
           "src/infrastructure/tools/release-package/",
           "package.json",
@@ -6724,11 +6211,7 @@
         },
         "depends_on_units": []
       },
-      "tags": [
-        "production-readiness",
-        "infrastructure/tools",
-        "hosting-profile"
-      ],
+      "tags": ["production-readiness", "infrastructure/tools", "hosting-profile"],
       "related_paths": [
         "src/infrastructure/tools/hosting-profile/",
         "deploy",
@@ -6738,11 +6221,7 @@
       "execution_context": {
         "mode": "standard",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/infrastructure/tools/hosting-profile/",
           "deploy",
@@ -6752,9 +6231,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run test:hosting-profile"
-        ],
+        "commands": ["npm run test:hosting-profile"],
         "expected_outputs": [
           "src/infrastructure/tools/hosting-profile/",
           "deploy",
@@ -6834,11 +6311,7 @@
           "tools.hosting_profile"
         ]
       },
-      "tags": [
-        "production-readiness",
-        "workflows",
-        "release-runbook"
-      ],
+      "tags": ["production-readiness", "workflows", "release-runbook"],
       "related_paths": [
         "src/workflows/release-runbook/",
         "README.md",
@@ -6850,11 +6323,7 @@
       "execution_context": {
         "mode": "async",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/workflows/release-runbook/",
           "README.md",
@@ -6868,9 +6337,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run check:documentation"
-        ],
+        "commands": ["npm run check:documentation"],
         "expected_outputs": [
           "src/workflows/release-runbook/",
           "README.md",
@@ -6977,11 +6444,7 @@
           "tools.source_archive"
         ]
       },
-      "tags": [
-        "production-readiness",
-        "workflows",
-        "ci-validation"
-      ],
+      "tags": ["production-readiness", "workflows", "ci-validation"],
       "related_paths": [
         "src/workflows/ci-validation/",
         "package.json",
@@ -6993,11 +6456,7 @@
       "execution_context": {
         "mode": "async",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/workflows/ci-validation/",
           "package.json",
@@ -7011,11 +6470,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm ci",
-          "npm run verify",
-          "npm run build"
-        ],
+        "commands": ["npm ci", "npm run verify", "npm run build"],
         "expected_outputs": [
           "src/workflows/ci-validation/",
           "package.json",
@@ -7141,11 +6596,7 @@
           "workflows.ci_validation"
         ]
       },
-      "tags": [
-        "production-readiness",
-        "workflows",
-        "staging-validation"
-      ],
+      "tags": ["production-readiness", "workflows", "staging-validation"],
       "related_paths": [
         "src/workflows/staging-validation/",
         "dist",
@@ -7156,11 +6607,7 @@
       "execution_context": {
         "mode": "async",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/workflows/staging-validation/",
           "dist",
@@ -7173,10 +6620,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run verify:staging",
-          "npm run verify:rollback"
-        ],
+        "commands": ["npm run verify:staging", "npm run verify:rollback"],
         "expected_outputs": [
           "src/workflows/staging-validation/",
           "dist",
@@ -7247,7 +6691,7 @@
       "estimated_hours": 4,
       "actual_hours": 0,
       "complexity": "Low",
-      "blocker_reason": "Awaiting the actual manual accessibility evidence required by task 20; no public deployment or clinical certification is implied.",
+      "blocker_reason": "Depends on task 20 and owner acceptance of the verified candidate. Record the owner name, date and acceptance against the reviewed content ID in docs/manual-review.json.",
       "sprint_name": "Week 6 - production readiness",
       "reviewer": {
         "name": "QA engineer (unassigned)",
@@ -7275,11 +6719,7 @@
           "workflows.staging_validation"
         ]
       },
-      "tags": [
-        "production-readiness",
-        "workflows",
-        "release-handoff"
-      ],
+      "tags": ["production-readiness", "workflows", "release-handoff"],
       "related_paths": [
         "src/workflows/release-handoff/",
         "node.tasks.json",
@@ -7291,11 +6731,7 @@
       "execution_context": {
         "mode": "async",
         "working_directory": ".",
-        "tools_required": [
-          "node",
-          "npm",
-          "git"
-        ],
+        "tools_required": ["node", "npm", "git"],
         "output_artifacts": [
           "src/workflows/release-handoff/",
           "node.tasks.json",
@@ -7309,9 +6745,7 @@
       },
       "verification": {
         "strategy": "test",
-        "commands": [
-          "npm run verify:release"
-        ],
+        "commands": ["npm run verify", "npm run verify:release"],
         "expected_outputs": [
           "src/workflows/release-handoff/",
           "node.tasks.json",
@@ -7320,7 +6754,7 @@
           "docs/reports/readiness.json",
           "dist"
         ],
-        "success_signal": "Every task is Done only after its own evidence passes; no Critical/High release blocker, unresolved scientific approval or missing visual reference remains. Registry lifecycle becomes stable only for implemented and tested units; task/path/unit graphs agree and all published data have current review decisions. Record exact release version, source revision, candidate hash, final canonical asset counts and tested hosting/browser profiles. Record owner and independent evidence/QA sign-off; keep budget and actual hours unknown unless supplied, and document residual lower-priority risks. Hand off source archive, deployable artifact, runbooks and maintenance graph; do not claim an unperformed public deployment."
+        "success_signal": "npm run verify and npm run verify:release exit 0 against the same dist release manifest. Every prerequisite is Done or explicitly Cancelled, both manual accessibility reviews and owner acceptance reference that runtime content ID, and the terminal task is marked Done after evidence is recorded."
       },
       "assigned_workers": [
         {
@@ -7331,11 +6765,9 @@
         }
       ],
       "acceptance_criteria": [
-        "Every task is Done only after its own evidence passes; no Critical/High release blocker, unresolved scientific approval or missing visual reference remains.",
-        "Registry lifecycle becomes stable only for implemented and tested units; task/path/unit graphs agree and all published data have current review decisions.",
-        "Record exact release version, source revision, candidate hash, final canonical asset counts and tested hosting/browser profiles.",
-        "Record owner and independent evidence/QA sign-off; keep budget and actual hours unknown unless supplied, and document residual lower-priority risks.",
-        "Hand off source archive, deployable artifact, runbooks and maintenance graph; do not claim an unperformed public deployment."
+        "The automated pipeline and release readiness commands exit 0 for the current candidate.",
+        "Every prerequisite task is closed with evidence. The same runtime content ID identifies the manual reviews and owner acceptance.",
+        "Record the candidate and runtime hashes, verified staging paths and source archive in the handoff."
       ],
       "dependencies": [
         {
@@ -7357,6 +6789,26 @@
           "predecessor_task_id": 27,
           "type": "FS",
           "lag_days": 0
+        },
+        {
+          "predecessor_task_id": 29,
+          "type": "FS",
+          "lag_days": 0
+        },
+        {
+          "predecessor_task_id": 30,
+          "type": "FS",
+          "lag_days": 0
+        },
+        {
+          "predecessor_task_id": 31,
+          "type": "FS",
+          "lag_days": 0
+        },
+        {
+          "predecessor_task_id": 32,
+          "type": "FS",
+          "lag_days": 0
         }
       ],
       "parent_task_id": 0,
@@ -7364,6 +6816,200 @@
       "attachments": [],
       "links": [],
       "comments": []
+    },
+    {
+      "task_id": 29,
+      "task_name": "Guard bilingual titles, captions and explanations against regression",
+      "description": "Added corpus-wide contract coverage for the 206 current references, one AU0, Spanish titles, distinct captions and explanations, and separate somatic introductions.",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-06",
+      "due_date": "2026-11-06",
+      "priority": "High",
+      "status": "Done",
+      "progress_percentage": 100,
+      "estimated_hours": 0,
+      "actual_hours": 0,
+      "complexity": "Medium",
+      "blocker_reason": "",
+      "category_name": "Graph Setup",
+      "target_unit": "",
+      "path_node_id": "src",
+      "related_paths": ["tests/contracts.test.mjs"],
+      "assigned_workers": [
+        {
+          "name": "Developer (unassigned)",
+          "email": "",
+          "role": "Developer",
+          "worker_id": "dev-unassigned"
+        }
+      ],
+      "verification": {
+        "strategy": "test",
+        "commands": ["npm test"],
+        "expected_outputs": ["tests/contracts.test.mjs"],
+        "success_signal": "The editorial contract test passes for every reference in English and Spanish."
+      },
+      "acceptance_criteria": [
+        "The editorial contract test passes for every reference in English and Spanish."
+      ],
+      "dependencies": [],
+      "subtasks": [],
+      "parent_task_id": 0,
+      "unit_bindings": {
+        "unit_path": "src",
+        "slot_paths": {
+          "verification": "tests/contracts.test.mjs"
+        },
+        "depends_on_units": []
+      }
+    },
+    {
+      "task_id": 30,
+      "task_name": "Verify the 25 intentionally revised image pairs",
+      "description": "Keep the 208-pair historical inventory and pin the 25 matching replacement JPEG/WebP pairs in ci/image-revisions.json. Public WebPs match the committed working baseline, and the paired thumbnails were checked for agreement.",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-06",
+      "due_date": "2026-11-06",
+      "priority": "High",
+      "status": "Done",
+      "progress_percentage": 100,
+      "estimated_hours": 0,
+      "actual_hours": 0,
+      "complexity": "Medium",
+      "blocker_reason": "",
+      "category_name": "Graph Setup",
+      "target_unit": "",
+      "path_node_id": "src",
+      "related_paths": ["tests/release.test.mjs"],
+      "assigned_workers": [
+        {
+          "name": "Developer (unassigned)",
+          "email": "",
+          "role": "Developer",
+          "worker_id": "dev-unassigned"
+        }
+      ],
+      "verification": {
+        "strategy": "test",
+        "commands": ["npm run test:packaging"],
+        "expected_outputs": ["tests/release.test.mjs"],
+        "success_signal": "The archive suite verifies original or explicitly recorded SHA-256 hashes for all 416 historical image paths. Unrecorded changes fail."
+      },
+      "acceptance_criteria": [
+        "The archive suite verifies original or explicitly recorded SHA-256 hashes for all 416 historical image paths. Unrecorded changes fail."
+      ],
+      "dependencies": [],
+      "subtasks": [],
+      "parent_task_id": 0,
+      "unit_bindings": {
+        "unit_path": "src",
+        "slot_paths": {
+          "verification": "tests/release.test.mjs"
+        },
+        "depends_on_units": []
+      }
+    },
+    {
+      "task_id": 31,
+      "task_name": "Bind task closure and verification evidence to the release candidate",
+      "description": "Record the terminal prerequisites in the graph, enforce them in the readiness gate and reject incomplete or stale automated and manual evidence. Provide a manual evidence template.",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-06",
+      "due_date": "2026-11-06",
+      "priority": "High",
+      "status": "Done",
+      "progress_percentage": 100,
+      "estimated_hours": 0,
+      "actual_hours": 0,
+      "complexity": "Medium",
+      "blocker_reason": "",
+      "category_name": "Graph Setup",
+      "target_unit": "",
+      "path_node_id": "src",
+      "related_paths": ["src/workflows/release-handoff/main.js"],
+      "assigned_workers": [
+        {
+          "name": "Developer (unassigned)",
+          "email": "",
+          "role": "Developer",
+          "worker_id": "dev-unassigned"
+        }
+      ],
+      "verification": {
+        "strategy": "test",
+        "commands": ["npm run check:plan"],
+        "expected_outputs": ["src/workflows/release-handoff/main.js"],
+        "success_signal": "The graph validates all terminal prerequisites and readiness rejects old content IDs or absent sign-off."
+      },
+      "acceptance_criteria": [
+        "The graph validates all terminal prerequisites and readiness rejects old content IDs or absent sign-off."
+      ],
+      "dependencies": [],
+      "subtasks": [],
+      "parent_task_id": 0,
+      "unit_bindings": {
+        "unit_path": "src",
+        "slot_paths": {
+          "verification": "src/workflows/release-handoff/main.js"
+        },
+        "depends_on_units": []
+      }
+    },
+    {
+      "task_id": 32,
+      "task_name": "Package and verify a lightweight Pages runtime",
+      "description": "A clean checkout lacks intentionally ignored JPEG originals and internal docs. Build locally, package only the verified runtime, and let the manually launched Pages workflow verify and unpack that release asset.",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-06",
+      "due_date": "2026-11-06",
+      "priority": "High",
+      "status": "Done",
+      "progress_percentage": 100,
+      "estimated_hours": 0,
+      "actual_hours": 0,
+      "complexity": "Medium",
+      "blocker_reason": "",
+      "category_name": "Graph Setup",
+      "target_unit": "",
+      "path_node_id": "src",
+      "related_paths": [
+        "scripts/package-pages.mjs",
+        ".github/workflows/pages.yml",
+        "ci/quality-gates.json",
+        "README.md"
+      ],
+      "assigned_workers": [
+        {
+          "name": "Developer (unassigned)",
+          "email": "",
+          "role": "Developer",
+          "worker_id": "dev-unassigned"
+        }
+      ],
+      "unit_bindings": {
+        "unit_path": "src",
+        "slot_paths": {
+          "verification": "scripts/package-pages.mjs"
+        },
+        "depends_on_units": []
+      },
+      "verification": {
+        "strategy": "test",
+        "commands": ["npm run verify:pages-package"],
+        "expected_outputs": ["artifacts/pages-runtime.tar.gz", "artifacts/pages-runtime.json"],
+        "success_signal": "Every deployed file matches the local manifest, unpacking rejects an incorrect SHA-256, and the archive contains no JPEG originals, internal docs or corresponding-source archive."
+      },
+      "acceptance_criteria": [
+        "The local build keeps the ignored originals and review inputs.",
+        "The Pages package round-trips only runtime files.",
+        "Pages uses the manually selected, checksum-verified release asset."
+      ],
+      "dependencies": [],
+      "subtasks": [],
+      "parent_task_id": 0,
+      "comments": [
+        "2026-11-06: JPEG originals and docs stay ignored at owner direction. Runtime packaging was verified locally. Hosted deployment needs a configured remote and a separately approved launch."
+      ]
     }
   ],
   "required_fields": [
@@ -7431,34 +7077,8 @@
         "label": "SomatoEmotions production readiness",
         "name": "emotions / SomatoEmotions - production readiness",
         "taskIds": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16,
-          17,
-          18,
-          19,
-          20,
-          21,
-          22,
-          23,
-          24,
-          25,
-          26,
-          27,
-          28
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+          26, 27, 28, 29, 30, 31, 32
         ]
       }
     ]

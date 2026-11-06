@@ -25,19 +25,14 @@
         "cardiovascular": [
           {
             "claim": "Laboratory anger induction can change cardiovascular activity.",
-            "shared_with": [
-              "panic",
-              "fear"
-            ],
+            "shared_with": ["panic", "fear"],
             "id": "somatic-3bfb7db4de17bc",
             "image_key": "somatic/anger-cardiovascular-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "ans-experiment-1983"
-              ],
+              "source_ids": ["ans-experiment-1983"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -45,9 +40,7 @@
           },
           {
             "claim": "Temple close-up",
-            "shared_with": [
-              "panic"
-            ],
+            "shared_with": ["panic"],
             "id": "somatic-5f6986aca5d573",
             "image_key": "somatic/anger-cardiovascular-1",
             "content_type": "illustration",
@@ -62,9 +55,7 @@
           },
           {
             "claim": "Face and upper-chest redness",
-            "shared_with": [
-              "shame"
-            ],
+            "shared_with": ["shame"],
             "id": "somatic-deab80f2511917",
             "image_key": "somatic/anger-cardiovascular-2",
             "content_type": "illustration",
@@ -96,9 +87,7 @@
           },
           {
             "claim": "Expanded upper chest",
-            "shared_with": [
-              "pride"
-            ],
+            "shared_with": ["pride"],
             "id": "somatic-4c60fd28ac4018",
             "image_key": "somatic/anger-respiratory-1",
             "content_type": "illustration",
@@ -115,10 +104,7 @@
         "gastrointestinal": [
           {
             "claim": "Hand on upper abdomen",
-            "shared_with": [
-              "anxiety",
-              "fear"
-            ],
+            "shared_with": ["anxiety", "fear"],
             "id": "somatic-ae73abcdf28607",
             "image_key": "somatic/anger-gastrointestinal-0",
             "content_type": "illustration",
@@ -135,9 +121,7 @@
         "musculoskeletal": [
           {
             "claim": "Clenched jaw",
-            "shared_with": [
-              "anxiety"
-            ],
+            "shared_with": ["anxiety"],
             "id": "somatic-8268f994330b6d",
             "image_key": "somatic/anger-musculoskeletal-0",
             "content_type": "illustration",
@@ -191,9 +175,7 @@
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "bodily-maps-2014"
-              ],
+              "source_ids": ["bodily-maps-2014"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -201,9 +183,7 @@
           },
           {
             "claim": "Palmar skin close-up",
-            "shared_with": [
-              "excitement"
-            ],
+            "shared_with": ["excitement"],
             "id": "somatic-fc65d05e9e1c5d",
             "image_key": "somatic/anger-integumentary_thermal-1",
             "content_type": "illustration",
@@ -220,10 +200,7 @@
         "neurosensory": [
           {
             "claim": "Focused gaze",
-            "shared_with": [
-              "fear",
-              "panic"
-            ],
+            "shared_with": ["fear", "panic"],
             "id": "somatic-f2591ac2c81641",
             "image_key": "somatic/anger-neurosensory-0",
             "content_type": "illustration",
@@ -238,9 +215,7 @@
           },
           {
             "claim": "Steady facial expression",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-0d8ffaa6f0ef6d",
             "image_key": "somatic/anger-neurosensory-1",
             "content_type": "illustration",
@@ -337,10 +312,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU4",
@@ -361,10 +333,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU5",
@@ -385,10 +354,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU7",
@@ -409,10 +375,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU23",
@@ -433,10 +396,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU24",
@@ -457,10 +417,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -475,20 +432,14 @@
         "cardiovascular": [
           {
             "claim": "Fear-inducing films can alter cardiovascular measures.",
-            "shared_with": [
-              "panic",
-              "anger",
-              "anxiety"
-            ],
+            "shared_with": ["panic", "anger", "anxiety"],
             "id": "somatic-903c05b51a4b64",
             "image_key": "somatic/fear-cardiovascular-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "fear-sadness-2007"
-              ],
+              "source_ids": ["fear-sadness-2007"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -496,9 +447,7 @@
           },
           {
             "claim": "Hand and forearm skin",
-            "shared_with": [
-              "anxiety"
-            ],
+            "shared_with": ["anxiety"],
             "id": "somatic-875c49ea945f89",
             "image_key": "somatic/fear-cardiovascular-1",
             "content_type": "illustration",
@@ -515,19 +464,14 @@
         "respiratory": [
           {
             "claim": "Respiratory responses were measured during fear-inducing films.",
-            "shared_with": [
-              "panic",
-              "anxiety"
-            ],
+            "shared_with": ["panic", "anxiety"],
             "id": "somatic-941c38a875cd22",
             "image_key": "somatic/fear-respiratory-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "fear-sadness-2007"
-              ],
+              "source_ids": ["fear-sadness-2007"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -535,10 +479,7 @@
           },
           {
             "claim": "Open mouth and tense throat",
-            "shared_with": [
-              "surprise",
-              "awe"
-            ],
+            "shared_with": ["surprise", "awe"],
             "id": "somatic-4f97b892e01cab",
             "image_key": "somatic/fear-respiratory-1",
             "content_type": "illustration",
@@ -555,10 +496,7 @@
         "gastrointestinal": [
           {
             "claim": "Hand over upper abdomen",
-            "shared_with": [
-              "panic",
-              "shame"
-            ],
+            "shared_with": ["panic", "shame"],
             "id": "somatic-df23dffb4397d7",
             "image_key": "somatic/fear-gastrointestinal-0",
             "content_type": "illustration",
@@ -573,9 +511,7 @@
           },
           {
             "claim": "Mouth and throat reference",
-            "shared_with": [
-              "anxiety"
-            ],
+            "shared_with": ["anxiety"],
             "id": "somatic-c10648879d65c6",
             "image_key": "somatic/fear-gastrointestinal-1",
             "content_type": "illustration",
@@ -599,9 +535,7 @@
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "bodily-maps-2014"
-              ],
+              "source_ids": ["bodily-maps-2014"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -609,9 +543,7 @@
           },
           {
             "claim": "Raised shoulders",
-            "shared_with": [
-              "anxiety"
-            ],
+            "shared_with": ["anxiety"],
             "id": "somatic-6e26467fc68a4a",
             "image_key": "somatic/fear-musculoskeletal-1",
             "content_type": "illustration",
@@ -626,9 +558,7 @@
           },
           {
             "claim": "Hands and fine movement",
-            "shared_with": [
-              "panic"
-            ],
+            "shared_with": ["panic"],
             "id": "somatic-cfb03540348b2f",
             "image_key": "somatic/fear-musculoskeletal-2",
             "content_type": "illustration",
@@ -645,9 +575,7 @@
         "integumentary_thermal": [
           {
             "claim": "Sweat on skin",
-            "shared_with": [
-              "panic"
-            ],
+            "shared_with": ["panic"],
             "id": "somatic-66341dca9f75ec",
             "image_key": "somatic/fear-integumentary_thermal-0",
             "content_type": "illustration",
@@ -662,9 +590,7 @@
           },
           {
             "claim": "Forearm skin close-up",
-            "shared_with": [
-              "awe"
-            ],
+            "shared_with": ["awe"],
             "id": "somatic-b97e571c3dbca2",
             "image_key": "somatic/fear-integumentary_thermal-1",
             "content_type": "illustration",
@@ -681,10 +607,7 @@
         "neurosensory": [
           {
             "claim": "Wide eyes",
-            "shared_with": [
-              "surprise",
-              "panic"
-            ],
+            "shared_with": ["surprise", "panic"],
             "id": "somatic-26a4e67672aee3",
             "image_key": "somatic/fear-neurosensory-0",
             "content_type": "illustration",
@@ -699,9 +622,7 @@
           },
           {
             "claim": "Head and gaze reference",
-            "shared_with": [
-              "panic"
-            ],
+            "shared_with": ["panic"],
             "id": "somatic-7f6c2238a8be1e",
             "image_key": "somatic/fear-neurosensory-1",
             "content_type": "illustration",
@@ -719,9 +640,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Retreat or stillness",
-          "shared_with": [
-            "panic"
-          ],
+          "shared_with": ["panic"],
           "id": "action-8f331247c0e018",
           "image_key": "action/fear-act-0",
           "content_type": "illustration",
@@ -736,9 +655,7 @@
         },
         {
           "claim": "Backward body lean",
-          "shared_with": [
-            "disgust"
-          ],
+          "shared_with": ["disgust"],
           "id": "action-e082a9e9501228",
           "image_key": "action/fear-act-1",
           "content_type": "illustration",
@@ -787,10 +704,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU1",
@@ -811,10 +725,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU2",
@@ -835,10 +746,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU4",
@@ -859,10 +767,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU5",
@@ -872,7 +777,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Both eyes, fear AU5: upper lids high, sclera visible above irises, pupils moderately dilated, brows in the AU1+2+4 configuration at the top of frame. No screaming mouth in this crop. Soft overhead clinic light. --ar 1:1",
           "id": "face-df18d0e8b94784",
-          "claim": "AU5: Upper Lid Raiser",
+          "claim": "AU5: Subtle upper lid lift",
           "image_key": "face/fear-au5",
           "content_type": "illustration",
           "evidence": {
@@ -883,10 +788,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU20",
@@ -907,10 +809,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -925,18 +824,14 @@
         "cardiovascular": [
           {
             "claim": "Cardiovascular responses were measured during sadness-inducing films.",
-            "shared_with": [
-              "grief"
-            ],
+            "shared_with": ["grief"],
             "id": "somatic-a1ecb91ddfc36c",
             "image_key": "somatic/sadness-cardiovascular-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "fear-sadness-2007"
-              ],
+              "source_ids": ["fear-sadness-2007"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -944,9 +839,7 @@
           },
           {
             "claim": "Seated posture",
-            "shared_with": [
-              "depression"
-            ],
+            "shared_with": ["depression"],
             "id": "somatic-834c7f715b3c18",
             "image_key": "somatic/sadness-cardiovascular-1",
             "content_type": "illustration",
@@ -963,18 +856,14 @@
         "respiratory": [
           {
             "claim": "Breathing patterns were studied during sadness-inducing films.",
-            "shared_with": [
-              "grief"
-            ],
+            "shared_with": ["grief"],
             "id": "somatic-19612dc1f7de53",
             "image_key": "somatic/sadness-respiratory-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "fear-sadness-2007"
-              ],
+              "source_ids": ["fear-sadness-2007"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -982,9 +871,7 @@
           },
           {
             "claim": "Sighing pose",
-            "shared_with": [
-              "anxiety"
-            ],
+            "shared_with": ["anxiety"],
             "id": "somatic-092c173e0e37b1",
             "image_key": "somatic/sadness-respiratory-1",
             "content_type": "illustration",
@@ -1001,9 +888,7 @@
         "gastrointestinal": [
           {
             "claim": "Upper-abdominal reference",
-            "shared_with": [
-              "depression"
-            ],
+            "shared_with": ["depression"],
             "id": "somatic-939831f59eb877",
             "image_key": "somatic/sadness-gastrointestinal-0",
             "content_type": "illustration",
@@ -1018,9 +903,7 @@
           },
           {
             "claim": "Hand on abdomen",
-            "shared_with": [
-              "grief"
-            ],
+            "shared_with": ["grief"],
             "id": "somatic-a2930ed9351ace",
             "image_key": "somatic/sadness-gastrointestinal-1",
             "content_type": "illustration",
@@ -1037,9 +920,7 @@
         "musculoskeletal": [
           {
             "claim": "Flexed spine",
-            "shared_with": [
-              "shame"
-            ],
+            "shared_with": ["shame"],
             "id": "somatic-97b2e4e1e74236",
             "image_key": "somatic/sadness-musculoskeletal-0",
             "content_type": "illustration",
@@ -1054,18 +935,14 @@
           },
           {
             "claim": "Participants reported bodily sensations associated with sadness.",
-            "shared_with": [
-              "depression"
-            ],
+            "shared_with": ["depression"],
             "id": "somatic-a1516b4d61a721",
             "image_key": "somatic/sadness-musculoskeletal-1",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "bodily-maps-2014"
-              ],
+              "source_ids": ["bodily-maps-2014"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -1073,9 +950,7 @@
           },
           {
             "claim": "Throat reference",
-            "shared_with": [
-              "grief"
-            ],
+            "shared_with": ["grief"],
             "id": "somatic-099f754ad70098",
             "image_key": "somatic/sadness-musculoskeletal-2",
             "content_type": "illustration",
@@ -1092,9 +967,7 @@
         "integumentary_thermal": [
           {
             "claim": "Wrapped shoulders",
-            "shared_with": [
-              "loneliness"
-            ],
+            "shared_with": ["loneliness"],
             "id": "somatic-6e382377ec6aeb",
             "image_key": "somatic/sadness-integumentary_thermal-0",
             "content_type": "illustration",
@@ -1109,9 +982,7 @@
           },
           {
             "claim": "Tears",
-            "shared_with": [
-              "grief"
-            ],
+            "shared_with": ["grief"],
             "id": "somatic-140807916ed6ff",
             "image_key": "somatic/sadness-integumentary_thermal-1",
             "content_type": "illustration",
@@ -1128,9 +999,7 @@
         "neurosensory": [
           {
             "claim": "Downward gaze",
-            "shared_with": [
-              "shame"
-            ],
+            "shared_with": ["shame"],
             "id": "somatic-64b4676dbfbc57",
             "image_key": "somatic/sadness-neurosensory-0",
             "content_type": "illustration",
@@ -1148,9 +1017,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Inward posture",
-          "shared_with": [
-            "shame"
-          ],
+          "shared_with": ["shame"],
           "id": "action-878ceec73e49f3",
           "image_key": "action/sadness-act-0",
           "content_type": "illustration",
@@ -1165,9 +1032,7 @@
         },
         {
           "claim": "Seated stillness",
-          "shared_with": [
-            "depression"
-          ],
+          "shared_with": ["depression"],
           "id": "action-83b8bc395ebce6",
           "image_key": "action/sadness-act-1",
           "content_type": "illustration",
@@ -1182,9 +1047,7 @@
         },
         {
           "claim": "Arms around the body",
-          "shared_with": [
-            "grief"
-          ],
+          "shared_with": ["grief"],
           "id": "action-068c03b49d4f62",
           "image_key": "action/sadness-act-2",
           "content_type": "illustration",
@@ -1218,10 +1081,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU1",
@@ -1231,7 +1091,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Eyes and forehead, sadness AU1: inner brows pulled up into a peak, outer brows not raised, central forehead lines, somber even lighting, wet or dry eyes acceptable, no grin. Photoreal adult, square crop. --ar 1:1",
           "id": "face-e407c59ce845ca",
-          "claim": "AU1: Inner Brow Raiser",
+          "claim": "AU1: Peaked inner brow lift",
           "image_key": "face/sadness-au1",
           "content_type": "illustration",
           "evidence": {
@@ -1242,10 +1102,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU4",
@@ -1255,7 +1112,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Glabella of sadness: AU1+AU4 together, inner brows up and knit, faint vertical lines plus central forehead bulge, not an anger scowl (brows are not lowered as a shelf). Clinical still. --ar 1:1",
           "id": "face-9b61940e56d971",
-          "claim": "AU4: Brow Lowerer",
+          "claim": "AU4: Inward brow pull with inner brow lift",
           "image_key": "face/sadness-au4",
           "content_type": "illustration",
           "evidence": {
@@ -1266,10 +1123,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU15",
@@ -1290,10 +1144,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU17",
@@ -1314,10 +1165,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -1332,9 +1180,7 @@
         "cardiovascular": [
           {
             "claim": "Relaxed face and neck",
-            "shared_with": [
-              "love"
-            ],
+            "shared_with": ["love"],
             "id": "somatic-819e975625232e",
             "image_key": "somatic/happiness-cardiovascular-0",
             "content_type": "illustration",
@@ -1349,9 +1195,7 @@
           },
           {
             "claim": "Mild facial redness",
-            "shared_with": [
-              "pride"
-            ],
+            "shared_with": ["pride"],
             "id": "somatic-6c641835e7a3b4",
             "image_key": "somatic/happiness-cardiovascular-1",
             "content_type": "illustration",
@@ -1385,9 +1229,7 @@
         "gastrointestinal": [
           {
             "claim": "Resting abdomen",
-            "shared_with": [
-              "contentment"
-            ],
+            "shared_with": ["contentment"],
             "id": "somatic-4af29e216843f6",
             "image_key": "somatic/happiness-gastrointestinal-0",
             "content_type": "illustration",
@@ -1404,9 +1246,7 @@
         "musculoskeletal": [
           {
             "claim": "Open upright posture",
-            "shared_with": [
-              "pride"
-            ],
+            "shared_with": ["pride"],
             "id": "somatic-04f1e48796fa04",
             "image_key": "somatic/happiness-musculoskeletal-0",
             "content_type": "illustration",
@@ -1428,9 +1268,7 @@
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "bodily-maps-2014"
-              ],
+              "source_ids": ["bodily-maps-2014"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -1440,9 +1278,7 @@
         "integumentary_thermal": [
           {
             "claim": "Face and hand skin",
-            "shared_with": [
-              "love"
-            ],
+            "shared_with": ["love"],
             "id": "somatic-9b28aacdd0b778",
             "image_key": "somatic/happiness-integumentary_thermal-0",
             "content_type": "illustration",
@@ -1459,10 +1295,7 @@
         "neurosensory": [
           {
             "claim": "Relaxed facial expression",
-            "shared_with": [
-              "pride",
-              "love"
-            ],
+            "shared_with": ["pride", "love"],
             "id": "somatic-3e752707763eaf",
             "image_key": "somatic/happiness-neurosensory-0",
             "content_type": "illustration",
@@ -1480,9 +1313,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Open-arm gesture",
-          "shared_with": [
-            "love"
-          ],
+          "shared_with": ["love"],
           "id": "action-8d5c6a2f78f438",
           "image_key": "action/happiness-act-0",
           "content_type": "illustration",
@@ -1497,9 +1328,7 @@
         },
         {
           "claim": "Light walking step",
-          "shared_with": [
-            "excitement"
-          ],
+          "shared_with": ["excitement"],
           "id": "action-bda927750022b2",
           "image_key": "action/happiness-act-1",
           "content_type": "illustration",
@@ -1514,9 +1343,7 @@
         },
         {
           "claim": "Approach gesture",
-          "shared_with": [
-            "love"
-          ],
+          "shared_with": ["love"],
           "id": "action-f1a913e5a20104",
           "image_key": "action/happiness-act-2",
           "content_type": "illustration",
@@ -1550,10 +1377,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU6",
@@ -1574,10 +1398,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU12",
@@ -1598,10 +1419,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU25",
@@ -1622,10 +1440,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -1640,9 +1455,7 @@
         "cardiovascular": [
           {
             "claim": "Face and neck",
-            "shared_with": [
-              "awe"
-            ],
+            "shared_with": ["awe"],
             "id": "somatic-2153d1a5ef1cf4",
             "image_key": "somatic/disgust-cardiovascular-0",
             "content_type": "illustration",
@@ -1723,9 +1536,7 @@
           },
           {
             "claim": "Receding torso",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-fcf64a6a5f3423",
             "image_key": "somatic/disgust-musculoskeletal-1",
             "content_type": "illustration",
@@ -1742,9 +1553,7 @@
         "integumentary_thermal": [
           {
             "claim": "Hand and face skin",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-3f0657af88842b",
             "image_key": "somatic/disgust-integumentary_thermal-0",
             "content_type": "illustration",
@@ -1843,10 +1652,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU9",
@@ -1867,10 +1673,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU10",
@@ -1891,10 +1694,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU15",
@@ -1904,7 +1704,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Mouth in disgust, AU9+AU15: nose wrinkled, corners down, not a sad cry face (no AU1 omega brow). --ar 1:1",
           "id": "face-9176af368293f8",
-          "claim": "AU15: Lip Corner Depressor",
+          "claim": "AU15: Lowered mouth corners with nose wrinkles",
           "image_key": "face/disgust-au15",
           "content_type": "illustration",
           "evidence": {
@@ -1915,10 +1715,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU16",
@@ -1939,10 +1736,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -1957,9 +1751,7 @@
         "cardiovascular": [
           {
             "claim": "Upper-body reference",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-242e411f27cd87",
             "image_key": "somatic/surprise-cardiovascular-0",
             "content_type": "illustration",
@@ -1976,10 +1768,7 @@
         "respiratory": [
           {
             "claim": "Open-mouth inhalation pose",
-            "shared_with": [
-              "awe",
-              "fear"
-            ],
+            "shared_with": ["awe", "fear"],
             "id": "somatic-6ee83479e73186",
             "image_key": "somatic/surprise-respiratory-0",
             "content_type": "illustration",
@@ -1996,9 +1785,7 @@
         "gastrointestinal": [
           {
             "claim": "Upper-abdominal reference",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-186765ecc6b224",
             "image_key": "somatic/surprise-gastrointestinal-0",
             "content_type": "illustration",
@@ -2015,9 +1802,7 @@
         "musculoskeletal": [
           {
             "claim": "Startle pose",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-9c10012c98476a",
             "image_key": "somatic/surprise-musculoskeletal-0",
             "content_type": "illustration",
@@ -2032,9 +1817,7 @@
           },
           {
             "claim": "Paused movement",
-            "shared_with": [
-              "awe"
-            ],
+            "shared_with": ["awe"],
             "id": "somatic-061775a5b14b95",
             "image_key": "somatic/surprise-musculoskeletal-1",
             "content_type": "illustration",
@@ -2051,9 +1834,7 @@
         "integumentary_thermal": [
           {
             "claim": "Forearm skin",
-            "shared_with": [
-              "awe"
-            ],
+            "shared_with": ["awe"],
             "id": "somatic-dc5a90d56ee106",
             "image_key": "somatic/surprise-integumentary_thermal-0",
             "content_type": "illustration",
@@ -2070,10 +1851,7 @@
         "neurosensory": [
           {
             "claim": "Oriented gaze",
-            "shared_with": [
-              "fear",
-              "awe"
-            ],
+            "shared_with": ["fear", "awe"],
             "id": "somatic-8968138da30050",
             "image_key": "somatic/surprise-neurosensory-0",
             "content_type": "illustration",
@@ -2091,9 +1869,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Head oriented to an event",
-          "shared_with": [
-            "awe"
-          ],
+          "shared_with": ["awe"],
           "id": "action-0533e7084a2a1f",
           "image_key": "action/surprise-act-0",
           "content_type": "illustration",
@@ -2108,9 +1884,7 @@
         },
         {
           "claim": "Paused movement",
-          "shared_with": [
-            "awe"
-          ],
+          "shared_with": ["awe"],
           "id": "action-f139803d059615",
           "image_key": "action/surprise-act-1",
           "content_type": "illustration",
@@ -2144,20 +1918,17 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU1+AU2",
-          "name": "Full brow raise",
+          "name": "Inner and outer brow lift",
           "muscles": [],
           "prototype_role": "Movement reference",
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Upper face, surprise brows AU1+AU2 without AU4: high curved brows, full-width forehead lines, smooth glabella with no vertical scowl. Eyes beginning to widen. 85mm clinical still, square. --ar 1:1",
           "id": "face-e8e2671e8e54be",
-          "claim": "AU1+AU2: Full brow raise",
+          "claim": "AU1+AU2: Inner and outer brow lift",
           "image_key": "face/surprise-au1-2",
           "content_type": "illustration",
           "evidence": {
@@ -2168,10 +1939,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU5",
@@ -2181,7 +1949,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Eyes in surprise AU5B: very high upper lids, round exposed irises, sclera above, relaxed lower lids, brows high and smooth. No tears, no horror contacts. --ar 1:1",
           "id": "face-9f3b1a0203c599",
-          "claim": "AU5: Upper Lid Raiser",
+          "claim": "AU5: Wide eye opening",
           "image_key": "face/surprise-au5",
           "content_type": "illustration",
           "evidence": {
@@ -2192,10 +1960,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU26",
@@ -2216,10 +1981,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -2234,10 +1996,7 @@
         "cardiovascular": [
           {
             "claim": "Face and neck reference",
-            "shared_with": [
-              "fear",
-              "panic"
-            ],
+            "shared_with": ["fear", "panic"],
             "id": "somatic-51b221a26543d2",
             "image_key": "somatic/anxiety-cardiovascular-0",
             "content_type": "illustration",
@@ -2252,9 +2011,7 @@
           },
           {
             "claim": "Hand over chest",
-            "shared_with": [
-              "panic"
-            ],
+            "shared_with": ["panic"],
             "id": "somatic-83a1f9e3b543ab",
             "image_key": "somatic/anxiety-cardiovascular-1",
             "content_type": "illustration",
@@ -2271,9 +2028,7 @@
         "respiratory": [
           {
             "claim": "Upper-chest breathing pose",
-            "shared_with": [
-              "sadness"
-            ],
+            "shared_with": ["sadness"],
             "id": "somatic-16b94853d7cc01",
             "image_key": "somatic/anxiety-respiratory-0",
             "content_type": "illustration",
@@ -2290,9 +2045,7 @@
         "gastrointestinal": [
           {
             "claim": "Hand on upper abdomen",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-a010f1c3df06d0",
             "image_key": "somatic/anxiety-gastrointestinal-0",
             "content_type": "illustration",
@@ -2309,9 +2062,7 @@
         "musculoskeletal": [
           {
             "claim": "Neck and shoulder tension",
-            "shared_with": [
-              "anger"
-            ],
+            "shared_with": ["anger"],
             "id": "somatic-09282ef8964d24",
             "image_key": "somatic/anxiety-musculoskeletal-0",
             "content_type": "illustration",
@@ -2328,9 +2079,7 @@
         "integumentary_thermal": [
           {
             "claim": "Palms and facial skin",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-7cce9ddad82d5f",
             "image_key": "somatic/anxiety-integumentary_thermal-0",
             "content_type": "illustration",
@@ -2347,9 +2096,7 @@
         "neurosensory": [
           {
             "claim": "Restless gaze",
-            "shared_with": [
-              "panic"
-            ],
+            "shared_with": ["panic"],
             "id": "somatic-ba790220ade1ee",
             "image_key": "somatic/anxiety-neurosensory-0",
             "content_type": "illustration",
@@ -2367,9 +2114,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Scanning gaze",
-          "shared_with": [
-            "fear"
-          ],
+          "shared_with": ["fear"],
           "id": "action-0b809844267d15",
           "image_key": "action/anxiety-act-0",
           "content_type": "illustration",
@@ -2399,9 +2144,7 @@
         },
         {
           "claim": "Pacing pose",
-          "shared_with": [
-            "panic"
-          ],
+          "shared_with": ["panic"],
           "id": "action-b7a13ce3b21ab9",
           "image_key": "action/anxiety-act-2",
           "content_type": "illustration",
@@ -2435,10 +2178,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU1+AU4",
@@ -2448,7 +2188,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Subtle worry face, low-intensity AU1+AU4 held over time: faintly raised inner brows, slight glabellar bunch, otherwise ordinary lighting, documentary portrait, not a theatrical scream. Square crop. --ar 1:1",
           "id": "face-295c700963a28a",
-          "claim": "AU1+AU4: Worry brow",
+          "claim": "AU1+AU4: Inner brow lift and inward pull",
           "image_key": "face/anxiety-au1-4",
           "content_type": "illustration",
           "evidence": {
@@ -2459,10 +2199,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU24",
@@ -2472,7 +2209,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Mouth, mild AU24: lips pressed in a thin line, no anger glare in the eyes of this crop, natural portrait. --ar 1:1",
           "id": "face-8c8a3e26c569ac",
-          "claim": "AU24: Lip Pressor",
+          "claim": "AU24: Firm, straight lip closure",
           "image_key": "face/anxiety-au24",
           "content_type": "illustration",
           "evidence": {
@@ -2483,10 +2220,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -2501,18 +2235,14 @@
         "cardiovascular": [
           {
             "claim": "Pounding or racing heart can occur during a panic attack.",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-78e84c6393e3bd",
             "image_key": "somatic/panic-cardiovascular-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "nimh-panic"
-              ],
+              "source_ids": ["nimh-panic"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -2522,18 +2252,14 @@
         "respiratory": [
           {
             "claim": "Difficulty breathing can occur during a panic attack.",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-9cc399890ed100",
             "image_key": "somatic/panic-respiratory-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "nimh-panic"
-              ],
+              "source_ids": ["nimh-panic"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -2543,18 +2269,14 @@
         "gastrointestinal": [
           {
             "claim": "Stomach discomfort or nausea can occur during a panic attack.",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-74cbb5c9e819b1",
             "image_key": "somatic/panic-gastrointestinal-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "nimh-panic"
-              ],
+              "source_ids": ["nimh-panic"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -2564,18 +2286,14 @@
         "musculoskeletal": [
           {
             "claim": "Trembling or weakness can occur during a panic attack.",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-5abfc6d68923ed",
             "image_key": "somatic/panic-musculoskeletal-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "nimh-panic"
-              ],
+              "source_ids": ["nimh-panic"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -2585,18 +2303,14 @@
         "integumentary_thermal": [
           {
             "claim": "Sweating or chills can occur during a panic attack.",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-eb9429323ed8fd",
             "image_key": "somatic/panic-integumentary_thermal-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "nimh-panic"
-              ],
+              "source_ids": ["nimh-panic"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -2606,18 +2320,14 @@
         "neurosensory": [
           {
             "claim": "Dizziness or tingling may occur during a panic attack.",
-            "shared_with": [
-              "anxiety"
-            ],
+            "shared_with": ["anxiety"],
             "id": "somatic-e57faeac32268c",
             "image_key": "somatic/panic-neurosensory-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "nimh-panic"
-              ],
+              "source_ids": ["nimh-panic"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -2628,9 +2338,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Movement toward an exit",
-          "shared_with": [
-            "fear"
-          ],
+          "shared_with": ["fear"],
           "id": "action-5e94442a522006",
           "image_key": "action/panic-act-0",
           "content_type": "illustration",
@@ -2694,10 +2402,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU1+AU2+AU5",
@@ -2718,10 +2423,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU26",
@@ -2731,7 +2433,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Gasping mouth AU26, slack jaw, dry lips, no staged scream stretch. Clinical/documentary. --ar 1:1",
           "id": "face-1d448a7257fd96",
-          "claim": "AU26: Jaw Drop",
+          "claim": "AU26: Open mouth with slack jaw",
           "image_key": "face/panic-au26",
           "content_type": "illustration",
           "evidence": {
@@ -2742,10 +2444,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -2760,9 +2459,7 @@
         "cardiovascular": [
           {
             "claim": "Face and neck redness",
-            "shared_with": [
-              "embarrassment"
-            ],
+            "shared_with": ["embarrassment"],
             "id": "somatic-74e721e86547c5",
             "image_key": "somatic/shame-cardiovascular-0",
             "content_type": "illustration",
@@ -2779,9 +2476,7 @@
         "respiratory": [
           {
             "claim": "Small-breathing pose",
-            "shared_with": [
-              "sadness"
-            ],
+            "shared_with": ["sadness"],
             "id": "somatic-7d537455c4eaed",
             "image_key": "somatic/shame-respiratory-0",
             "content_type": "illustration",
@@ -2798,9 +2493,7 @@
         "gastrointestinal": [
           {
             "claim": "Hand on abdomen",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-1516763dd3fab8",
             "image_key": "somatic/shame-gastrointestinal-0",
             "content_type": "illustration",
@@ -2817,18 +2510,14 @@
         "musculoskeletal": [
           {
             "claim": "Lowered head posture occurred in studied shame displays.",
-            "shared_with": [
-              "sadness"
-            ],
+            "shared_with": ["sadness"],
             "id": "somatic-68a300ae665e26",
             "image_key": "somatic/shame-musculoskeletal-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "pride-shame-2008"
-              ],
+              "source_ids": ["pride-shame-2008"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -2836,18 +2525,14 @@
           },
           {
             "claim": "Slumped shoulders and a narrowed chest occurred after defeat in the studied athletes.",
-            "shared_with": [
-              "sadness"
-            ],
+            "shared_with": ["sadness"],
             "id": "somatic-3e239bdc6c845d",
             "image_key": "somatic/shame-musculoskeletal-1",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "pride-shame-2008"
-              ],
+              "source_ids": ["pride-shame-2008"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -2857,9 +2542,7 @@
         "integumentary_thermal": [
           {
             "claim": "Upper-body skin reference",
-            "shared_with": [
-              "embarrassment"
-            ],
+            "shared_with": ["embarrassment"],
             "id": "somatic-abef4f8814a5e6",
             "image_key": "somatic/shame-integumentary_thermal-0",
             "content_type": "illustration",
@@ -2876,9 +2559,7 @@
         "neurosensory": [
           {
             "claim": "Downward gaze",
-            "shared_with": [
-              "embarrassment"
-            ],
+            "shared_with": ["embarrassment"],
             "id": "somatic-4009425b9a6199",
             "image_key": "somatic/shame-neurosensory-0",
             "content_type": "illustration",
@@ -2896,9 +2577,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Lowered head and averted gaze",
-          "shared_with": [
-            "sadness"
-          ],
+          "shared_with": ["sadness"],
           "id": "action-71e2eb63522411",
           "image_key": "action/shame-act-0",
           "content_type": "illustration",
@@ -2913,9 +2592,7 @@
         },
         {
           "claim": "Covered face",
-          "shared_with": [
-            "embarrassment"
-          ],
+          "shared_with": ["embarrassment"],
           "id": "action-d4e937a791935e",
           "image_key": "action/shame-act-1",
           "content_type": "illustration",
@@ -2964,10 +2641,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU54",
@@ -2988,10 +2662,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU64",
@@ -3012,10 +2683,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU15",
@@ -3025,7 +2693,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Soft AU15 on a downcast face, low intensity, not theatrical tragedy. --ar 1:1",
           "id": "face-f26a942bb23d0c",
-          "claim": "AU15: Lip Corner Depressor",
+          "claim": "AU15: Slight downward turn of the mouth corners",
           "image_key": "face/shame-au15",
           "content_type": "illustration",
           "evidence": {
@@ -3036,10 +2704,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -3054,9 +2719,7 @@
         "cardiovascular": [
           {
             "claim": "Upright torso",
-            "shared_with": [
-              "happiness"
-            ],
+            "shared_with": ["happiness"],
             "id": "somatic-2a1b7b01da2fbf",
             "image_key": "somatic/pride-cardiovascular-0",
             "content_type": "illustration",
@@ -3073,9 +2736,7 @@
         "respiratory": [
           {
             "claim": "Raised chest",
-            "shared_with": [
-              "happiness"
-            ],
+            "shared_with": ["happiness"],
             "id": "somatic-2aeef815bc56e2",
             "image_key": "somatic/pride-respiratory-0",
             "content_type": "illustration",
@@ -3116,9 +2777,7 @@
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "pride-shame-2008"
-              ],
+              "source_ids": ["pride-shame-2008"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -3126,9 +2785,7 @@
           },
           {
             "claim": "Raised chin",
-            "shared_with": [
-              "contempt"
-            ],
+            "shared_with": ["contempt"],
             "id": "somatic-dcebdf4bcc4199",
             "image_key": "somatic/pride-musculoskeletal-1",
             "content_type": "illustration",
@@ -3150,9 +2807,7 @@
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "pride-shame-2008"
-              ],
+              "source_ids": ["pride-shame-2008"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -3162,9 +2817,7 @@
         "integumentary_thermal": [
           {
             "claim": "Chest skin reference",
-            "shared_with": [
-              "love"
-            ],
+            "shared_with": ["love"],
             "id": "somatic-4c2ef39f52e5f0",
             "image_key": "somatic/pride-integumentary_thermal-0",
             "content_type": "illustration",
@@ -3181,9 +2834,7 @@
         "neurosensory": [
           {
             "claim": "Upright full-body reference",
-            "shared_with": [
-              "happiness"
-            ],
+            "shared_with": ["happiness"],
             "id": "somatic-1ad1230edaa856",
             "image_key": "somatic/pride-neurosensory-0",
             "content_type": "illustration",
@@ -3231,9 +2882,7 @@
         },
         {
           "claim": "Direct gaze",
-          "shared_with": [
-            "happiness"
-          ],
+          "shared_with": ["happiness"],
           "id": "action-41a6c46393d582",
           "image_key": "action/pride-act-2",
           "content_type": "illustration",
@@ -3267,10 +2916,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU53",
@@ -3291,10 +2937,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU12",
@@ -3315,10 +2958,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -3384,9 +3024,7 @@
         "musculoskeletal": [
           {
             "claim": "Turned-away torso",
-            "shared_with": [
-              "disgust"
-            ],
+            "shared_with": ["disgust"],
             "id": "somatic-efffd80ffa16a1",
             "image_key": "somatic/contempt-musculoskeletal-0",
             "content_type": "illustration",
@@ -3420,9 +3058,7 @@
         "neurosensory": [
           {
             "claim": "Raised-head gaze",
-            "shared_with": [
-              "pride"
-            ],
+            "shared_with": ["pride"],
             "id": "somatic-9123a8d7364fb3",
             "image_key": "somatic/contempt-neurosensory-0",
             "content_type": "illustration",
@@ -3440,9 +3076,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Rotated-away torso",
-          "shared_with": [
-            "disgust"
-          ],
+          "shared_with": ["disgust"],
           "id": "action-210a4628dbf6b5",
           "image_key": "action/contempt-act-0",
           "content_type": "illustration",
@@ -3491,10 +3125,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU14",
@@ -3515,10 +3146,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU10",
@@ -3539,10 +3167,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -3557,9 +3182,7 @@
         "cardiovascular": [
           {
             "claim": "Still upper body",
-            "shared_with": [
-              "surprise"
-            ],
+            "shared_with": ["surprise"],
             "id": "somatic-edd748dfcd23a0",
             "image_key": "somatic/awe-cardiovascular-0",
             "content_type": "illustration",
@@ -3576,9 +3199,7 @@
         "respiratory": [
           {
             "claim": "Open-mouth breathing pose",
-            "shared_with": [
-              "surprise"
-            ],
+            "shared_with": ["surprise"],
             "id": "somatic-7ec95d50b42bca",
             "image_key": "somatic/awe-respiratory-0",
             "content_type": "illustration",
@@ -3612,9 +3233,7 @@
         "musculoskeletal": [
           {
             "claim": "Standing still",
-            "shared_with": [
-              "surprise"
-            ],
+            "shared_with": ["surprise"],
             "id": "somatic-48b8debbb09814",
             "image_key": "somatic/awe-musculoskeletal-0",
             "content_type": "illustration",
@@ -3631,18 +3250,14 @@
         "integumentary_thermal": [
           {
             "claim": "Objective goosebumps were not a reliable indicator of awe in the tested laboratory settings.",
-            "shared_with": [
-              "fear"
-            ],
+            "shared_with": ["fear"],
             "id": "somatic-e8596cf64ffe60",
             "image_key": "somatic/awe-integumentary_thermal-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "awe-piloerection-2021"
-              ],
+              "source_ids": ["awe-piloerection-2021"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -3670,9 +3285,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Still orientation",
-          "shared_with": [
-            "surprise"
-          ],
+          "shared_with": ["surprise"],
           "id": "action-f743ff6adb964c",
           "image_key": "action/awe-act-0",
           "content_type": "illustration",
@@ -3721,10 +3334,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU1+AU2",
@@ -3734,7 +3344,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Awe, not jump-scare: AU1+AU2 smooth high brows, eyes wide but soft, face lit as if looking at a landscape, no AU4. --ar 1:1",
           "id": "face-897d6fd8fb10da",
-          "claim": "AU1+AU2: Brow arch without AU4",
+          "claim": "AU1+AU2: Brow arch with open glabella",
           "image_key": "face/awe-au1-2",
           "content_type": "illustration",
           "evidence": {
@@ -3745,10 +3355,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU5",
@@ -3758,7 +3365,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Soft wide eyes AU5, large catchlights, no strain in the lower lid, awe. --ar 1:1",
           "id": "face-1bd9c1b0bab34b",
-          "claim": "AU5: Upper Lid Raiser",
+          "claim": "AU5: Upper lid lift with relaxed lower lid",
           "image_key": "face/awe-au5",
           "content_type": "illustration",
           "evidence": {
@@ -3769,10 +3376,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU26",
@@ -3782,7 +3386,7 @@
           "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
           "image_prompt": "Slight AU26, lips parted, relaxed jaw, wonder. --ar 1:1",
           "id": "face-6a4fa220e9da3a",
-          "claim": "AU26: Jaw Drop",
+          "claim": "AU26: Slight jaw drop",
           "image_key": "face/awe-au26",
           "content_type": "illustration",
           "evidence": {
@@ -3793,10 +3397,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -3811,19 +3412,14 @@
         "cardiovascular": [
           {
             "claim": "Participants mapped bodily sensations while considering love.",
-            "shared_with": [
-              "happiness",
-              "pride"
-            ],
+            "shared_with": ["happiness", "pride"],
             "id": "somatic-2b5132f50c89ad",
             "image_key": "somatic/love-cardiovascular-0",
             "content_type": "scientific_claim",
             "evidence": {
               "decision": "qualified",
               "support": "direct",
-              "source_ids": [
-                "bodily-maps-2014"
-              ],
+              "source_ids": ["bodily-maps-2014"],
               "review_method": "source-based editorial audit",
               "reviewed_at": "2026-10-24",
               "limitations": "Context and population limits apply; see the linked source."
@@ -3833,9 +3429,7 @@
         "respiratory": [
           {
             "claim": "Relaxed breathing pose",
-            "shared_with": [
-              "happiness"
-            ],
+            "shared_with": ["happiness"],
             "id": "somatic-f958f8038822a8",
             "image_key": "somatic/love-respiratory-0",
             "content_type": "illustration",
@@ -3852,9 +3446,7 @@
         "gastrointestinal": [
           {
             "claim": "Resting abdomen",
-            "shared_with": [
-              "happiness"
-            ],
+            "shared_with": ["happiness"],
             "id": "somatic-79ed04281b2d7c",
             "image_key": "somatic/love-gastrointestinal-0",
             "content_type": "illustration",
@@ -3871,9 +3463,7 @@
         "musculoskeletal": [
           {
             "claim": "Open shoulders",
-            "shared_with": [
-              "happiness"
-            ],
+            "shared_with": ["happiness"],
             "id": "somatic-6c08c005deee49",
             "image_key": "somatic/love-musculoskeletal-0",
             "content_type": "illustration",
@@ -3888,9 +3478,7 @@
           },
           {
             "claim": "Relaxed limbs",
-            "shared_with": [
-              "happiness"
-            ],
+            "shared_with": ["happiness"],
             "id": "somatic-de5eab0fd07bb4",
             "image_key": "somatic/love-musculoskeletal-1",
             "content_type": "illustration",
@@ -3907,10 +3495,7 @@
         "integumentary_thermal": [
           {
             "claim": "Face and chest skin",
-            "shared_with": [
-              "happiness",
-              "shame"
-            ],
+            "shared_with": ["happiness", "shame"],
             "id": "somatic-6b04a2255fd960",
             "image_key": "somatic/love-integumentary_thermal-0",
             "content_type": "illustration",
@@ -3927,9 +3512,7 @@
         "neurosensory": [
           {
             "claim": "Gentle gaze",
-            "shared_with": [
-              "pride"
-            ],
+            "shared_with": ["pride"],
             "id": "somatic-cbf059a69ad1a3",
             "image_key": "somatic/love-neurosensory-0",
             "content_type": "illustration",
@@ -3947,9 +3530,7 @@
       "behavioral_action_tendencies": [
         {
           "claim": "Consensual reaching gesture",
-          "shared_with": [
-            "happiness"
-          ],
+          "shared_with": ["happiness"],
           "id": "action-244e19628b0f10",
           "image_key": "action/love-act-0",
           "content_type": "illustration",
@@ -3998,10 +3579,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU6",
@@ -4022,10 +3600,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         },
         {
           "code": "AU12",
@@ -4046,10 +3621,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     },
@@ -4216,34 +3788,7 @@
             "reviewed_at": "2026-10-24",
             "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
           },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
-        },
-        {
-          "code": "AU0",
-          "name": "Neutral face",
-          "muscles": [],
-          "prototype_role": "Movement reference",
-          "action_description": "A posed illustration of the displayed movement; it does not determine emotion.",
-          "image_prompt": "FACS AU0 reference plate: adult face at rest, lips gently closed, brows relaxed, eyes naturally open looking at camera without stare, no wrinkle recruitment beyond age-resting lines. Matched pair of large softboxes, color-accurate, 85mm, f/8, square crop from mid-forehead to just below the chin, no makeup, no expression coaching. This image is the before-plate for all other AUs. --ar 1:1",
-          "id": "face-917754c3f55993",
-          "claim": "AU0: Neutral face",
-          "image_key": "face/baseline-neutral-au0",
-          "content_type": "illustration",
-          "evidence": {
-            "decision": "replaced_with_visual_label",
-            "support": "illustration_only",
-            "source_ids": [],
-            "review_method": "source-based editorial audit",
-            "reviewed_at": "2026-10-24",
-            "limitations": "This is a visual label, not an evidence-based indicator of an emotion."
-          },
-          "method_source_ids": [
-            "facs-authority",
-            "faces-review-2019"
-          ]
+          "method_source_ids": ["facs-authority", "faces-review-2019"]
         }
       ]
     }

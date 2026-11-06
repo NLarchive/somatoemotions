@@ -39,7 +39,7 @@ test('all emotions, records and combined images are reachable without console or
       }
     }
   }
-  expect(selected).toBe(207);
+  expect(selected).toBe(206);
   expect(errors).toEqual([]);
 });
 

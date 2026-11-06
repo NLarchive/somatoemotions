@@ -21,7 +21,7 @@ const text = {
     '#tab-actions': 'Referencias de acciones',
     '#panel-somatic h2': 'Referencias corporales',
     '#panel-somatic .panel-lead':
-      'Elige una referencia para ver su ilustración. Las afirmaciones respaldadas por fuentes enlazan con resultados de investigación acotados; las demás etiquetas describen ilustraciones sin atribuirles una fisiología específica de una emoción.',
+      'Elige una referencia para ver su ilustración y descripción. Consulta las fuentes y sus limitaciones en el panel de revisión.',
     '#list-cardiovascular': '',
     '#somatic-list .system-card:nth-child(1) h3': 'Cardiovascular',
     '#somatic-list .system-card:nth-child(2) h3': 'Respiratorio',
@@ -64,7 +64,7 @@ const text = {
     '#tab-actions': 'Action references',
     '#panel-somatic h2': 'Bodily references',
     '#panel-somatic .panel-lead':
-      'Choose a reference to see its illustration. Source-qualified statements link to bounded research findings; other labels describe illustrations without asserting emotion-specific physiology.',
+      'Choose a reference to see its illustration and description. Consult the review panel for sources and their limitations.',
     '#somatic-list .system-card:nth-child(1) h3': 'Cardiovascular',
     '#somatic-list .system-card:nth-child(2) h3': 'Respiratory',
     '#somatic-list .system-card:nth-child(3) h3': 'Gastrointestinal',
