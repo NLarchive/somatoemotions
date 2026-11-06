@@ -326,7 +326,7 @@ body {
 .card-head h3,
 .action-card h3 {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
@@ -617,6 +617,9 @@ body {
   font-weight: 600;
 }
 .record-label {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
   overflow-wrap: anywhere;
 }
 .context-notice {
